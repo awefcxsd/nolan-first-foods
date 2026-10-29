@@ -2,8 +2,9 @@
   "name": "Nolan",
   "birthDate": "2026-05-22",
   "planStartDate": "2026-10-30",
+  "introductionStartDate": "2026-10-30",
   "reportedTriedFoods": ["十倍粥", "南瓜", "地瓜"],
   "reportedAllergies": "目前無已知過敏（家長提供，2026-10-29）",
   "readinessConfirmed": false,
-  "notes": "六個月前不安排新食材；已開始副食品的部分請與兒科確認。"
+  "notes": "家長指定 2026-10-30 先試酪梨；首次候選只排平日，至少間隔三天，週末順延。當天為 5 個月 8 天，準備度與兒科是否同意提前引入尚待確認；本版過敏原候選預設約六個月起，個別較早引入需兒科評估。"
 }
