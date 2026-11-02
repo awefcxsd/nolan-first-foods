@@ -110,27 +110,37 @@ const repeatWeekdays = {
 
 // Nutritional roles explain the choice; exact dates/order are household scheduling.
 const timingReasons = {
-  ...Object.fromEntries(expandedFoods.map(food => [food.name, `${food.reason}；依平日與至少三天觀察安排，並非醫學上建議等到此日；觀察未完成則順延，不為湊滿100種趕進度`])),
-  含鐵嬰兒燕麥: '約六個月開始優先增加含鐵食物，並讓穀類不只依賴米；選在起步時是營養與調製方便的考量，並非必須先吃燕麥',
-  牛肉: '接著增加肉類含鐵食物與蛋白質；放在燕麥後便於分開觀察，也可與燕麥交換順序',
-  全熟蛋: '約六個月可開始單一少量引入蛋；列在早期以免無故延後到更大月齡，毋須等肉類都試完',
-  花生: '約六個月以安全稀釋形式引入，避免無故延後；排在蛋的觀察段後便於辨識反應，並非一定要先吃蛋；嚴重濕疹或蛋過敏者先詢問兒科',
-  原味優格: '約六個月可用無糖巴氏殺菌優格引入乳；此日是接續前項觀察的安排，不需等一歲，但不可因此用鮮奶取代奶類主飲',
-  小麥麵: '約六個月可引入含麩質食物；此時擴充主食選擇，日期為錯開新食材，可更早以安全質地安排',
-  豆腐: '約六個月可引入黃豆，熟豆腐易壓泥並增加蛋白質來源；排在此處為單項觀察，並非黃豆必須比小麥晚',
-  鮭魚: '約六個月可引入全熟去刺魚肉；此時加入魚類選擇，排在豆腐後只是分開觀察，不代表較早吃魚不適合',
-  芝麻: '約六個月可用充分稀釋的純芝麻醬引入；此日接續魚的觀察段，沒有必須等到此日的月齡限制',
-  杏仁: '約六個月可用安全稀釋的堅果醬引入；與花生分開記錄，因花生耐受不代表杏仁耐受，日期可與其他候選調換',
-  蝦: '約六個月可引入全熟細磨甲殼類；與魚分開觀察，魚耐受不代表蝦耐受，不是必須等到這一天才能吃蝦',
-  雞肉: '增加不同肉類與蛋白質來源；排在前面候選後是家庭輪替選擇，約六個月即可用熟肉泥引入，毋須等海鮮試完',
-  花椰菜: '擴充已試過南瓜、地瓜之外的蔬菜味道；煮軟壓泥即可安排，排在此日無特殊生理門檻，也可提早',
-  香蕉: '熟軟香蕉方便壓泥，增加水果選擇；此日為菜單擴充安排，不必等所有蔬菜或肉類都試完',
-  梨: '以去皮去籽煮軟的梨增加水果變化；放在香蕉後便於分開記錄，沒有必須先香蕉再梨的要求',
-  胡蘿蔔: '增加蔬菜變化，以煮至可壓爛控制質地；日期是輪替安排，安全煮軟後可在約六個月起另排',
-  馬鈴薯: '增加米、燕麥、小麥之外的澱粉來源；熟泥適合初期，排在此日為主食輪替，並非此月齡才可消化',
-  酪梨: '家長指定以酪梨作為本輪第一項新食材；熟軟去皮去核後壓泥便於準備，先單項觀察，再接續含鐵食物；這是家庭選擇，並非酪梨必須最先吃或有特定日期的醫學優勢',
-  扁豆: '增加植物性鐵與蛋白質來源；煮熟壓泥可在約六個月起安排，較晚列入是菜單排序，毋須等肉類吃過才引入',
-  菠菜: '增加綠葉蔬菜選擇；煮熟細處理後可在約六個月起安排，此日只是輪替順序，並非必須延至此時，也不取代主要含鐵食物',
+  ...Object.fromEntries(expandedFoods.map(food => [food.name, ({
+    肉類: '增加不同肉類與鐵來源，不必等到更大月齡；此日可前後調整。',
+    豆類: '增加植物性蛋白質與鐵來源，不必等肉類都試完；此日可調整。',
+    穀類: '增加主食種類，沒有必須延後的特定月齡要求；此日可前後調整。',
+    根莖: '增加不同主食選擇；沒有特定引入窗口，此日可前後調整。',
+    蔬菜: '增加不同蔬菜風味，無需等其他蔬菜都試完；此日可前後調整。',
+    水果: '增加不同水果風味；沒有特定引入窗口，此日可前後調整。',
+    菇類: '增加食物種類；此日沒有特定時點優勢，可前後調整。',
+    魚類: '增加不同魚類選擇，不需刻意延至一歲；此日可前後調整。',
+    堅果: '約六個月可引入安全形式的堅果，不需刻意延後；此日可調整。',
+  })[food.group]])),
+  含鐵嬰兒燕麥: '開始副食品時就加入含鐵穀物，補充鐵來源，不必等蔬果都試完。',
+  牛肉: '優先增加肉類鐵來源，避免初期只吃粥和蔬果，不必延後到更大月齡。',
+  全熟蛋: '約六個月起可引入；不刻意延至一歲，避免錯過早期接觸的機會。',
+  花生: '約六個月起可引入；無故延至六至十二個月之後，可能增加過敏風險。',
+  原味優格: '約六個月可用優格引入乳品，不必像鮮奶主飲一樣等到一歲。',
+  小麥麵: '約六個月即可增加含麩質主食，不需等更大月齡；此日可前後調整。',
+  豆腐: '初期可增加豆類蛋白質與鐵來源，不需等肉類全部試完；此日可調整。',
+  鮭魚: '約六個月即可增加魚類選擇，不需刻意延至一歲；此日可前後調整。',
+  芝麻: '約六個月即可引入安全形式的芝麻，不需刻意延後；此日可調整。',
+  杏仁: '約六個月可引入安全形式的堅果，不需刻意延後；此日可調整。',
+  蝦: '約六個月可引入全熟甲殼類，不需刻意延至一歲；此日可調整。',
+  雞肉: '開始副食品時可增加肉類蛋白質與鐵來源，不必等海鮮都試完。',
+  花椰菜: '初期就接觸不同蔬菜味道，增加多樣性；此日無特殊優勢，可前後調整。',
+  香蕉: '熟軟易處理，可作初期水果選擇；沒有必須等到更大月齡的理由。',
+  梨: '煮軟後可作初期水果選擇；不需等香蕉試完，此日可前後調整。',
+  胡蘿蔔: '煮軟後增加蔬菜變化；沒有特定引入窗口，此日可前後調整。',
+  馬鈴薯: '增加不同主食選擇；沒有特定引入窗口，此日可前後調整。',
+  酪梨: '依家長指定作為起始食材，熟軟易處理；沒有必須先於其他食材的時點優勢。',
+  扁豆: '可從初期增加植物性鐵與蛋白質來源，不必等肉類都試完；此日可調整。',
+  菠菜: '增加綠葉菜變化；不需等其他蔬菜試完，此日可前後調整。',
 };
 assert(foods.every(food => timingReasons[food.name]), '每項新食材均須有時點理由');
 
@@ -173,7 +183,7 @@ for (let date = new Date(start); date < birthday; date = new Date(+date + dayMs)
     const day = Math.round((date - start) / dayMs);
     mealFoods = [earlyMenu[day % earlyMenu.length], [], []];
     introduction = '不安排；只使用已試過的米、南瓜、地瓜';
-    timingReason = '尚未到家長設定的新食材起始日，先輪替已試過食物作備選；實際開始仍須確認準備度與兒科建議';
+    timingReason = '—';
     note = '僅在兒科已確認可繼續且具準備度、上述食物已耐受時少量提供；否則暫緩副食品，母乳／配方奶照常';
   } else {
     const offset = Math.round((date - introductionStart) / dayMs);
@@ -197,23 +207,7 @@ for (let date = new Date(start); date < birthday; date = new Date(+date + dayMs)
     introduction = current
       ? `${offset === current.intro ? '首次候選' : '重複觀察候選'}：${current.name}${current.allergen ? `【${current.allergen}】` : ''}；${current.prep}`
       : nextFood ? `不試新；下項候選：${iso(new Date(+introductionStart + nextFood.intro * dayMs))} ${nextFood.name}` : '無新食材候選；回顧實際紀錄';
-    if (current) {
-      if (offset === current.intro) {
-        const previous = foods[foods.indexOf(current) - 1];
-        timingReason = timingReasons[current.name] + (previous
-          ? `；距前項「${previous.name}」首次候選已${current.intro - previous.intro}天，保留至少三天觀察並避開週末；未完成則順延`
-          : `；以家長指定的 ${iso(introductionStart)} 作排程起點，仍須確認準備度`);
-      } else {
-        timingReason = `今天是「${current.name}」預定觀察第${offset - current.intro + 1}天；已實際引入且無反應才重複，不再加入另一新食材，以利辨識反應；三天是排程預設，必要時延長，無反應不代表排除過敏`;
-      }
-    } else {
-      timingReason = nextFood
-        ? '今天不加新食材，保留觀察與休息空間；首次引入只排平日，週末順延；過敏原暫以約六個月起安排，仍須確認準備度'
-        : `本輪${foods.length}項新增候選已排完，今天輪替實際已耐受食物；種類數不是醫療門檻，未實際吃過者仍須依紀錄安排，新增只排平日且保留觀察間隔`;
-      timingReason += monthAge < 9
-        ? '；壓泥或軟顆粒依能力練習，不必等到特定生日，也不提前強迫升級'
-        : '；此階段依能力練習軟碎食與較規律餐次，日期不是質地升級的硬性門檻';
-    }
+    timingReason = current && offset === current.intro ? timingReasons[current.name] : '—';
     if (current) {
       const familiar = current.name === breakfastBase ? pick(vegetables, '南瓜') : breakfastBase;
       mealFoods[0] = [current.name, familiar];
@@ -237,7 +231,6 @@ for (let date = new Date(start); date < birthday; date = new Date(+date + dayMs)
     }
     note += '；未實際耐受者換已耐受食物，觀察未完成則延後後續新食材';
     if (date < sixMonths) {
-      timingReason = `家長指定自 ${iso(introductionStart)} 起排程，今天為${age(date)}；早於一般約六個月的建議，須兒科確認適合提前且具準備度才執行。` + timingReason;
       mealFoods[1] = [];
       mealFoods[2] = [];
       note = '未滿六個月，僅列白天少量一餐；準備度與提前引入須經兒科確認，未確認則暫緩並順延；不因表列菜單減少奶量；其他配餐食材須已耐受';
@@ -255,7 +248,7 @@ for (let date = new Date(start); date < birthday; date = new Date(+date + dayMs)
     introduction = '週末不首次試新；' + introduction;
     note += '；若前項其實尚未引入，週末不得補試，順延至平日';
   }
-  assert(timingReason, '每天均須填寫引入時點理由');
+  assert(timingReason, '首次須填寫時點理由，其餘日期以破折號表示');
   const record = { date: iso(date), age: age(date), meals, mealFoods, introduction, timingReason, note, portion };
   records.push(record);
   months.get(key).push(`| ${iso(date)}（${weekday[date.getUTCDay()]}） | ${record.age} | ${meals.join(' | ')} | ${introduction} | ${timingReason} | ${note} | ${portion} | [ ] |`);
@@ -291,7 +284,7 @@ foods.forEach((food, index) => { overview += `| ${baselineFoods.length + index +
 deferredFoods.forEach((food, index) => { overview += `| ${baselineFoods.length + foods.length + index + 1} | ${food.name} | ${foodGroups[food.name]} | ${food.allergen || '—'} | 待後續引入（本期未排） | 待後續安排，不壓縮觀察間隔 |\n`; });
 fs.writeFileSync(path.join(planDir, 'overview.md'), overview);
 const index = `# 每日規劃索引\n\n${profile.name}：${profile.birthDate} 出生。${iso(start)} 至 ${records.at(-1).date}，共 **${records.length} 天**，截至一歲前一天。\n\n家長指定新食材起始日：**${iso(introductionStart)}（${age(introductionStart)}）**，首次引入只排平日，至少間隔三天，遇週末順延；過敏原候選暫排約六個月起。滿六個月日期：${iso(sixMonths)}。六個月前僅列白天少量一餐，須經兒科確認適合提前且具準備度才執行；未確認則暫緩並順延。\n\n`;
-fs.writeFileSync(path.join(planDir, 'README.md'), index + `[100種食材 overview：已回報${baselineFoods.length}種＋新增候選${allFoods.length}種](overview.md)；新增中${foods.length}項已排本期、${deferredFoods.length}項待後續。每餐最多兩樣；滿六個月至未滿七個月（${iso(sixMonths)}～${iso(new Date(+sevenMonths - dayMs))}）每日兩餐，第三餐不安排。各日均列餵食量參考。[台灣醫師資料查核](../docs/taiwan-recommendations.md) · [每週兩次備餐清單](../prep/README.md)。\n\n` + [...months].map(([month, rows]) => `- [${month}（${rows.length} 天）](${month}.md)`).join('\n') + '\n\n請先看 [安全原則](../docs/feeding-guide.md)。實際吃過與否以 [食材紀錄](../docs/food-log.md) 及 logs/ 為準，不由計畫自動推定。\n');
+fs.writeFileSync(path.join(planDir, 'README.md'), index + `[100種食材 overview：已回報${baselineFoods.length}種＋新增候選${allFoods.length}種](overview.md)；新增中${foods.length}項已排本期、${deferredFoods.length}項待後續。每餐最多兩樣；滿六個月至未滿七個月（${iso(sixMonths)}～${iso(new Date(+sevenMonths - dayMs))}）每日兩餐，第三餐不安排。各日均列餵食量參考。[台灣醫師資料查核](../docs/taiwan-recommendations.md) · [每週兩次備餐清單](../prep/README.md) · [食量／質地／調味／過敏原summary](../docs/feeding-summary.md)。\n\n` + [...months].map(([month, rows]) => `- [${month}（${rows.length} 天）](${month}.md)`).join('\n') + '\n\n請先看 [安全原則](../docs/feeding-guide.md)。實際吃過與否以 [食材紀錄](../docs/food-log.md) 及 logs/ 為準，不由計畫自動推定。\n');
 console.log(`產生 ${records.length} 天、${months.size} 個月份：${iso(start)} ～ ${records.at(-1).date}；已驗證日期連續、無重複、排除一歲生日。`);
 const prep = writePrepPlans({ root, records, foods, preparedFood, introductionStart: iso(introductionStart) });
 console.log(`同步產生${prep.weeks.size}週、${prep.batches.length}批備餐；逐項覆蓋${prep.totalUses}次食材使用。`);

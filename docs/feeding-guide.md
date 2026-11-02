@@ -2,6 +2,8 @@
 
 這是可調整的家庭草稿，並非 Nolan 個人的營養處方。若有早產、吞嚥困難、生長或其他疾病問題，由兒科評估調整。[資料來源](sources.md)
 
+跨月的每日食量、泥到顆粒與軟固體、調味及過敏原分析見 [四角度summary](feeding-summary.md)。原每日表的15～30mL為起始提供量，不能當作後期全餐的固定上限。
+
 ## 開始與進展
 
 - Nolan 在 2026-11-22 滿六個月。約六個月且能控制頭頸、坐穩或在支撐下坐好、能吞嚥食物時再逐步引入。本表依家長指定自 2026-10-30（5 個月 8 天）起列新食材候選，這是提前排程，不代表已確認適合開始。六個月前須經兒科確認適合提前且具準備度才執行，否則暫緩並順延；僅列白天少量一餐，奶類照常。[CDC：開始副食品](https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html)
@@ -12,11 +14,10 @@
 
 ## 如何理解「引入時點理由」
 
-規劃表每天的「引入時點理由」區分營養與發展考量，以及家庭排程選擇。本表以家長指定的 2026-10-30 作排程起點，一般建議仍為約六個月且具準備度；六個月前的候選需兒科確認適合提前，並非來源推薦在這一天開始。含鐵食物列在早期，是為了從開始吃副食品時就提供鐵的來源。[CDC：開始副食品](https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html)、[CDC：鐵](https://www.cdc.gov/infant-toddler-nutrition/vitamins-minerals/iron.html)
+「引入時點理由」**只在首次試新當天填寫一句話**，回答為何適合在這個階段引入、是否有理由不延後；重複觀察、週末及一般輪替日一律填「—」。觀察、安全與餐次提醒放在原有欄位及本指引，不重複塞進理由。
 
-**沒有證據要求一般寶寶一定在表列的那一天、按這個順序吃某一項食物。** 多數適合的食物可從約六個月、具準備度並採安全質地時安排。先燕麥後牛肉、先香蕉後梨等順序是家庭選擇；蔬果或扁豆排得較晚，不表示較早吃不安全。蛋、花生等過敏原也不應只因表格排序而無故延後；可與其他候選交換順序，但仍要單一少量引入並記錄反應。[CDC](https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html)、[NHS：過敏原](https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/)
+理由的依據主要是開始副食品時補充鐵來源，以及約六個月起不刻意延後蛋、花生等過敏原；沒有明確時點優勢的蔬果或主食，直接註明可前後調整，不把家庭排序寫成醫療必要。[CDC：鐵](https://www.cdc.gov/infant-toddler-nutrition/vitamins-minerals/iron.html)、[NHS：過敏原](https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/)
 
-首次候選日說明食物選擇與接續前項觀察的理由；接下來兩天說明為何先重複、不急著再加新食材。候選排完後的日期說明多樣輪替與質地練習，而非暗示食物已實際吃過。至少三天觀察是本表的排程預設，遇週末可為四或五天，不是過敏檢測；若需更長觀察、尚未引入或有反應，調整後續日期。月份所列質地也以實際能力為準。
 
 ## 新食材與過敏原
 

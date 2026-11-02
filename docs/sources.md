@@ -6,6 +6,10 @@
 
 | 來源 | 支持內容 |
 | --- | --- |
+| [ASCIA 2026：Infant Feeding for Food Allergy Prevention](https://allergy.org.au/hp/papers/infant-feeding-and-allergy-prevention/) | 蛋／花生適時引入、其他常見類別第一年引入及證據強度；無反應後至少每週持續食用屬專家共識 |
+| [UNICEF：Feeding your baby 6–12 months](https://www.unicef.org/lac/en/parenting-lac/food-nutrition/feeding-baby-6-12-months) | 少量起步至約半杯的概念；summary的60／90mL月齡算例是家庭示範，非來源月齡配額 |
+| [NSW Health：Food for babies up to 12 months](https://www.health.nsw.gov.au/heal/child/menu/Pages/food-babies.aspx) | 不加鹽、鹹調味料、糖或蜂蜜；可用香草與香料 |
+| [長庚小兒科團隊2017年出生世代研究](https://pubmed.ncbi.nlm.nih.gov/29040259/) | 不同食物接觸與IgE致敏的觀察性關聯；其六項定義不能直接比較本表九類，更非台灣同齡全國平均 |
 | [NHS：Storing and reheating food](https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/storing-and-reheating-food/) | 冷卻、米飯的一小時／24小時規則、解凍、復熱一次與剩食處理 |
 | [HSE：Baby foods homemade](https://www2.hse.ie/babies-children/weaning-eating/nutrition-baby/homemade-food/) | 小份冷凍、標籤、冷藏解凍與不重新冷凍解凍品 |
 | [FoodSafety.gov：Cold Food Storage Chart](https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts) | 設備保存溫度及硬煮蛋不建議冷凍；不拿成人熟食冷藏日數取代嬰兒食物指引 |

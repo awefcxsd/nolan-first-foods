@@ -18,7 +18,7 @@ const introductions = new Map(firsts.map(row => [row[5].match(/首次候選：([
 assert.equal(introductions.size, 57);
 assert.equal(firsts[0][0].slice(0, 10), '2026-10-30');
 assert(firsts[0][5].includes('酪梨'));
-assert(firsts[0][6].includes('家長指定以酪梨'));
+assert(firsts[0][6].includes('家長指定'));
 for (const [name, expected] of Object.entries({ 含鐵嬰兒燕麥: '2026-11-02', 全熟蛋: '2026-11-23', 花生: '2026-11-26', 菠菜: '2027-01-04' })) {
   assert.equal(introductions.get(name), Date.parse(expected), `保留既有首次日期：${name}`);
 }
@@ -34,7 +34,10 @@ rows.forEach((row, index) => {
   const date = Date.parse(row[0].slice(0, 10));
   assert.equal(date, Date.parse(profile.planStartDate) + index * dayMs);
   assert.equal(row.length, 10);
-  assert(row[6].length > 20);
+  if (row[5].includes('首次候選：')) {
+    assert(row[6] !== '—' && row[6].length <= 90, `${row[0]} 首次理由須簡短`);
+    assert(!/距前項|預定觀察|週末|順延/.test(row[6]), '理由不混入排程提醒');
+  } else assert.equal(row[6], '—', `${row[0]} 非首次不填時點理由`);
   if ([0, 6].includes(new Date(date).getUTCDay())) assert(row[5].startsWith('週末不首次試新'));
   const activeMeals = row.slice(2, 5).filter(cell => !cell.startsWith('不安排副食品'));
   if (date < sixMonths) assert.equal(activeMeals.length, 1);

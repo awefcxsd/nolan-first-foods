@@ -5,40 +5,49 @@
   <meta name="theme-color" content="#f6f4ed"><meta name="description" content="Nolan 的副食品探索日誌：進食進度、食材分類、喜好與每日觀察。">
   <title>Nolan 的第一口 · 副食品 Dashboard</title>
   <style>@charset "UTF-8";
-:root{--paper:#f6f4ed;--ink:#293e35;--muted:#768079;--line:#e1e5dc;--green:#4f7460;--mint:#e7ede3;--orange:#c97651;--peach:#f6e5da;--white:#fffefa}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI","Microsoft JhengHei",sans-serif;font-size:14px;line-height:1.7}button,input,select{font:inherit}button,a,select{touch-action:manipulation}a{color:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:4px}button:disabled{cursor:default}h1,h2,h3,p{margin:0}h2{font-size:24px;font-weight:650;letter-spacing:-.6px}h3{font-size:17px}main{max-width:1240px;padding:0 38px;margin:auto}.topbar{max-width:1440px;margin:auto;padding:25px 38px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;display:flex;align-items:center;gap:12px;font-family:Georgia,serif;font-size:21px;letter-spacing:-.5px}.brand-icon{display:grid;place-items:center;background:var(--green);color:white;border-radius:14px 14px 14px 3px;width:38px;height:38px;font-size:29px;line-height:1}.brand-sub{font-family:"Microsoft JhengHei",sans-serif;color:var(--muted);font-size:12px;letter-spacing:1px;border-left:1px solid var(--line);padding-left:14px;margin-left:4px}nav{display:flex;gap:27px}nav a{text-decoration:none;font-size:13px;color:#58685e}nav a:hover{color:var(--orange)}.private{font-size:11px;color:var(--green);letter-spacing:1px}.hero{padding:58px 0 36px;display:flex;justify-content:space-between;align-items:center;gap:30px}.eyebrow{font-size:10px;font-weight:650;letter-spacing:2px;color:var(--green);margin-bottom:12px}.hero h1{font-size:49px;line-height:1.35;font-weight:550;letter-spacing:2px;font-family:Georgia,"PMingLiU","Microsoft JhengHei",serif}.orange{color:var(--orange)}.intro{color:var(--muted);margin-top:17px;font-size:14px}.mobile-break{display:none}.hero-note{width:250px;min-height:210px;background:var(--mint);border-radius:100px 100px 12px 12px;text-align:center;display:flex;align-items:center;flex-direction:column;justify-content:center;padding:22px 18px;transform:rotate(2deg);margin-right:20px}.sprout{color:var(--green);font-size:44px;line-height:1.2;margin-bottom:10px}.hero-note>span:not(.sprout){font-size:8px;letter-spacing:1.8px;color:var(--green)}.hero-note strong{font-size:20px;font-weight:500;margin-top:10px}.hero-note p{font-size:11px;color:var(--muted);margin-top:5px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:26px}.stat{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px 23px}.stat:first-child{background:var(--green);color:white;border-color:var(--green)}.stat-label{font-size:12px;color:var(--muted)}.stat:first-child .stat-label,.stat:first-child .stat-note{color:#d7e4d7}.stat-value{font-family:Georgia,serif;font-size:45px;line-height:1.2;margin:12px 0 9px;letter-spacing:-1px;white-space:nowrap}.stat-value small{font-family:"Microsoft JhengHei",sans-serif;font-size:13px;margin:0 5px;letter-spacing:0}.stat-note{font-size:10px;color:var(--muted);line-height:1.8}.panel{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px}.chart-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:21px}.section-head .eyebrow{font-size:9px;margin-bottom:5px}.micro{font-size:10px;color:var(--muted);white-space:nowrap}.category-content{display:flex;align-items:center;justify-content:space-around;gap:20px;min-height:210px}.category-list{flex:1;max-width:240px}.category{display:flex;gap:9px;width:100%;align-items:center;background:none;border:0;border-radius:6px;padding:7px;color:var(--ink);font-size:12px;text-align:left}.category:hover{background:var(--paper)}.category:disabled{opacity:.6}.category .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}.category strong{margin-left:auto;font-size:13px}.category .bar{width:50px;height:4px;background:#eeeee6;border-radius:5px;overflow:hidden}.category .bar span{display:block;height:100%;border-radius:5px}.footnote{color:var(--muted);font-size:10px;line-height:1.9;margin-top:16px}.donut{width:172px;height:172px;position:relative}.donut svg{transform:rotate(-90deg);width:100%;height:100%}.donut-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column}.donut-center strong{font-size:38px;font-family:Georgia,serif;line-height:1.3}.donut-center span{font-size:10px;color:var(--muted)}.timeline{padding:7px 0 0;min-height:210px}.timeline-row{display:grid;grid-template-columns:48px 18px 1fr;gap:12px;margin-bottom:18px;align-items:start}.timeline-date{font-size:11px;color:var(--muted);padding-top:2px}.timeline-dot{width:9px;height:9px;border:2px solid var(--green);background:var(--white);border-radius:50%;margin-top:6px;position:relative}.timeline-row:not(:last-child) .timeline-dot:after{content:"";position:absolute;width:1px;height:39px;top:9px;left:2px;background:var(--line)}.timeline-title{font-size:13px}.timeline-note{font-size:11px;color:var(--muted);margin-top:2px}.timeline-title span{float:right;color:var(--green);font-weight:650;font-size:11px}.favorites-section{margin:42px 0 28px}.muted{font-size:12px;color:var(--muted);margin-top:4px}.text-button{border:0;background:none;color:var(--green);font-size:12px;padding:5px 0;text-decoration:underline;text-underline-offset:5px;white-space:nowrap}.rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.rank-heading{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line)}.round-icon{border-radius:50%;width:42px;height:42px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:26px}.peach{background:var(--peach);color:var(--orange)}.rank-entry{padding:16px 0;border-bottom:1px solid var(--line)}.rank-entry:last-child{border-bottom:0}.rank-entry summary{list-style:none;display:flex;align-items:center;gap:12px;cursor:pointer}.rank-entry summary::-webkit-details-marker{display:none}.rank-number{font-family:Georgia,serif;color:#8a9488;font-size:17px;min-width:14px}.food-icon{font-size:26px;width:34px}.rank-main{flex:1}.rank-main strong{font-size:14px;font-weight:600}.rank-main p{color:var(--muted);font-size:10px;line-height:1.7;margin-top:2px}.badge{display:inline-block;padding:3px 9px;border-radius:5px;font-size:10px;background:var(--mint);color:var(--green)}.badge.warm{background:var(--peach);color:#9b593a}.badge.gray{background:#efeee8;color:#71786f}.rank-entry summary:after{content:"＋";color:var(--muted);font-size:12px}.rank-entry[open] summary:after{content:"−"}.evidence{font-size:11px;color:var(--muted);padding:15px 10px 0 61px}.evidence blockquote{margin:8px 0 12px;border-left:2px solid #cdd8c8;padding-left:10px}.evidence b{font-weight:500;color:var(--green)}.rank-caption{font-size:10px;color:var(--muted);padding-top:15px}.method{border:1px solid #d4decc;background:var(--mint);border-radius:12px;padding:20px;font-size:12px;line-height:2;margin-bottom:18px}.food-panel{padding-bottom:20px;margin-bottom:35px}.filters{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 20px}.search{flex:1;min-width:180px;display:flex;align-items:center;border:1px solid var(--line);border-radius:7px;padding:0 12px;background:white}.search span{font-size:24px;color:var(--muted);margin-right:7px}.search input{border:0;background:none;width:100%;padding:8px 0;color:var(--ink);font-size:12px;min-width:0}select{border:1px solid var(--line);border-radius:7px;background:white;padding:10px;color:var(--ink);font-size:11px}.filters .text-button{padding:5px 8px}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px;min-width:890px}th{text-align:left;color:var(--muted);font-weight:500;font-size:10px;padding:13px 12px;background:#f6f7f1;border-bottom:1px solid var(--line)}td{vertical-align:top;border-bottom:1px solid var(--line);padding:20px 12px}tr:last-child td{border-bottom:0}td:nth-child(1){width:16%}td:nth-child(2){width:17%}td:nth-child(3){width:13%}td:nth-child(4){width:23%}td:nth-child(5){width:31%}.food-name{font-size:14px;font-weight:600;white-space:nowrap}.food-name span{margin-right:6px}.cell-sub{display:block;font-size:10px;color:var(--muted);margin-top:7px;line-height:1.8}.days{font-family:Georgia,"Microsoft JhengHei",sans-serif;font-size:20px}.days small{font-size:11px}.cell-text{font-size:11px;margin-top:8px;color:#627266;line-height:1.9}.attention{color:#a76342;background:#fbefe5;border-radius:5px;padding:5px 7px;font-size:10px;margin-top:9px}.empty{text-align:center;padding:40px;color:var(--muted)}footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:24px 0 35px;gap:20px}.brand-footer{font-family:Georgia,serif;font-size:30px;color:var(--green)}.brand-footer span{font-size:15px;font-style:italic;margin-left:9px}footer p{text-align:right;font-size:10px;color:var(--muted)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}[hidden]{display:none!important}@media(min-width:1500px){main{max-width:1340px}.hero{padding-top:65px}.hero h1{font-size:56px}}@media(max-width:1000px){.brand-sub{display:none}.chart-grid{grid-template-columns:1fr 1fr}.category-content{flex-direction:column;gap:10px}.category-list{width:100%;max-width:none}.stats{gap:10px}.stat{padding:18px 15px}.stat-value{font-size:37px}.chart-grid .panel{padding:22px}.category-content{min-height:360px}.timeline{min-height:360px;display:flex;flex-direction:column;justify-content:center}.micro{white-space:normal}.rank-grid .panel{padding:20px}}@media(max-width:700px){main{padding:0 19px}.topbar{padding:18px 19px;gap:12px}.brand{font-size:17px;gap:8px}.brand-icon{width:30px;height:30px;font-size:24px;border-radius:10px 10px 10px 3px}.private{display:none}nav{gap:13px}nav a{font-size:11px}.hero{padding:35px 0 27px;gap:15px}.hero h1{font-size:33px}.eyebrow{font-size:8px;letter-spacing:1.3px}.hero-note{width:130px;min-width:130px;min-height:164px;padding:15px 8px;margin:0}.hero-note>span:not(.sprout){font-size:6px;letter-spacing:.8px}.hero-note strong{font-size:13px}.hero-note p{font-size:9px}.sprout{font-size:32px}.intro{font-size:12px}.mobile-break{display:block}.stats{grid-template-columns:1fr 1fr;gap:12px}.stat-value{font-size:38px}.stat-label{font-size:11px}.chart-grid,.rank-grid{grid-template-columns:1fr;gap:16px}.category-content{flex-direction:row;min-height:210px}.category-list{max-width:220px}.timeline{min-height:210px}.panel{padding:20px}.chart-grid .panel{padding:20px}.donut{width:140px;height:140px}.donut-center strong{font-size:32px}h2{font-size:21px}.section-head{align-items:flex-start}.section-head>.text-button{font-size:10px}.muted{font-size:11px}.favorites-section{margin-top:32px}.food-panel{padding:20px 14px}.search{flex-basis:100%}.filters{gap:7px}select{padding:8px 6px;font-size:10px}footer{align-items:flex-start}.brand-footer span{font-size:12px;display:block;margin:0}footer p{font-size:9px}.rank-main p{max-width:220px}.category .bar{width:38px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root{--paper:#f6f4ed;--ink:#293e35;--muted:#768079;--line:#e1e5dc;--green:#4f7460;--mint:#e7ede3;--orange:#c97651;--peach:#f6e5da;--white:#fffefa}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI","Microsoft JhengHei",sans-serif;font-size:14px;line-height:1.7}button,input,select{font:inherit}button,a,select{touch-action:manipulation}a{color:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:4px}button:disabled{cursor:default}h1,h2,h3,p{margin:0}h2{font-size:24px;font-weight:650;letter-spacing:-.6px}h3{font-size:17px}main{max-width:1240px;padding:0 38px;margin:auto}.topbar{max-width:1440px;margin:auto;padding:25px 38px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;display:flex;align-items:center;gap:12px;font-family:Georgia,serif;font-size:21px;letter-spacing:-.5px}.brand-icon{display:grid;place-items:center;background:var(--green);color:white;border-radius:14px 14px 14px 3px;width:38px;height:38px;font-size:29px;line-height:1}.brand-sub{font-family:"Microsoft JhengHei",sans-serif;color:var(--muted);font-size:12px;letter-spacing:1px;border-left:1px solid var(--line);padding-left:14px;margin-left:4px}nav{display:flex;gap:27px}nav a{text-decoration:none;font-size:13px;color:#58685e}nav a:hover{color:var(--orange)}.private{font-size:11px;color:var(--green);letter-spacing:1px}.hero{padding:58px 0 36px;display:flex;justify-content:space-between;align-items:center;gap:30px}.eyebrow{font-size:10px;font-weight:650;letter-spacing:2px;color:var(--green);margin-bottom:12px}.hero h1{font-size:49px;line-height:1.35;font-weight:550;letter-spacing:2px;font-family:Georgia,"PMingLiU","Microsoft JhengHei",serif}.orange{color:var(--orange)}.intro{color:var(--muted);margin-top:17px;font-size:14px}.mobile-break{display:none}.hero-note{width:250px;min-height:210px;background:var(--mint);border-radius:100px 100px 12px 12px;text-align:center;display:flex;align-items:center;flex-direction:column;justify-content:center;padding:22px 18px;transform:rotate(2deg);margin-right:20px}.sprout{color:var(--green);font-size:44px;line-height:1.2;margin-bottom:10px}.hero-note>span:not(.sprout){font-size:8px;letter-spacing:1.8px;color:var(--green)}.hero-note strong{font-size:20px;font-weight:500;margin-top:10px}.hero-note p{font-size:11px;color:var(--muted);margin-top:5px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:26px}.stat{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px 23px}.stat:first-child{background:var(--green);color:white;border-color:var(--green)}.stat-label{font-size:12px;color:var(--muted)}.stat:first-child .stat-label,.stat:first-child .stat-note{color:#d7e4d7}.stat-value{font-family:Georgia,serif;font-size:45px;line-height:1.2;margin:12px 0 9px;letter-spacing:-1px;white-space:nowrap}.stat-value small{font-family:"Microsoft JhengHei",sans-serif;font-size:13px;margin:0 5px;letter-spacing:0}.stat-note{font-size:10px;color:var(--muted);line-height:1.8}.panel{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px}.chart-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:21px}.section-head .eyebrow{font-size:9px;margin-bottom:5px}.micro{font-size:10px;color:var(--muted);white-space:nowrap}.category-content{display:flex;align-items:center;justify-content:space-around;gap:20px;min-height:210px}.category-list{flex:1;max-width:240px}.category{display:flex;gap:9px;width:100%;align-items:center;background:none;border:0;border-radius:6px;padding:7px;color:var(--ink);font-size:12px;text-align:left}.category:hover{background:var(--paper)}.category:disabled{opacity:.6}.category .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}.category strong{margin-left:auto;font-size:13px}.category .bar{width:50px;height:4px;background:#eeeee6;border-radius:5px;overflow:hidden}.category .bar span{display:block;height:100%;border-radius:5px}.footnote{color:var(--muted);font-size:10px;line-height:1.9;margin-top:16px}.donut{width:172px;height:172px;position:relative}.donut svg{transform:rotate(-90deg);width:100%;height:100%}.donut-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column}.donut-center strong{font-size:38px;font-family:Georgia,serif;line-height:1.3}.donut-center span{font-size:10px;color:var(--muted)}.timeline{padding:7px 0 0;min-height:210px}.timeline-row{display:grid;grid-template-columns:48px 18px 1fr;gap:12px;margin-bottom:18px;align-items:start}.timeline-date{font-size:11px;color:var(--muted);padding-top:2px}.timeline-dot{width:9px;height:9px;border:2px solid var(--green);background:var(--white);border-radius:50%;margin-top:6px;position:relative}.timeline-row:not(:last-child) .timeline-dot:after{content:"";position:absolute;width:1px;height:39px;top:9px;left:2px;background:var(--line)}.timeline-title{font-size:13px}.timeline-note{font-size:11px;color:var(--muted);margin-top:2px}.timeline-title span{float:right;color:var(--green);font-weight:650;font-size:11px}.favorites-section{margin:42px 0 28px}.muted{font-size:12px;color:var(--muted);margin-top:4px}.text-button{border:0;background:none;color:var(--green);font-size:12px;padding:5px 0;text-decoration:underline;text-underline-offset:5px;white-space:nowrap}.rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.rank-heading{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line)}.round-icon{border-radius:50%;width:42px;height:42px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:26px}.peach{background:var(--peach);color:var(--orange)}.rank-entry{padding:16px 0;border-bottom:1px solid var(--line)}.rank-entry:last-child{border-bottom:0}.rank-entry summary{list-style:none;display:flex;align-items:center;gap:12px;cursor:pointer}.rank-entry summary::-webkit-details-marker{display:none}.rank-number{font-family:Georgia,serif;color:#8a9488;font-size:17px;min-width:14px}.food-icon{font-size:26px;width:34px}.rank-main{flex:1}.rank-main strong{font-size:14px;font-weight:600}.rank-main p{color:var(--muted);font-size:10px;line-height:1.7;margin-top:2px}.badge{display:inline-block;padding:3px 9px;border-radius:5px;font-size:10px;background:var(--mint);color:var(--green)}.badge.warm{background:var(--peach);color:#9b593a}.badge.gray{background:#efeee8;color:#71786f}.rank-entry summary:after{content:"＋";color:var(--muted);font-size:12px}.rank-entry[open] summary:after{content:"−"}.evidence{font-size:11px;color:var(--muted);padding:15px 10px 0 61px}.evidence blockquote{margin:8px 0 12px;border-left:2px solid #cdd8c8;padding-left:10px}.evidence b{font-weight:500;color:var(--green)}.rank-caption{font-size:10px;color:var(--muted);padding-top:15px}.method{border:1px solid #d4decc;background:var(--mint);border-radius:12px;padding:20px;font-size:12px;line-height:2;margin-bottom:18px}.food-panel{padding-bottom:20px;margin-bottom:35px}.filters{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 20px}.search{flex:1;min-width:180px;display:flex;align-items:center;border:1px solid var(--line);border-radius:7px;padding:0 12px;background:white}.search span{font-size:24px;color:var(--muted);margin-right:7px}.search input{border:0;background:none;width:100%;padding:8px 0;color:var(--ink);font-size:12px;min-width:0}select{border:1px solid var(--line);border-radius:7px;background:white;padding:10px;color:var(--ink);font-size:11px}.filters .text-button{padding:5px 8px}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px;min-width:890px}th{text-align:left;color:var(--muted);font-weight:500;font-size:10px;padding:13px 12px;background:#f6f7f1;border-bottom:1px solid var(--line)}td{vertical-align:top;border-bottom:1px solid var(--line);padding:20px 12px}tr:last-child td{border-bottom:0}td:nth-child(1){width:16%}td:nth-child(2){width:17%}td:nth-child(3){width:13%}td:nth-child(4){width:23%}td:nth-child(5){width:31%}.food-name{font-size:14px;font-weight:600;white-space:nowrap}.food-name span{margin-right:6px}.cell-sub{display:block;font-size:10px;color:var(--muted);margin-top:7px;line-height:1.8}.days{font-family:Georgia,"Microsoft JhengHei",sans-serif;font-size:20px}.days small{font-size:11px}.cell-text{font-size:11px;margin-top:8px;color:#627266;line-height:1.9}.attention{color:#a76342;background:#fbefe5;border-radius:5px;padding:5px 7px;font-size:10px;margin-top:9px}.empty{text-align:center;padding:40px;color:var(--muted)}footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:24px 0 35px;gap:20px}.brand-footer{font-family:Georgia,serif;font-size:30px;color:var(--green)}.brand-footer span{font-size:15px;font-style:italic;margin-left:9px}footer p{text-align:right;font-size:10px;color:var(--muted)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}[hidden]{display:none!important}@media(min-width:1500px){main{max-width:1340px}.hero{padding-top:65px}.hero h1{font-size:56px}}@media(max-width:1000px){.brand-sub{display:none}.chart-grid{grid-template-columns:1fr 1fr}.category-content{flex-direction:column;gap:10px}.category-list{width:100%;max-width:none}.stats{gap:10px}.stat{padding:18px 15px}.stat-value{font-size:37px}.chart-grid .panel{padding:22px}.category-content{min-height:360px}.timeline{min-height:360px;display:flex;flex-direction:column;justify-content:center}.micro{white-space:normal}.rank-grid .panel{padding:20px}}@media(max-width:700px){main{padding:0 19px}.topbar{padding:18px 19px;gap:12px}.brand{font-size:17px;gap:8px}.brand-icon{width:30px;height:30px;font-size:24px;border-radius:10px 10px 10px 3px}.private{display:none}nav{gap:13px}nav a{font-size:11px}.hero{padding:35px 0 27px;gap:15px}.hero h1{font-size:33px}.eyebrow{font-size:8px;letter-spacing:1.3px}.hero-note{width:130px;min-width:130px;min-height:164px;padding:15px 8px;margin:0}.hero-note>span:not(.sprout){font-size:6px;letter-spacing:.8px}.hero-note strong{font-size:13px}.hero-note p{font-size:9px}.sprout{font-size:32px}.intro{font-size:12px}.mobile-break{display:block}.stats{grid-template-columns:1fr 1fr;gap:12px}.stat-value{font-size:38px}.stat-label{font-size:11px}.chart-grid,.rank-grid{grid-template-columns:1fr;gap:16px}.category-content{flex-direction:row;min-height:210px}.category-list{max-width:220px}.timeline{min-height:210px}.panel{padding:20px}.chart-grid .panel{padding:20px}.donut{width:140px;height:140px}.donut-center strong{font-size:32px}h2{font-size:21px}.section-head{align-items:flex-start}.section-head>.text-button{font-size:10px}.muted{font-size:11px}.favorites-section{margin-top:32px}.food-panel{padding:20px 14px}.search{flex-basis:100%}.filters{gap:7px}select{padding:8px 6px;font-size:10px}footer{align-items:flex-start}.brand-footer span{font-size:12px;display:block;margin:0}footer p{font-size:9px}.rank-main p{max-width:220px}.category .bar{width:38px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .allergy-panel{margin-bottom:35px}.allergy-summary{display:flex;gap:12px;flex-wrap:wrap}.allergy-summary>span{background:var(--paper);padding:9px 15px;border-radius:8px;font-size:12px;color:var(--muted)}.allergy-summary strong{font-family:Georgia,serif;font-size:22px;color:var(--ink);margin-right:6px}.allergy-empty{text-align:center;padding:30px 15px 22px}.allergy-empty .round-icon{margin:0 auto 12px;font-size:19px}.allergy-empty p{font-size:12px;color:var(--muted);margin-top:7px}.allergy-list-title{margin-top:24px;margin-bottom:12px}.allergy-panel table{min-width:640px}.allergy-panel td:first-child{width:24%}.allergy-panel td:nth-child(2){width:43%}.allergy-panel td:nth-child(3){width:33%}@media(max-width:700px){nav{gap:9px}.topbar{flex-wrap:wrap}nav{margin-left:auto}}
 </style>
 
 </head>
 <body>
   <header class="topbar"><a class="brand" href="#"><span class="brand-icon">n.</span>Nolan’s little bites<span class="brand-sub">副食品探索日誌</span></a><nav aria-label="主要導覽"><a href="#overview">總覽</a><a href="#favorites">喜好</a><a href="#allergies">過敏紀錄</a><a href="#foods">食材紀錄</a></nav><span class="private">● 家庭紀錄</span></header>
-  <main>
-    <section class="hero" id="overview"><div><p class="eyebrow">SMALL SPOONS, NEW DISCOVERIES</p><h1>一口一口，<br>認識這個世界<span class="orange">。</span></h1><p class="intro">記下 Nolan 的每一次嘗試，<br class="mobile-break">讓小小的進步，都有跡可循。</p></div><div class="hero-note"><span class="sprout" aria-hidden="true">✳</span><span>OUR LITTLE FOOD EXPLORER</span><strong id="age">Nolan</strong><p id="updated"></p></div></section>
-    <section class="stats" aria-label="整體進度" id="stats"></section>
+  <main><div class="view-switch" aria-label="Dashboard 切換"><a class="selected" href="index.html" aria-current="page">實吃紀錄</a><a href="planning.html">Planning · 成長計畫 →</a></div>
+    <section class="hero" id="overview"><div><p class="eyebrow">SMALL SPOONS, NEW DISCOVERIES</p><h1>一口一口，<br>認識這個世界<span class="orange">。</span></h1><p class="intro">記下 Nolan 的每一次嘗試，<br class="mobile-break">讓小小的進步，都有跡可循。</p></div><div class="hero-note"><span class="sprout" aria-hidden="true">✳</span><span>OUR LITTLE FOOD EXPLORER</span><strong id="age">Nolan · 5 個月 11 天</strong><p id="updated">紀錄更新至 2026 / 11 / 02</p></div></section>
+    <section class="stats" aria-label="整體進度" id="stats"><article class="stat"><p class="stat-label">副食品探索</p><p class="stat-value"><small>第</small>13<small>天</small></p><p class="stat-note">自 2026-10-21 起</p></article><article class="stat"><p class="stat-label">已嘗試的不同食材</p><p class="stat-value">5<small>種</small></p><p class="stat-note">同一食材不同做法只計一次</p></article></section>
     <section class="chart-grid">
-      <article class="panel category-panel"><div class="section-head"><div><p class="eyebrow">A LITTLE BIT OF EVERYTHING</p><h2>探索的食物版圖</h2></div><span class="micro">依食材種類計數</span></div><div class="category-content"><div id="donut"></div><div id="categories" class="category-list"></div></div><p class="footnote">每種食材依主要用途歸入一類：地瓜歸碳水、酪梨歸脂肪。這是食材種類分布，不是營養攝取比例。點選分類可篩選下方紀錄。</p></article>
-      <article class="panel"><div class="section-head"><div><p class="eyebrow">ONE NEW TASTE AT A TIME</p><h2>小小探索足跡</h2></div></div><div id="timeline" class="timeline"></div><p class="footnote">只顯示有回報的進展；沒有日誌的日期不視為沒吃，也不補算。日誌前已吃過的 3 種食物包含在總數內。</p></article>
+      <article class="panel category-panel"><div class="section-head"><div><p class="eyebrow">A LITTLE BIT OF EVERYTHING</p><h2>探索的食物版圖</h2></div><span class="micro">依食材種類計數</span></div><div class="category-content"><div id="donut"><div class="donut" role="img" aria-label="蛋白質 0 種，蔬菜 1 種，碳水 3 種，脂肪 1 種，水果 0 種，待分類 0 種"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="none" stroke="#7a9970" stroke-width="10" pathLength="100" stroke-dasharray="20 80" stroke-dashoffset="0"/><circle cx="50" cy="50" r="40" fill="none" stroke="#d8b98a" stroke-width="10" pathLength="100" stroke-dasharray="60 40" stroke-dashoffset="-20"/><circle cx="50" cy="50" r="40" fill="none" stroke="#bd7857" stroke-width="10" pathLength="100" stroke-dasharray="20 80" stroke-dashoffset="-80"/></svg><div class="donut-center"><strong>5</strong><span>種食材的探索</span></div></div></div><div id="categories" class="category-list"><button class="category" data-category="蛋白質" disabled><span class="dot" style="background:#b5beb6"></span><span>蛋白質</span><strong>0</strong><span class="bar"><span style="width:0%;background:#b5beb6"></span></span></button><button class="category" data-category="蔬菜" ><span class="dot" style="background:#7a9970"></span><span>蔬菜</span><strong>1</strong><span class="bar"><span style="width:20%;background:#7a9970"></span></span></button><button class="category" data-category="碳水" ><span class="dot" style="background:#d8b98a"></span><span>碳水</span><strong>3</strong><span class="bar"><span style="width:60%;background:#d8b98a"></span></span></button><button class="category" data-category="脂肪" ><span class="dot" style="background:#bd7857"></span><span>脂肪</span><strong>1</strong><span class="bar"><span style="width:20%;background:#bd7857"></span></span></button></div></div><p class="footnote">每種食材依主要用途歸入一類：地瓜歸碳水、酪梨歸脂肪。這是食材種類分布，不是營養攝取比例。點選分類可篩選下方紀錄。</p></article>
+      <article class="panel"><div class="section-head"><div><p class="eyebrow">ONE NEW TASTE AT A TIME</p><h2>小小探索足跡</h2></div></div><div id="timeline" class="timeline"><div class="timeline-row"><span class="timeline-date">10/21</span><span class="timeline-dot"></span><div><p class="timeline-title">🍚 十倍粥（米）<span>1 種</span></p><p class="timeline-note">新增實吃回報</p></div></div><div class="timeline-row"><span class="timeline-date">10/24</span><span class="timeline-dot"></span><div><p class="timeline-title">🎃 南瓜<span>2 種</span></p><p class="timeline-note">新增實吃回報</p></div></div><div class="timeline-row"><span class="timeline-date">10/27</span><span class="timeline-dot"></span><div><p class="timeline-title">🍠 地瓜（番薯）<span>3 種</span></p><p class="timeline-note">新增實吃回報</p></div></div><div class="timeline-row"><span class="timeline-date">10/30</span><span class="timeline-dot"></span><div><p class="timeline-title">🥑 酪梨<span>4 種</span></p><p class="timeline-note">新增實吃回報</p></div></div><div class="timeline-row"><span class="timeline-date">11/02</span><span class="timeline-dot"></span><div><p class="timeline-title">🥣 寶寶燕麥<span>5 種</span></p><p class="timeline-note">新增實吃回報</p></div></div></div><p class="footnote">只顯示有回報的進展；沒有日誌的日期不視為沒吃，也不補算。歷史補記依實際日期納入，番薯與地瓜視為同一種。</p></article>
     </section>
-    <section id="favorites" class="favorites-section"><div class="section-head"><div><p class="eyebrow">WHAT THOSE LITTLE BITES TELL US</p><h2>Nolan 的口味筆記</h2><p class="muted">從每天的回饋讀懂喜好，隨著新的嘗試慢慢改變。</p></div><button class="text-button" id="method-toggle" aria-expanded="false" aria-controls="method">排序怎麼來的？ ↗</button></div><div class="method" id="method" hidden></div><div class="rank-grid"><article class="panel"><div class="rank-heading"><span class="round-icon">♡</span><div><h3>Top 10 · 比較喜歡</h3><p class="muted">有明確正向回饋的食材</p></div></div><div id="top-list"></div></article><article class="panel"><div class="rank-heading"><span class="round-icon peach">↻</span><div><h3>Bottom 10 · 還在熟悉</h3><p class="muted">近期接受度較低的食材</p></div></div><div id="bottom-list"></div></article></div><p class="footnote">只列有偏好證據的食材，不足 10 種就顯示實際數量。未提供偏好不當成不喜歡；想吐等進食反應另外追蹤。每項可展開查看原始回饋。</p></section>
-    <section class="panel food-panel" id="foods"><div class="section-head"><div><p class="eyebrow">EVERY FOOD HAS A LITTLE STORY</p><h2>每一種食材的進度</h2></div><span class="micro" id="table-count"></span></div><div class="filters"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜尋食材或回饋…" aria-label="搜尋食材或回饋"></label><label><span class="sr-only">食材分類</span><select id="category-filter"><option value="">全部分類</option></select></label><label><span class="sr-only">質地</span><select id="texture-filter"><option value="">全部質地</option><option>泥狀</option><option>粥狀</option><option>糊狀</option><option>顆粒狀</option><option>軟固體</option><option>未記錄</option></select></label><label><span class="sr-only">排序</span><select id="sort"><option value="default">依探索順序</option><option value="days">嘗試天數最多</option><option value="liked">偏好由高到低</option><option value="least">偏好由低到高</option></select></label><button class="text-button" id="reset">重設</button></div><div class="table-scroll"><table><thead><tr><th scope="col">食材 / 分類</th><th scope="col">試吃天數</th><th scope="col">質地</th><th scope="col">接受度 / 喜好</th><th scope="col">反應與耐受紀錄</th></tr></thead><tbody id="food-rows"></tbody></table></div><div id="empty" class="empty" hidden>沒有符合條件的食材。試試其他分類，或重設篩選。</div><p class="footnote">「至少 3 天」包含家長補充的歷史進食，不與有日期的日誌重複相加。家庭耐受標註保留原始觀察；地瓜最新想吐的反應仍需追蹤。質地按實際回報，不按食物名稱推測。</p></section>
+    <section id="favorites" class="favorites-section"><div class="section-head"><div><p class="eyebrow">WHAT THOSE LITTLE BITES TELL US</p><h2>Nolan 的口味筆記</h2><p class="muted">從每天的回饋讀懂喜好，隨著新的嘗試慢慢改變。</p></div><button class="text-button" id="method-toggle" aria-expanded="false" aria-controls="method">排序怎麼來的？ ↗</button></div><div class="method" id="method" hidden>以中文語意線索歸納每日食量與興趣，分數 -5～+5；近 30 天回饋權重較高。同餐同一訊號只計一次，再取加權平均；無偏好訊號不計分。反應欄不參與喜好分數。 明確喜歡 +3、吃得好 +2、接受尚可 +1、多口 +2、幾乎吃完 +2、主動張嘴 +1、接受度較低 −2，同餐合計限制在 −5～+5。分數只是排序線索，不是精準量表；每項顯示有偏好訊號的回饋天數，少量回饋的排序仍可能變動。分類與原文可在詳細表核對。</div><div class="rank-grid"><article class="panel"><div class="rank-heading"><span class="round-icon">♡</span><div><h3>Top 10 · 比較喜歡</h3><p class="muted">有明確正向回饋的食材</p></div></div><div id="top-list"><details class="rank-entry"><summary><span class="rank-number">01</span><span class="food-icon" aria-hidden="true">🥑</span><div class="rank-main"><strong>酪梨</strong><p>1 天偏好回饋 · 吃得好、大部分吃完、主動張嘴</p></div><span class="badge ">很喜歡</span></summary><div class="evidence"><b>語意線索分數 5.0 / 5 · 1 天回饋</b><blockquote><strong>10/31</strong>「酪梨泥幾乎吃完；提供量與實吃重量未提供；吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供」<br>吃得好 +2 · 大部分吃完 +2 · 主動張嘴 +1</blockquote></div></details><details class="rank-entry"><summary><span class="rank-number">01</span><span class="food-icon" aria-hidden="true">🥣</span><div class="rank-main"><strong>寶寶燕麥</strong><p>1 天偏好回饋 · 明確表達喜歡、吃了多口</p></div><span class="badge ">很喜歡</span></summary><div class="evidence"><b>語意線索分數 5.0 / 5 · 1 天回饋</b><blockquote><strong>11/02</strong>「吃了好多口，回報時仍在吃；確切份量未提供；很喜歡吃；飽足訊號未提供」<br>明確表達喜歡 +3 · 吃了多口 +2</blockquote></div></details><details class="rank-entry"><summary><span class="rank-number">03</span><span class="food-icon" aria-hidden="true">🎃</span><div class="rank-main"><strong>南瓜</strong><p>2 天偏好回饋 · 吃得好、主動張嘴</p></div><span class="badge ">吃得不錯</span></summary><div class="evidence"><b>語意線索分數 2.5 / 5 · 2 天回饋</b><blockquote><strong>10/26</strong>「已吃；確切份量未提供；家長對 10/24–10/26 的整體回顧：南瓜也不錯；非逐日獨立回報」<br>吃得好 +2</blockquote><blockquote><strong>10/31</strong>「已吃，份量未提供；吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供」<br>吃得好 +2 · 主動張嘴 +1</blockquote></div></details><details class="rank-entry"><summary><span class="rank-number">04</span><span class="food-icon" aria-hidden="true">🍚</span><div class="rank-main"><strong>十倍粥（米）</strong><p>1 天偏好回饋 · 接受尚可</p></div><span class="badge ">接受尚可</span></summary><div class="evidence"><b>語意線索分數 1.0 / 5 · 1 天回饋</b><blockquote><strong>10/23</strong>「已吃；確切份量未提供；家長對 10/21–10/23 的整體回顧：十倍粥吃得還行；非逐日獨立回報」<br>接受尚可 +1</blockquote></div></details><p class="rank-caption">目前 4 種有正向回饋，不補滿名額。</p></div></article><article class="panel"><div class="rank-heading"><span class="round-icon peach">↻</span><div><h3>Bottom 10 · 還在熟悉</h3><p class="muted">近期接受度較低的食材</p></div></div><div id="bottom-list"><details class="rank-entry"><summary><span class="rank-number">01</span><span class="food-icon" aria-hidden="true">🍠</span><div class="rank-main"><strong>地瓜（番薯）</strong><p>1 天偏好回饋 · 接受度較低</p></div><span class="badge warm">接受度較低</span></summary><div class="evidence"><b>語意線索分數 -2.0 / 5 · 1 天回饋</b><blockquote><strong>11/02</strong>「已嘗試，份量未提供；吃得不是很好」<br>接受度較低 -2</blockquote><p>另有進食不適紀錄，請查看下方詳細表。</p></div></details><p class="rank-caption">目前 1 種有接受度較低的回饋，不補滿名額。</p></div></article></div><p class="footnote">只列有偏好證據的食材，不足 10 種就顯示實際數量。未提供偏好不當成不喜歡；想吐等進食反應另外追蹤。每項可展開查看原始回饋。</p></section>
+    <section class="panel food-panel" id="foods"><div class="section-head"><div><p class="eyebrow">EVERY FOOD HAS A LITTLE STORY</p><h2>每一種食材的進度</h2></div><span class="micro" id="table-count">5 / 5 種食材</span></div><div class="filters"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜尋食材或回饋…" aria-label="搜尋食材或回饋"></label><label><span class="sr-only">食材分類</span><select id="category-filter"><option value="">全部分類</option><option value="蛋白質">蛋白質（0）</option><option value="蔬菜">蔬菜（1）</option><option value="碳水">碳水（3）</option><option value="脂肪">脂肪（1）</option><option value="水果">水果（0）</option><option value="待分類">待分類（0）</option></select></label><label><span class="sr-only">質地</span><select id="texture-filter"><option value="">全部質地</option><option>泥狀</option><option>粥狀</option><option>糊狀</option><option>顆粒狀</option><option>軟固體</option><option>未記錄</option></select></label><label><span class="sr-only">排序</span><select id="sort"><option value="default">依探索順序</option><option value="days">嘗試天數最多</option><option value="liked">偏好由高到低</option><option value="least">偏好由低到高</option></select></label><button class="text-button" id="reset">重設</button></div><div class="table-scroll"><table><thead><tr><th scope="col">食材 / 分類</th><th scope="col">試吃天數</th><th scope="col">質地</th><th scope="col">接受度 / 喜好</th><th scope="col">反應與耐受紀錄</th></tr></thead><tbody id="food-rows"><tr><td><span class="food-name"><span aria-hidden="true">🍚</span>十倍粥（米）</span><span class="cell-sub">碳水</span></td><td><span class="days">4<small> 天</small></span><span class="cell-sub">已確認最長連續 3 天<br>有日期日誌 4 天<br>10/21、10/22、10/23、10/30</span></td><td><span class="badge ">粥狀</span><span class="cell-sub">十倍粥</span></td><td><span class="badge ">接受尚可</span><p class="cell-text">未提供</p><span class="cell-sub">1 天偏好回饋 · 1.0 / 5</span></td><td><span class="badge ">已確認耐受（家庭觀察）</span><p class="cell-text">未提供</p><span class="cell-sub">10/21–10/23 連續三天吃十倍粥，整段回顧吃得還行；10/30 再次吃，共有 4 天實吃紀錄。</span></td></tr><tr><td><span class="food-name"><span aria-hidden="true">🎃</span>南瓜</span><span class="cell-sub">蔬菜</span></td><td><span class="days">4<small> 天</small></span><span class="cell-sub">已確認最長連續 3 天<br>有日期日誌 4 天<br>10/24、10/25、10/26、10/31</span></td><td><span class="badge gray">未記錄</span> <span class="badge ">泥狀</span><span class="cell-sub">打成非常細緻的南瓜泥</span></td><td><span class="badge ">吃得不錯</span><p class="cell-text">吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供</p><span class="cell-sub">2 天偏好回饋 · 2.5 / 5</span></td><td><span class="badge ">已確認耐受（家庭觀察）</span><p class="cell-text">未提供</p><span class="cell-sub">10/24–10/26 連續三天吃南瓜，整段回顧不錯；10/31 細泥吃得挺好，共有 4 天實吃紀錄。</span></td></tr><tr><td><span class="food-name"><span aria-hidden="true">🍠</span>地瓜（番薯）</span><span class="cell-sub">碳水</span></td><td><span class="days">4<small> 天</small></span><span class="cell-sub">已確認最長連續 3 天<br>有日期日誌 4 天<br>10/27、10/28、10/29、11/02</span></td><td><span class="badge gray">未記錄</span><span class="cell-sub">未提供；家長猜測纖維較多影響進食，尚未確認</span></td><td><span class="badge warm">接受度較低</span><p class="cell-text">吃得不是很好</p><span class="cell-sub">1 天偏好回饋 · -2.0 / 5</span></td><td><span class="badge ">已確認耐受（家庭觀察）</span><p class="cell-text">進食時一直想吐；是否實際嘔吐、是否有嗆咳及其他症狀未提供</p><p class="attention">需追蹤：進食時一直想吐，原因未確認</p><span class="cell-sub">10/27–10/29 有點難咬、難吞嚥（整段回顧，未細分發生日期）；11/02 複習一直想吐，共有 4 天實吃紀錄。質地未提供，原因未確認；不標為過敏。</span></td></tr><tr><td><span class="food-name"><span aria-hidden="true">🥑</span>酪梨</span><span class="cell-sub">脂肪</span></td><td><span class="days">2<small> 天</small></span><span class="cell-sub">已確認最長連續 2 天<br>有日期日誌 2 天<br>10/30、10/31</span></td><td><span class="badge ">泥狀</span><span class="cell-sub">打成非常細緻的酪梨泥</span></td><td><span class="badge ">很喜歡</span><p class="cell-text">吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供</p><span class="cell-sub">1 天偏好回饋 · 5.0 / 5</span></td><td><span class="badge ">已確認耐受（家庭觀察）</span><p class="cell-text">未提供</p><span class="cell-sub">家長確認截至目前耐受。最早實吃回報為 10/30，是否更早吃過待補；實吃紀錄仍為 2 天。</span></td></tr><tr><td><span class="food-name"><span aria-hidden="true">🥣</span>寶寶燕麥</span><span class="cell-sub">碳水</span></td><td><span class="days">1<small> 天</small></span><span class="cell-sub">已確認最長連續 1 天<br>有日期日誌 1 天<br>11/02</span></td><td><span class="badge gray">未記錄</span><span class="cell-sub">調製方式與稠度未提供</span></td><td><span class="badge ">很喜歡</span><p class="cell-text">很喜歡吃；飽足訊號未提供</p><span class="cell-sub">1 天偏好回饋 · 5.0 / 5</span></td><td><span class="badge ">已確認耐受（家庭觀察）</span><p class="cell-text">家長觀察食物吃進去就不見了、沒有吐出來；其他反應與後續觀察未提供</p><span class="cell-sub">家長確認截至目前耐受。11/02 首次嘗試，實吃紀錄仍為 1 天；品牌、完整配料及是否含鐵待補。</span></td></tr></tbody></table></div><div id="empty" class="empty" hidden>沒有符合條件的食材。試試其他分類，或重設篩選。</div><p class="footnote">試吃天數按實吃日期去重；已補齊日期的歷史紀錄直接納入，不重複相加。家庭耐受標註保留原始觀察；地瓜最新想吐的反應仍需追蹤。質地按實際回報，不按食物名稱推測。</p></section>
     <section class="panel allergy-panel" id="allergies" aria-labelledby="allergy-title">
-      <div class="section-head"><div><p class="eyebrow">ALLERGY JOURNAL</p><h2 id="allergy-title">過敏食物與症狀</h2><p class="muted">截至目前的過敏紀錄，與一般進食反應分開追蹤。</p></div><span class="micro" id="allergy-reviewed"></span></div>
-      <div class="allergy-summary" id="allergy-summary"></div>
+      <div class="section-head"><div><p class="eyebrow">ALLERGY JOURNAL</p><h2 id="allergy-title">過敏食物與症狀</h2><p class="muted">截至目前的過敏紀錄，與一般進食反應分開追蹤。</p></div><span class="micro" id="allergy-reviewed">最後回報 2026-11-02</span></div>
+      <div class="allergy-summary" id="allergy-summary"><span><strong>0</strong> 種已確認過敏食物</span><span><strong>0</strong> 種疑似反應待確認</span></div>
       <div class="allergy-empty" id="allergy-empty"><span class="round-icon" aria-hidden="true">✓</span><h3>目前尚未發現過敏原</h3><p>尚無過敏食物或過敏症狀回報，名單暫時留白。</p></div>
       <div id="allergy-confirmed" hidden><h3 class="allergy-list-title">Top 10 · 已確認的過敏食物</h3><div class="table-scroll"><table><thead><tr><th scope="col">食物</th><th scope="col">過敏症狀與發生日期</th><th scope="col">確認依據／補充紀錄</th></tr></thead><tbody id="allergy-confirmed-rows"></tbody></table></div></div>
       <div id="allergy-suspected" hidden><h3 class="allergy-list-title">疑似反應 · 尚未確認過敏</h3><div class="table-scroll"><table><thead><tr><th scope="col">食物</th><th scope="col">回報症狀與發生日期</th><th scope="col">確認狀態／補充紀錄</th></tr></thead><tbody id="allergy-suspected-rows"></tbody></table></div></div>
       <p class="footnote">最多列出 10 種，依最近回報日期排序，不代表嚴重程度。只依明確回報登記；想吐、拒吃或不喜歡不會自動標成過敏。沒有過敏紀錄不代表已排除所有食物過敏。</p>
     </section>
-    <footer><span class="brand-footer">n. <span>Made of little moments.</span></span><p>資料來自家庭日誌 · <span id="footer-date"></span><br>每次新增回饋，重新整理食材、進度與喜好。</p></footer>
+    <footer><span class="brand-footer">n. <span>Made of little moments.</span></span><p>資料來自家庭日誌 · <span id="footer-date">2026-11-02</span><br>每次新增回饋，重新整理食材、進度與喜好。</p></footer>
   </main>
 <script>window.FEEDING_DATA = {
   "name": "Nolan",
   "birthDate": "2026-05-22",
-  "actualStartDate": null,
+  "actualStartDate": "2026-10-21",
   "baselineReportedAt": "2026-10-29",
-  "firstLogDate": "2026-10-30",
+  "firstLogDate": "2026-10-21",
   "asOf": "2026-11-02",
   "logDates": [
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-24",
+    "2026-10-25",
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
     "2026-10-30",
     "2026-10-31",
     "2026-11-02"
@@ -61,13 +70,60 @@
         "米（",
         "十倍粥"
       ],
-      "baseline": true,
+      "baseline": false,
+      "firstTriedDate": "2026-10-21",
       "confirmedDays": 3,
+      "confirmedDates": [
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23"
+      ],
       "confirmedConsecutiveDays": 3,
       "confirmationDate": "2026-11-02",
       "tolerance": "已確認耐受（家庭觀察）",
-      "note": "家長補充已吃滿三天，具體日期待補。",
+      "note": "10/21–10/23 連續三天吃十倍粥，整段回顧吃得還行；10/30 再次吃，共有 4 天實吃紀錄。",
       "entries": [
+        {
+          "foodId": "rice",
+          "date": "2026-10-21",
+          "ingredients": "米（十倍粥；其他配料未提供）",
+          "texture": "十倍粥（粥狀）",
+          "textureGroup": "粥狀",
+          "amount": "已吃；確切份量未提供",
+          "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-23",
+          "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-23",
+          "score": null,
+          "evidence": []
+        },
+        {
+          "foodId": "rice",
+          "date": "2026-10-22",
+          "ingredients": "米（十倍粥；其他配料未提供）",
+          "texture": "十倍粥（粥狀）",
+          "textureGroup": "粥狀",
+          "amount": "已吃；確切份量未提供",
+          "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-23",
+          "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-23",
+          "score": null,
+          "evidence": []
+        },
+        {
+          "foodId": "rice",
+          "date": "2026-10-23",
+          "ingredients": "米（十倍粥；其他配料未提供）",
+          "texture": "十倍粥（粥狀）",
+          "textureGroup": "粥狀",
+          "amount": "已吃；確切份量未提供",
+          "interest": "家長對 10/21–10/23 的整體回顧：十倍粥吃得還行；非逐日獨立回報",
+          "reaction": "未提供",
+          "score": 1,
+          "evidence": [
+            {
+              "weight": 1,
+              "label": "接受尚可"
+            }
+          ]
+        },
         {
           "foodId": "rice",
           "date": "2026-10-30",
@@ -82,14 +138,29 @@
         }
       ],
       "dates": [
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
         "2026-10-30"
       ],
-      "observedDays": 1,
-      "daysAtLeast": 3,
+      "observedDays": 4,
+      "daysAtLeast": 4,
+      "hasUndatedHistory": false,
       "consecutiveDays": 3,
-      "score": null,
-      "feedbackDays": 0,
-      "evidence": [],
+      "score": 1,
+      "feedbackDays": 1,
+      "evidence": [
+        {
+          "date": "2026-10-23",
+          "quote": "已吃；確切份量未提供；家長對 10/21–10/23 的整體回顧：十倍粥吃得還行；非逐日獨立回報",
+          "cues": [
+            {
+              "weight": 1,
+              "label": "接受尚可"
+            }
+          ]
+        }
+      ],
       "textures": [
         "粥狀"
       ],
@@ -115,13 +186,60 @@
       "aliases": [
         "南瓜"
       ],
-      "baseline": true,
+      "baseline": false,
+      "firstTriedDate": "2026-10-24",
       "confirmedDays": 3,
+      "confirmedDates": [
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26"
+      ],
       "confirmedConsecutiveDays": 3,
       "confirmationDate": "2026-11-02",
       "tolerance": "已確認耐受（家庭觀察）",
-      "note": "家長補充已吃滿三天，具體日期待補。",
+      "note": "10/24–10/26 連續三天吃南瓜，整段回顧不錯；10/31 細泥吃得挺好，共有 4 天實吃紀錄。",
       "entries": [
+        {
+          "foodId": "pumpkin",
+          "date": "2026-10-24",
+          "ingredients": "南瓜（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃；確切份量未提供",
+          "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-26",
+          "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-26",
+          "score": null,
+          "evidence": []
+        },
+        {
+          "foodId": "pumpkin",
+          "date": "2026-10-25",
+          "ingredients": "南瓜（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃；確切份量未提供",
+          "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-26",
+          "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-26",
+          "score": null,
+          "evidence": []
+        },
+        {
+          "foodId": "pumpkin",
+          "date": "2026-10-26",
+          "ingredients": "南瓜（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃；確切份量未提供",
+          "interest": "家長對 10/24–10/26 的整體回顧：南瓜也不錯；非逐日獨立回報",
+          "reaction": "未提供",
+          "score": 2,
+          "evidence": [
+            {
+              "weight": 2,
+              "label": "吃得好"
+            }
+          ]
+        },
         {
           "foodId": "pumpkin",
           "date": "2026-10-31",
@@ -145,14 +263,28 @@
         }
       ],
       "dates": [
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
         "2026-10-31"
       ],
-      "observedDays": 1,
-      "daysAtLeast": 3,
+      "observedDays": 4,
+      "daysAtLeast": 4,
+      "hasUndatedHistory": false,
       "consecutiveDays": 3,
-      "score": 3,
-      "feedbackDays": 1,
+      "score": 2.5362318840579707,
+      "feedbackDays": 2,
       "evidence": [
+        {
+          "date": "2026-10-26",
+          "quote": "已吃；確切份量未提供；家長對 10/24–10/26 的整體回顧：南瓜也不錯；非逐日獨立回報",
+          "cues": [
+            {
+              "weight": 2,
+              "label": "吃得好"
+            }
+          ]
+        },
         {
           "date": "2026-10-31",
           "quote": "已吃，份量未提供；吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供",
@@ -169,6 +301,7 @@
         }
       ],
       "textures": [
+        "未記錄",
         "泥狀"
       ],
       "latest": {
@@ -196,19 +329,62 @@
     },
     {
       "id": "sweet-potato",
-      "name": "地瓜",
+      "name": "地瓜（番薯）",
       "icon": "🍠",
       "category": "碳水",
       "aliases": [
-        "地瓜"
+        "地瓜",
+        "番薯"
       ],
-      "baseline": true,
+      "baseline": false,
+      "firstTriedDate": "2026-10-27",
       "confirmedDays": 3,
+      "confirmedDates": [
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29"
+      ],
       "confirmedConsecutiveDays": 3,
       "confirmationDate": "2026-11-02",
       "tolerance": "已確認耐受（家庭觀察）",
-      "note": "家長補充已吃滿三天；11/02 一直想吐，仍需追蹤。纖維較多是家長猜測，原因未確認。",
+      "note": "10/27–10/29 有點難咬、難吞嚥（整段回顧，未細分發生日期）；11/02 複習一直想吐，共有 4 天實吃紀錄。質地未提供，原因未確認；不標為過敏。",
       "entries": [
+        {
+          "foodId": "sweet-potato",
+          "date": "2026-10-27",
+          "ingredients": "地瓜（番薯；其他配料未提供）",
+          "texture": "未提供；不能由難咬或難吞嚥推定為固體",
+          "textureGroup": "未記錄",
+          "amount": "已吃；確切份量未提供",
+          "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-29",
+          "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-29",
+          "score": null,
+          "evidence": []
+        },
+        {
+          "foodId": "sweet-potato",
+          "date": "2026-10-28",
+          "ingredients": "地瓜（番薯；其他配料未提供）",
+          "texture": "未提供；不能由難咬或難吞嚥推定為固體",
+          "textureGroup": "未記錄",
+          "amount": "已吃；確切份量未提供",
+          "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-29",
+          "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-29",
+          "score": null,
+          "evidence": []
+        },
+        {
+          "foodId": "sweet-potato",
+          "date": "2026-10-29",
+          "ingredients": "地瓜（番薯；其他配料未提供）",
+          "texture": "未提供；不能由難咬或難吞嚥推定為固體",
+          "textureGroup": "未記錄",
+          "amount": "已吃；確切份量未提供",
+          "interest": "家長對 10/27–10/29 的整體回顧：未提供明確偏好；非逐日獨立回報",
+          "reaction": "家長對 10/27–10/29 的整體回顧：番薯有點難咬、難吞嚥；實際出現日期未細分，未回報為過敏",
+          "score": null,
+          "evidence": []
+        },
         {
           "foodId": "sweet-potato",
           "date": "2026-11-02",
@@ -228,10 +404,14 @@
         }
       ],
       "dates": [
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
         "2026-11-02"
       ],
-      "observedDays": 1,
-      "daysAtLeast": 3,
+      "observedDays": 4,
+      "daysAtLeast": 4,
+      "hasUndatedHistory": false,
       "consecutiveDays": 3,
       "score": -2,
       "feedbackDays": 1,
@@ -278,8 +458,9 @@
         "酪梨"
       ],
       "baseline": false,
-      "tolerance": "觀察中",
-      "note": "最早實吃回報為 10/30，是否更早吃過待補。",
+      "confirmationDate": "2026-11-02",
+      "tolerance": "已確認耐受（家庭觀察）",
+      "note": "家長確認截至目前耐受。最早實吃回報為 10/30，是否更早吃過待補；實吃紀錄仍為 2 天。",
       "entries": [
         {
           "foodId": "avocado",
@@ -325,6 +506,7 @@
       ],
       "observedDays": 2,
       "daysAtLeast": 2,
+      "hasUndatedHistory": false,
       "consecutiveDays": 2,
       "score": 5,
       "feedbackDays": 1,
@@ -388,8 +570,9 @@
         "嬰兒燕麥"
       ],
       "baseline": false,
-      "tolerance": "觀察中",
-      "note": "11/02 首次嘗試；品牌、完整配料及是否含鐵待補。",
+      "confirmationDate": "2026-11-02",
+      "tolerance": "已確認耐受（家庭觀察）",
+      "note": "家長確認截至目前耐受。11/02 首次嘗試，實吃紀錄仍為 1 天；品牌、完整配料及是否含鐵待補。",
       "entries": [
         {
           "foodId": "oats",
@@ -418,6 +601,7 @@
       ],
       "observedDays": 1,
       "daysAtLeast": 1,
+      "hasUndatedHistory": false,
       "consecutiveDays": 1,
       "score": 5,
       "feedbackDays": 1,
@@ -465,6 +649,124 @@
     }
   ],
   "observations": [
+    {
+      "foodId": "rice",
+      "date": "2026-10-21",
+      "ingredients": "米（十倍粥；其他配料未提供）",
+      "texture": "十倍粥（粥狀）",
+      "textureGroup": "粥狀",
+      "amount": "已吃；確切份量未提供",
+      "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-23",
+      "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-23",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "rice",
+      "date": "2026-10-22",
+      "ingredients": "米（十倍粥；其他配料未提供）",
+      "texture": "十倍粥（粥狀）",
+      "textureGroup": "粥狀",
+      "amount": "已吃；確切份量未提供",
+      "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-23",
+      "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-23",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "rice",
+      "date": "2026-10-23",
+      "ingredients": "米（十倍粥；其他配料未提供）",
+      "texture": "十倍粥（粥狀）",
+      "textureGroup": "粥狀",
+      "amount": "已吃；確切份量未提供",
+      "interest": "家長對 10/21–10/23 的整體回顧：十倍粥吃得還行；非逐日獨立回報",
+      "reaction": "未提供",
+      "score": 1,
+      "evidence": [
+        {
+          "weight": 1,
+          "label": "接受尚可"
+        }
+      ]
+    },
+    {
+      "foodId": "pumpkin",
+      "date": "2026-10-24",
+      "ingredients": "南瓜（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃；確切份量未提供",
+      "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-26",
+      "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-26",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "pumpkin",
+      "date": "2026-10-25",
+      "ingredients": "南瓜（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃；確切份量未提供",
+      "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-26",
+      "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-26",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "pumpkin",
+      "date": "2026-10-26",
+      "ingredients": "南瓜（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃；確切份量未提供",
+      "interest": "家長對 10/24–10/26 的整體回顧：南瓜也不錯；非逐日獨立回報",
+      "reaction": "未提供",
+      "score": 2,
+      "evidence": [
+        {
+          "weight": 2,
+          "label": "吃得好"
+        }
+      ]
+    },
+    {
+      "foodId": "sweet-potato",
+      "date": "2026-10-27",
+      "ingredients": "地瓜（番薯；其他配料未提供）",
+      "texture": "未提供；不能由難咬或難吞嚥推定為固體",
+      "textureGroup": "未記錄",
+      "amount": "已吃；確切份量未提供",
+      "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-29",
+      "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-29",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "sweet-potato",
+      "date": "2026-10-28",
+      "ingredients": "地瓜（番薯；其他配料未提供）",
+      "texture": "未提供；不能由難咬或難吞嚥推定為固體",
+      "textureGroup": "未記錄",
+      "amount": "已吃；確切份量未提供",
+      "interest": "未提供當日個別偏好；三日整體回顧見 2026-10-29",
+      "reaction": "未提供當日個別反應；三日整體回顧見 2026-10-29",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "sweet-potato",
+      "date": "2026-10-29",
+      "ingredients": "地瓜（番薯；其他配料未提供）",
+      "texture": "未提供；不能由難咬或難吞嚥推定為固體",
+      "textureGroup": "未記錄",
+      "amount": "已吃；確切份量未提供",
+      "interest": "家長對 10/27–10/29 的整體回顧：未提供明確偏好；非逐日獨立回報",
+      "reaction": "家長對 10/27–10/29 的整體回顧：番薯有點難咬、難吞嚥；實際出現日期未細分，未回報為過敏",
+      "score": null,
+      "evidence": []
+    },
     {
       "foodId": "avocado",
       "date": "2026-10-30",
@@ -582,9 +884,2726 @@
     "confirmed": [],
     "suspected": []
   },
-  "method": "以中文語意線索歸納每日食量與興趣，分數 -5～+5；近 30 天回饋權重較高。同餐同一訊號只計一次，再取加權平均；無偏好訊號不計分。反應欄不參與喜好分數。"
+  "method": "以中文語意線索歸納每日食量與興趣，分數 -5～+5；近 30 天回饋權重較高。同餐同一訊號只計一次，再取加權平均；無偏好訊號不計分。反應欄不參與喜好分數。",
+  "planning": {
+    "start": "2026-10-21",
+    "end": "2027-05-21",
+    "referenceDate": "2026-11-02",
+    "checkedDate": "2026-11-02",
+    "scheduleStart": "2026-10-30",
+    "readinessConfirmed": false,
+    "plannedFoods": [
+      {
+        "name": "米",
+        "category": "穀類",
+        "allergen": "—",
+        "plannedDate": "2026-10-21",
+        "actualDate": "2026-10-21"
+      },
+      {
+        "name": "南瓜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2026-10-24",
+        "actualDate": "2026-10-24"
+      },
+      {
+        "name": "地瓜",
+        "category": "根莖",
+        "allergen": "—",
+        "plannedDate": "2026-10-27",
+        "actualDate": "2026-10-27"
+      },
+      {
+        "name": "酪梨",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2026-10-30",
+        "actualDate": "2026-10-30"
+      },
+      {
+        "name": "含鐵嬰兒燕麥",
+        "category": "穀類",
+        "allergen": "—",
+        "plannedDate": "2026-11-02",
+        "actualDate": "2026-11-02"
+      },
+      {
+        "name": "牛肉",
+        "category": "肉類",
+        "allergen": "—",
+        "plannedDate": "2026-11-05",
+        "actualDate": null
+      },
+      {
+        "name": "雞肉",
+        "category": "肉類",
+        "allergen": "—",
+        "plannedDate": "2026-11-09",
+        "actualDate": null
+      },
+      {
+        "name": "花椰菜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2026-11-12",
+        "actualDate": null
+      },
+      {
+        "name": "香蕉",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2026-11-16",
+        "actualDate": null
+      },
+      {
+        "name": "梨",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2026-11-19",
+        "actualDate": null
+      },
+      {
+        "name": "全熟蛋",
+        "category": "蛋類",
+        "allergen": "蛋",
+        "plannedDate": "2026-11-23",
+        "actualDate": null
+      },
+      {
+        "name": "花生",
+        "category": "豆類／過敏原",
+        "allergen": "花生",
+        "plannedDate": "2026-11-26",
+        "actualDate": null
+      },
+      {
+        "name": "原味優格",
+        "category": "乳品",
+        "allergen": "乳",
+        "plannedDate": "2026-11-30",
+        "actualDate": null
+      },
+      {
+        "name": "小麥麵",
+        "category": "穀類",
+        "allergen": "小麥",
+        "plannedDate": "2026-12-03",
+        "actualDate": null
+      },
+      {
+        "name": "豆腐",
+        "category": "豆類",
+        "allergen": "黃豆",
+        "plannedDate": "2026-12-07",
+        "actualDate": null
+      },
+      {
+        "name": "鮭魚",
+        "category": "魚類",
+        "allergen": "魚",
+        "plannedDate": "2026-12-10",
+        "actualDate": null
+      },
+      {
+        "name": "芝麻",
+        "category": "種子",
+        "allergen": "芝麻",
+        "plannedDate": "2026-12-14",
+        "actualDate": null
+      },
+      {
+        "name": "杏仁",
+        "category": "堅果",
+        "allergen": "樹堅果",
+        "plannedDate": "2026-12-17",
+        "actualDate": null
+      },
+      {
+        "name": "蝦",
+        "category": "甲殼類",
+        "allergen": "甲殼類",
+        "plannedDate": "2026-12-21",
+        "actualDate": null
+      },
+      {
+        "name": "胡蘿蔔",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2026-12-24",
+        "actualDate": null
+      },
+      {
+        "name": "馬鈴薯",
+        "category": "根莖",
+        "allergen": "—",
+        "plannedDate": "2026-12-28",
+        "actualDate": null
+      },
+      {
+        "name": "扁豆",
+        "category": "豆類",
+        "allergen": "—",
+        "plannedDate": "2026-12-31",
+        "actualDate": null
+      },
+      {
+        "name": "菠菜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-01-04",
+        "actualDate": null
+      },
+      {
+        "name": "櫛瓜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-01-11",
+        "actualDate": null
+      },
+      {
+        "name": "蘋果",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2027-01-14",
+        "actualDate": null
+      },
+      {
+        "name": "豬肉",
+        "category": "肉類",
+        "allergen": "—",
+        "plannedDate": "2027-01-18",
+        "actualDate": null
+      },
+      {
+        "name": "小米",
+        "category": "穀類",
+        "allergen": "—",
+        "plannedDate": "2027-01-21",
+        "actualDate": null
+      },
+      {
+        "name": "高麗菜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-01-25",
+        "actualDate": null
+      },
+      {
+        "name": "桃子",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2027-01-28",
+        "actualDate": null
+      },
+      {
+        "name": "鷹嘴豆",
+        "category": "豆類",
+        "allergen": "—",
+        "plannedDate": "2027-02-01",
+        "actualDate": null
+      },
+      {
+        "name": "青江菜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-02-04",
+        "actualDate": null
+      },
+      {
+        "name": "木瓜",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2027-02-08",
+        "actualDate": null
+      },
+      {
+        "name": "藜麥",
+        "category": "穀類",
+        "allergen": "—",
+        "plannedDate": "2027-02-11",
+        "actualDate": null
+      },
+      {
+        "name": "番茄",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-02-15",
+        "actualDate": null
+      },
+      {
+        "name": "草莓",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2027-02-18",
+        "actualDate": null
+      },
+      {
+        "name": "火雞肉",
+        "category": "肉類",
+        "allergen": "—",
+        "plannedDate": "2027-02-22",
+        "actualDate": null
+      },
+      {
+        "name": "甜椒",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-02-25",
+        "actualDate": null
+      },
+      {
+        "name": "藍莓",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2027-03-01",
+        "actualDate": null
+      },
+      {
+        "name": "紅豆",
+        "category": "豆類",
+        "allergen": "—",
+        "plannedDate": "2027-03-04",
+        "actualDate": null
+      },
+      {
+        "name": "四季豆",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-03-08",
+        "actualDate": null
+      },
+      {
+        "name": "橘子",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2027-03-11",
+        "actualDate": null
+      },
+      {
+        "name": "玉米",
+        "category": "穀類",
+        "allergen": "—",
+        "plannedDate": "2027-03-15",
+        "actualDate": null
+      },
+      {
+        "name": "奇異果",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2027-03-18",
+        "actualDate": null
+      },
+      {
+        "name": "香瓜",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2027-03-22",
+        "actualDate": null
+      },
+      {
+        "name": "芒果",
+        "category": "水果",
+        "allergen": "—",
+        "plannedDate": "2027-03-25",
+        "actualDate": null
+      },
+      {
+        "name": "白蘿蔔",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-03-29",
+        "actualDate": null
+      },
+      {
+        "name": "洋蔥",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-04-01",
+        "actualDate": null
+      },
+      {
+        "name": "茄子",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-04-05",
+        "actualDate": null
+      },
+      {
+        "name": "絲瓜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-04-08",
+        "actualDate": null
+      },
+      {
+        "name": "冬瓜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-04-12",
+        "actualDate": null
+      },
+      {
+        "name": "小黃瓜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-04-15",
+        "actualDate": null
+      },
+      {
+        "name": "蘆筍",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-04-19",
+        "actualDate": null
+      },
+      {
+        "name": "豌豆",
+        "category": "豆類",
+        "allergen": "—",
+        "plannedDate": "2027-04-22",
+        "actualDate": null
+      },
+      {
+        "name": "萵苣",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-04-26",
+        "actualDate": null
+      },
+      {
+        "name": "芥藍",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-04-29",
+        "actualDate": null
+      },
+      {
+        "name": "空心菜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-05-03",
+        "actualDate": null
+      },
+      {
+        "name": "地瓜葉",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-05-06",
+        "actualDate": null
+      },
+      {
+        "name": "莧菜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-05-10",
+        "actualDate": null
+      },
+      {
+        "name": "茼蒿",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-05-13",
+        "actualDate": null
+      },
+      {
+        "name": "白菜",
+        "category": "蔬菜",
+        "allergen": "—",
+        "plannedDate": "2027-05-17",
+        "actualDate": null
+      }
+    ],
+    "monthly": [
+      {
+        "month": "2026-10",
+        "newCandidates": 1,
+        "cumulative": 4,
+        "foods": [
+          "米",
+          "南瓜",
+          "地瓜",
+          "酪梨"
+        ]
+      },
+      {
+        "month": "2026-11",
+        "newCandidates": 9,
+        "cumulative": 13,
+        "foods": [
+          "含鐵嬰兒燕麥",
+          "牛肉",
+          "雞肉",
+          "花椰菜",
+          "香蕉",
+          "梨",
+          "全熟蛋",
+          "花生",
+          "原味優格"
+        ]
+      },
+      {
+        "month": "2026-12",
+        "newCandidates": 9,
+        "cumulative": 22,
+        "foods": [
+          "小麥麵",
+          "豆腐",
+          "鮭魚",
+          "芝麻",
+          "杏仁",
+          "蝦",
+          "胡蘿蔔",
+          "馬鈴薯",
+          "扁豆"
+        ]
+      },
+      {
+        "month": "2027-01",
+        "newCandidates": 7,
+        "cumulative": 29,
+        "foods": [
+          "菠菜",
+          "櫛瓜",
+          "蘋果",
+          "豬肉",
+          "小米",
+          "高麗菜",
+          "桃子"
+        ]
+      },
+      {
+        "month": "2027-02",
+        "newCandidates": 8,
+        "cumulative": 37,
+        "foods": [
+          "鷹嘴豆",
+          "青江菜",
+          "木瓜",
+          "藜麥",
+          "番茄",
+          "草莓",
+          "火雞肉",
+          "甜椒"
+        ]
+      },
+      {
+        "month": "2027-03",
+        "newCandidates": 9,
+        "cumulative": 46,
+        "foods": [
+          "藍莓",
+          "紅豆",
+          "四季豆",
+          "橘子",
+          "玉米",
+          "奇異果",
+          "香瓜",
+          "芒果",
+          "白蘿蔔"
+        ]
+      },
+      {
+        "month": "2027-04",
+        "newCandidates": 9,
+        "cumulative": 55,
+        "foods": [
+          "洋蔥",
+          "茄子",
+          "絲瓜",
+          "冬瓜",
+          "小黃瓜",
+          "蘆筍",
+          "豌豆",
+          "萵苣",
+          "芥藍"
+        ]
+      },
+      {
+        "month": "2027-05",
+        "newCandidates": 5,
+        "cumulative": 60,
+        "foods": [
+          "空心菜",
+          "地瓜葉",
+          "莧菜",
+          "茼蒿",
+          "白菜"
+        ]
+      }
+    ],
+    "daily": [
+      {
+        "date": "2026-10-30",
+        "meals": [
+          "熟軟酪梨泥（去皮去核）＋白米粥（僅米與水）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：酪梨；熟軟去皮去核壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-10-31",
+        "meals": [
+          "熟軟酪梨泥（去皮去核）＋白米粥（僅米與水）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：酪梨；熟軟去皮去核壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-01",
+        "meals": [
+          "熟軟酪梨泥（去皮去核）＋白米粥（僅米與水）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：酪梨；熟軟去皮去核壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-02",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋白米粥（僅米與水）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：含鐵嬰兒燕麥；依標示調製；確認產品未含其他未試成分",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-03",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋白米粥（僅米與水）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：含鐵嬰兒燕麥；依標示調製；確認產品未含其他未試成分",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-04",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋白米粥（僅米與水）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：含鐵嬰兒燕麥；依標示調製；確認產品未含其他未試成分",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-05",
+        "meals": [
+          "全熟牛肉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：牛肉；充分煮熟打成細泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-06",
+        "meals": [
+          "全熟牛肉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：牛肉；充分煮熟打成細泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-07",
+        "meals": [
+          "全熟牛肉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：牛肉；充分煮熟打成細泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-08",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋熟軟酪梨泥（去皮去核）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2026-11-09 雞肉",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-09",
+        "meals": [
+          "全熟雞肉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：雞肉；充分煮熟打泥或細碎",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-10",
+        "meals": [
+          "全熟雞肉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：雞肉；充分煮熟打泥或細碎",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-11",
+        "meals": [
+          "全熟雞肉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：雞肉；充分煮熟打泥或細碎",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-12",
+        "meals": [
+          "煮軟花椰菜泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：花椰菜；煮軟壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-13",
+        "meals": [
+          "煮軟花椰菜泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：花椰菜；煮軟壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-14",
+        "meals": [
+          "煮軟花椰菜泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：花椰菜；煮軟壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-15",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋熟軟酪梨泥（去皮去核）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2026-11-16 香蕉",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-16",
+        "meals": [
+          "熟香蕉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：香蕉；熟軟去皮壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-17",
+        "meals": [
+          "熟香蕉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：香蕉；熟軟去皮壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-18",
+        "meals": [
+          "熟香蕉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：香蕉；熟軟去皮壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-19",
+        "meals": [
+          "去皮去籽蒸梨泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：梨；去皮去籽煮軟壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-20",
+        "meals": [
+          "去皮去籽蒸梨泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：梨；去皮去籽煮軟壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-21",
+        "meals": [
+          "去皮去籽蒸梨泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：梨；去皮去籽煮軟壓泥",
+        "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
+      },
+      {
+        "date": "2026-11-22",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋去皮去籽蒸梨泥",
+          "全熟雞肉泥＋蒸南瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2026-11-23 全熟蛋",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-11-23",
+        "meals": [
+          "全熟蛋泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟牛肉泥＋蒸地瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：全熟蛋【蛋】；充分煮熟壓成細泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-11-24",
+        "meals": [
+          "全熟蛋泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟雞肉泥＋煮軟花椰菜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：全熟蛋【蛋】；充分煮熟壓成細泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-11-25",
+        "meals": [
+          "全熟蛋泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟牛肉泥＋蒸南瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：全熟蛋【蛋】；充分煮熟壓成細泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-11-26",
+        "meals": [
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸南瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：花生【花生】；無顆粒純花生醬充分稀釋混入已耐受泥食",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-11-27",
+        "meals": [
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟雞肉泥＋煮軟花椰菜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：花生【花生】；無顆粒純花生醬充分稀釋混入已耐受泥食",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-11-28",
+        "meals": [
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸南瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：花生【花生】；無顆粒純花生醬充分稀釋混入已耐受泥食",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-11-29",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋熟軟酪梨泥（去皮去核）",
+          "全熟牛肉泥＋蒸地瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2026-11-30 原味優格",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-11-30",
+        "meals": [
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸地瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：原味優格【乳】；巴氏殺菌全脂無糖原味，確認成分",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-01",
+        "meals": [
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：原味優格【乳】；巴氏殺菌全脂無糖原味，確認成分",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-02",
+        "meals": [
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟牛肉泥＋蒸地瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：原味優格【乳】；巴氏殺菌全脂無糖原味，確認成分",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-03",
+        "meals": [
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸地瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：小麥麵【小麥】；選成分單純款煮軟壓碎，確認沒有未試過的蛋等配料",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-04",
+        "meals": [
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：小麥麵【小麥】；選成分單純款煮軟壓碎，確認沒有未試過的蛋等配料",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-05",
+        "meals": [
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟牛肉泥＋蒸地瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：小麥麵【小麥】；選成分單純款煮軟壓碎，確認沒有未試過的蛋等配料",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-06",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋熟香蕉泥",
+          "全熟雞肉泥＋煮軟花椰菜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2026-12-07 豆腐",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-07",
+        "meals": [
+          "熟豆腐泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟花椰菜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：豆腐【黃豆】；煮熟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-08",
+        "meals": [
+          "熟豆腐泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：豆腐【黃豆】；煮熟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-09",
+        "meals": [
+          "熟豆腐泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：豆腐【黃豆】；煮熟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-10",
+        "meals": [
+          "全熟去刺鮭魚泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟花椰菜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：鮭魚【魚】；全熟去皮去刺細泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-11",
+        "meals": [
+          "全熟去刺鮭魚泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：鮭魚【魚】；全熟去皮去刺細泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-12",
+        "meals": [
+          "全熟去刺鮭魚泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：鮭魚【魚】；全熟去皮去刺細泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-13",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋去皮去籽蒸梨泥",
+          "熟豆腐泥＋煮軟花椰菜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2026-12-14 芝麻",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-14",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸南瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：芝麻【芝麻】；純芝麻醬充分稀釋混入已耐受泥食",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-15",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：芝麻【芝麻】；純芝麻醬充分稀釋混入已耐受泥食",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-16",
+        "meals": [
+          "全熟去刺鮭魚泥＋純芝麻醬（以水充分稀釋，拌入同餐食物）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：芝麻【芝麻】；純芝麻醬充分稀釋混入已耐受泥食",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-17",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸南瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：杏仁【樹堅果】；無顆粒純杏仁醬充分稀釋混入已耐受泥食",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-18",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "重複觀察候選：杏仁【樹堅果】；無顆粒純杏仁醬充分稀釋混入已耐受泥食",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-19",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：杏仁【樹堅果】；無顆粒純杏仁醬充分稀釋混入已耐受泥食",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-20",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋蒸南瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2026-12-21 蝦",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-21",
+        "meals": [
+          "全熟去殼蝦泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸地瓜泥",
+          "不安排副食品；母乳／配方奶照常"
+        ],
+        "candidate": "首次候選：蝦【甲殼類】；充分煮熟去殼細磨",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-22",
+        "meals": [
+          "全熟去殼蝦泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "重複觀察候選：蝦【甲殼類】；充分煮熟去殼細磨",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-23",
+        "meals": [
+          "全熟去刺鮭魚泥＋全熟去殼蝦泥",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟牛肉泥"
+        ],
+        "candidate": "重複觀察候選：蝦【甲殼類】；充分煮熟去殼細磨",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-24",
+        "meals": [
+          "煮軟胡蘿蔔泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸地瓜泥",
+          "白米粥（僅米與水）＋全熟蛋泥"
+        ],
+        "candidate": "首次候選：胡蘿蔔；煮至可輕易壓爛後壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-25",
+        "meals": [
+          "全熟去殼蝦泥＋煮軟胡蘿蔔泥",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋熟豆腐泥"
+        ],
+        "candidate": "重複觀察候選：胡蘿蔔；煮至可輕易壓爛後壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-26",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋煮軟胡蘿蔔泥",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：胡蘿蔔；煮至可輕易壓爛後壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-27",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋煮軟花椰菜泥",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟去殼蝦泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2026-12-28 馬鈴薯",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-28",
+        "meals": [
+          "熟馬鈴薯泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟胡蘿蔔泥",
+          "白米粥（僅米與水）＋全熟牛肉泥"
+        ],
+        "candidate": "首次候選：馬鈴薯；去皮煮熟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-29",
+        "meals": [
+          "熟馬鈴薯泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟雞肉泥"
+        ],
+        "candidate": "重複觀察候選：馬鈴薯；去皮煮熟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-30",
+        "meals": [
+          "全熟去刺鮭魚泥＋熟馬鈴薯泥",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟蛋泥"
+        ],
+        "candidate": "重複觀察候選：馬鈴薯；去皮煮熟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2026-12-31",
+        "meals": [
+          "煮熟扁豆泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟花椰菜泥",
+          "白米粥（僅米與水）＋熟豆腐泥"
+        ],
+        "candidate": "首次候選：扁豆；充分煮熟壓泥，不給整粒",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-01",
+        "meals": [
+          "全熟去殼蝦泥＋煮熟扁豆泥",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "重複觀察候選：扁豆；充分煮熟壓泥，不給整粒",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-02",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋煮熟扁豆泥",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋全熟去殼蝦泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：扁豆；充分煮熟壓泥，不給整粒",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-03",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋蒸地瓜泥",
+          "白米粥（僅米與水）＋熟豆腐泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-01-04 菠菜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-04",
+        "meals": [
+          "熟菠菜泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟花椰菜泥",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "首次候選：菠菜；洗淨煮熟切細或打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-05",
+        "meals": [
+          "熟菠菜泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋全熟去殼蝦泥"
+        ],
+        "candidate": "重複觀察候選：菠菜；洗淨煮熟切細或打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-06",
+        "meals": [
+          "全熟去刺鮭魚泥＋熟菠菜泥",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋煮熟扁豆泥"
+        ],
+        "candidate": "重複觀察候選：菠菜；洗淨煮熟切細或打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-07",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋熟軟酪梨泥（去皮去核）",
+          "全熟蛋泥＋熟菠菜泥",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟牛肉泥"
+        ],
+        "candidate": "不試新；下項候選：2027-01-11 櫛瓜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-08",
+        "meals": [
+          "全熟去殼蝦泥＋蒸地瓜泥",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋全熟雞肉泥"
+        ],
+        "candidate": "不試新；下項候選：2027-01-11 櫛瓜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-09",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟蛋泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-01-11 櫛瓜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-10",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋煮軟花椰菜泥",
+          "單純小麥麵（煮軟切碎；初期打泥）＋熟豆腐泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-01-11 櫛瓜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-11",
+        "meals": [
+          "櫛瓜（洗淨煮軟壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟胡蘿蔔泥",
+          "熟馬鈴薯泥＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "首次候選：櫛瓜；洗淨煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-12",
+        "meals": [
+          "櫛瓜（洗淨煮軟壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟去殼蝦泥"
+        ],
+        "candidate": "重複觀察候選：櫛瓜；洗淨煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-13",
+        "meals": [
+          "全熟去刺鮭魚泥＋櫛瓜（洗淨煮軟壓泥）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋煮熟扁豆泥"
+        ],
+        "candidate": "重複觀察候選：櫛瓜；洗淨煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-14",
+        "meals": [
+          "蘋果（去皮去核去籽煮軟壓泥，不給硬生塊）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋熟菠菜泥",
+          "熟馬鈴薯泥＋全熟牛肉泥"
+        ],
+        "candidate": "首次候選：蘋果；去皮去核去籽煮軟壓泥，不給硬生塊",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-15",
+        "meals": [
+          "全熟去殼蝦泥＋蘋果（去皮去核去籽煮軟壓泥，不給硬生塊）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟雞肉泥"
+        ],
+        "candidate": "重複觀察候選：蘋果；去皮去核去籽煮軟壓泥，不給硬生塊",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-16",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋蘋果（去皮去核去籽煮軟壓泥，不給硬生塊）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟蛋泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：蘋果；去皮去核去籽煮軟壓泥，不給硬生塊",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-17",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋蒸地瓜泥",
+          "熟馬鈴薯泥＋熟豆腐泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-01-18 豬肉",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-18",
+        "meals": [
+          "豬肉（充分煮熟去筋細磨，依能力處理）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟花椰菜泥",
+          "白米粥（僅米與水）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "首次候選：豬肉；充分煮熟去筋細磨，依能力處理",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-19",
+        "meals": [
+          "豬肉（充分煮熟去筋細磨，依能力處理）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟去殼蝦泥"
+        ],
+        "candidate": "重複觀察候選：豬肉；充分煮熟去筋細磨，依能力處理",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-20",
+        "meals": [
+          "全熟去刺鮭魚泥＋豬肉（充分煮熟去筋細磨，依能力處理）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋煮熟扁豆泥"
+        ],
+        "candidate": "重複觀察候選：豬肉；充分煮熟去筋細磨，依能力處理",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-21",
+        "meals": [
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋櫛瓜（洗淨煮軟壓泥）",
+          "白米粥（僅米與水）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "首次候選：小米；煮至全軟後打泥或壓碎，不給整粒穀物",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-22",
+        "meals": [
+          "全熟去殼蝦泥＋小米（煮至全軟後打泥或壓碎，不給整粒穀物）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟去殼蝦泥"
+        ],
+        "candidate": "重複觀察候選：小米；煮至全軟後打泥或壓碎，不給整粒穀物",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-23",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋小米（煮至全軟後打泥或壓碎，不給整粒穀物）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋煮熟扁豆泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：小米；煮至全軟後打泥或壓碎，不給整粒穀物",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-24",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋煮軟花椰菜泥",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-01-25 高麗菜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-25",
+        "meals": [
+          "高麗菜（煮軟去硬梗後打泥或切細）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟胡蘿蔔泥",
+          "白米粥（僅米與水）＋全熟牛肉泥"
+        ],
+        "candidate": "首次候選：高麗菜；煮軟去硬梗後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-26",
+        "meals": [
+          "高麗菜（煮軟去硬梗後打泥或切細）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟雞肉泥"
+        ],
+        "candidate": "重複觀察候選：高麗菜；煮軟去硬梗後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-27",
+        "meals": [
+          "全熟去刺鮭魚泥＋高麗菜（煮軟去硬梗後打泥或切細）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋全熟蛋泥"
+        ],
+        "candidate": "重複觀察候選：高麗菜；煮軟去硬梗後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-28",
+        "meals": [
+          "桃子（去皮去核，選熟軟果肉壓泥，偏硬則煮軟）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋高麗菜（煮軟去硬梗後打泥或切細）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋熟豆腐泥"
+        ],
+        "candidate": "首次候選：桃子；去皮去核，選熟軟果肉壓泥，偏硬則煮軟",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-29",
+        "meals": [
+          "全熟去殼蝦泥＋桃子（去皮去核，選熟軟果肉壓泥，偏硬則煮軟）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "重複觀察候選：桃子；去皮去核，選熟軟果肉壓泥，偏硬則煮軟",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-30",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋桃子（去皮去核，選熟軟果肉壓泥，偏硬則煮軟）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟去殼蝦泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：桃子；去皮去核，選熟軟果肉壓泥，偏硬則煮軟",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-01-31",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋煮軟花椰菜泥",
+          "熟馬鈴薯泥＋煮熟扁豆泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-02-01 鷹嘴豆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-01",
+        "meals": [
+          "鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟胡蘿蔔泥",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "首次候選：鷹嘴豆；充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-02",
+        "meals": [
+          "鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟牛肉泥"
+        ],
+        "candidate": "重複觀察候選：鷹嘴豆；充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-03",
+        "meals": [
+          "全熟去刺鮭魚泥＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟雞肉泥"
+        ],
+        "candidate": "重複觀察候選：鷹嘴豆；充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-04",
+        "meals": [
+          "青江菜（洗淨煮軟去硬梗後打泥或切細）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋高麗菜（煮軟去硬梗後打泥或切細）",
+          "熟馬鈴薯泥＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "首次候選：青江菜；洗淨煮軟去硬梗後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-05",
+        "meals": [
+          "全熟去殼蝦泥＋青江菜（洗淨煮軟去硬梗後打泥或切細）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋全熟牛肉泥"
+        ],
+        "candidate": "重複觀察候選：青江菜；洗淨煮軟去硬梗後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-06",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋青江菜（洗淨煮軟去硬梗後打泥或切細）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟雞肉泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：青江菜；洗淨煮軟去硬梗後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-07",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋熟菠菜泥",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟蛋泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-02-08 木瓜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-08",
+        "meals": [
+          "木瓜（熟軟去皮去籽壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋櫛瓜（洗淨煮軟壓泥）",
+          "熟馬鈴薯泥＋熟豆腐泥"
+        ],
+        "candidate": "首次候選：木瓜；熟軟去皮去籽壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-09",
+        "meals": [
+          "木瓜（熟軟去皮去籽壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "重複觀察候選：木瓜；熟軟去皮去籽壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-10",
+        "meals": [
+          "全熟去刺鮭魚泥＋木瓜（熟軟去皮去籽壓泥）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟去殼蝦泥"
+        ],
+        "candidate": "重複觀察候選：木瓜；熟軟去皮去籽壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-11",
+        "meals": [
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸南瓜泥",
+          "單純小麥麵（煮軟切碎；初期打泥）＋煮熟扁豆泥"
+        ],
+        "candidate": "首次候選：藜麥；依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-12",
+        "meals": [
+          "全熟去殼蝦泥＋藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "重複觀察候選：藜麥；依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-13",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：藜麥；依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-14",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋煮軟胡蘿蔔泥",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋全熟牛肉泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-02-15 番茄",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-15",
+        "meals": [
+          "番茄（煮軟去皮壓泥，不給整顆小番茄）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋熟菠菜泥",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋全熟雞肉泥"
+        ],
+        "candidate": "首次候選：番茄；煮軟去皮壓泥，不給整顆小番茄",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-16",
+        "meals": [
+          "番茄（煮軟去皮壓泥，不給整顆小番茄）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟蛋泥"
+        ],
+        "candidate": "重複觀察候選：番茄；煮軟去皮壓泥，不給整顆小番茄",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-17",
+        "meals": [
+          "全熟去刺鮭魚泥＋番茄（煮軟去皮壓泥，不給整顆小番茄）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋熟豆腐泥"
+        ],
+        "candidate": "重複觀察候選：番茄；煮軟去皮壓泥，不給整顆小番茄",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-18",
+        "meals": [
+          "草莓（洗淨去蒂，選熟軟果肉壓泥，不給整顆）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟胡蘿蔔泥",
+          "熟馬鈴薯泥＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "首次候選：草莓；洗淨去蒂，選熟軟果肉壓泥，不給整顆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-19",
+        "meals": [
+          "全熟去殼蝦泥＋草莓（洗淨去蒂，選熟軟果肉壓泥，不給整顆）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋全熟去殼蝦泥"
+        ],
+        "candidate": "重複觀察候選：草莓；洗淨去蒂，選熟軟果肉壓泥，不給整顆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-20",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋草莓（洗淨去蒂，選熟軟果肉壓泥，不給整顆）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋煮熟扁豆泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：草莓；洗淨去蒂，選熟軟果肉壓泥，不給整顆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-21",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋高麗菜（煮軟去硬梗後打泥或切細）",
+          "白米粥（僅米與水）＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-02-22 火雞肉",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-22",
+        "meals": [
+          "火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋青江菜（洗淨煮軟去硬梗後打泥或切細）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "首次候選：火雞肉；充分煮熟去皮去筋細磨，選原肉而非加工肉片",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-23",
+        "meals": [
+          "火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋全熟牛肉泥"
+        ],
+        "candidate": "重複觀察候選：火雞肉；充分煮熟去皮去筋細磨，選原肉而非加工肉片",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-24",
+        "meals": [
+          "全熟去刺鮭魚泥＋火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋全熟雞肉泥"
+        ],
+        "candidate": "重複觀察候選：火雞肉；充分煮熟去皮去筋細磨，選原肉而非加工肉片",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-25",
+        "meals": [
+          "甜椒（去蒂去籽，煮軟去韌皮後壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸地瓜泥",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）"
+        ],
+        "candidate": "首次候選：甜椒；去蒂去籽，煮軟去韌皮後壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-26",
+        "meals": [
+          "全熟去殼蝦泥＋甜椒（去蒂去籽，煮軟去韌皮後壓泥）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟牛肉泥"
+        ],
+        "candidate": "重複觀察候選：甜椒；去蒂去籽，煮軟去韌皮後壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-27",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋甜椒（去蒂去籽，煮軟去韌皮後壓泥）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟雞肉泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：甜椒；去蒂去籽，煮軟去韌皮後壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-02-28",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋蒸地瓜泥",
+          "熟馬鈴薯泥＋全熟蛋泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-03-01 藍莓",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-01",
+        "meals": [
+          "藍莓（洗淨後煮軟壓泥或充分壓碎，不給整顆）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟花椰菜泥",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋熟豆腐泥"
+        ],
+        "candidate": "首次候選：藍莓；洗淨後煮軟壓泥或充分壓碎，不給整顆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-02",
+        "meals": [
+          "藍莓（洗淨後煮軟壓泥或充分壓碎，不給整顆）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "重複觀察候選：藍莓；洗淨後煮軟壓泥或充分壓碎，不給整顆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-03",
+        "meals": [
+          "全熟去刺鮭魚泥＋藍莓（洗淨後煮軟壓泥或充分壓碎，不給整顆）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟去殼蝦泥"
+        ],
+        "candidate": "重複觀察候選：藍莓；洗淨後煮軟壓泥或充分壓碎，不給整顆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-04",
+        "meals": [
+          "紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋櫛瓜（洗淨煮軟壓泥）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋煮熟扁豆泥"
+        ],
+        "candidate": "首次候選：紅豆；充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-05",
+        "meals": [
+          "全熟去殼蝦泥＋紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "重複觀察候選：紅豆；充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-06",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：紅豆；充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-07",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋番茄（煮軟去皮壓泥，不給整顆小番茄）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-03-08 四季豆",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-08",
+        "meals": [
+          "四季豆（去頭尾去筋，充分煮熟煮軟後打泥或切細）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋甜椒（去蒂去籽，煮軟去韌皮後壓泥）",
+          "白米粥（僅米與水）＋火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）"
+        ],
+        "candidate": "首次候選：四季豆；去頭尾去筋，充分煮熟煮軟後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-09",
+        "meals": [
+          "四季豆（去頭尾去筋，充分煮熟煮軟後打泥或切細）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）"
+        ],
+        "candidate": "重複觀察候選：四季豆；去頭尾去筋，充分煮熟煮軟後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-10",
+        "meals": [
+          "全熟去刺鮭魚泥＋四季豆（去頭尾去筋，充分煮熟煮軟後打泥或切細）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋全熟牛肉泥"
+        ],
+        "candidate": "重複觀察候選：四季豆；去頭尾去筋，充分煮熟煮軟後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-11",
+        "meals": [
+          "橘子（去皮去籽去瓣膜，果肉壓碎，不給整瓣或果汁）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸南瓜泥",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋全熟雞肉泥"
+        ],
+        "candidate": "首次候選：橘子；去皮去籽去瓣膜，果肉壓碎，不給整瓣或果汁",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-12",
+        "meals": [
+          "全熟去殼蝦泥＋橘子（去皮去籽去瓣膜，果肉壓碎，不給整瓣或果汁）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋全熟蛋泥"
+        ],
+        "candidate": "重複觀察候選：橘子；去皮去籽去瓣膜，果肉壓碎，不給整瓣或果汁",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-13",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋橘子（去皮去籽去瓣膜，果肉壓碎，不給整瓣或果汁）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋熟豆腐泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：橘子；去皮去籽去瓣膜，果肉壓碎，不給整瓣或果汁",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-14",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋煮軟胡蘿蔔泥",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-03-15 玉米",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-15",
+        "meals": [
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋熟菠菜泥",
+          "熟馬鈴薯泥＋全熟去殼蝦泥"
+        ],
+        "candidate": "首次候選：玉米；充分煮熟打泥並過濾韌皮，不給整粒玉米",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-16",
+        "meals": [
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋煮熟扁豆泥"
+        ],
+        "candidate": "重複觀察候選：玉米；充分煮熟打泥並過濾韌皮，不給整粒玉米",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-17",
+        "meals": [
+          "全熟去刺鮭魚泥＋玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "重複觀察候選：玉米；充分煮熟打泥並過濾韌皮，不給整粒玉米",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-18",
+        "meals": [
+          "奇異果（熟軟去皮，果肉壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋青江菜（洗淨煮軟去硬梗後打泥或切細）",
+          "熟馬鈴薯泥＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "首次候選：奇異果；熟軟去皮，果肉壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-19",
+        "meals": [
+          "全熟去殼蝦泥＋奇異果（熟軟去皮，果肉壓泥）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）"
+        ],
+        "candidate": "重複觀察候選：奇異果；熟軟去皮，果肉壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-20",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋奇異果（熟軟去皮，果肉壓泥）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：奇異果；熟軟去皮，果肉壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-21",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋四季豆（去頭尾去筋，充分煮熟煮軟後打泥或切細）",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋全熟牛肉泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-03-22 香瓜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-22",
+        "meals": [
+          "香瓜（熟軟去皮去籽壓泥，不做球狀或大塊）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸南瓜泥",
+          "白米粥（僅米與水）＋全熟雞肉泥"
+        ],
+        "candidate": "首次候選：香瓜；熟軟去皮去籽壓泥，不做球狀或大塊",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-23",
+        "meals": [
+          "香瓜（熟軟去皮去籽壓泥，不做球狀或大塊）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟蛋泥"
+        ],
+        "candidate": "重複觀察候選：香瓜；熟軟去皮去籽壓泥，不做球狀或大塊",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-24",
+        "meals": [
+          "全熟去刺鮭魚泥＋香瓜（熟軟去皮去籽壓泥，不做球狀或大塊）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋熟豆腐泥"
+        ],
+        "candidate": "重複觀察候選：香瓜；熟軟去皮去籽壓泥，不做球狀或大塊",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-25",
+        "meals": [
+          "芒果（熟軟去皮去核，去粗纖維後壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋煮軟胡蘿蔔泥",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "首次候選：芒果；熟軟去皮去核，去粗纖維後壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-26",
+        "meals": [
+          "全熟去殼蝦泥＋芒果（熟軟去皮去核，去粗纖維後壓泥）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋全熟去殼蝦泥"
+        ],
+        "candidate": "重複觀察候選：芒果；熟軟去皮去核，去粗纖維後壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-27",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋芒果（熟軟去皮去核，去粗纖維後壓泥）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋煮熟扁豆泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：芒果；熟軟去皮去核，去粗纖維後壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-28",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋高麗菜（煮軟去硬梗後打泥或切細）",
+          "白米粥（僅米與水）＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-03-29 白蘿蔔",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-29",
+        "meals": [
+          "白蘿蔔（去皮煮軟壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋青江菜（洗淨煮軟去硬梗後打泥或切細）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "首次候選：白蘿蔔；去皮煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-30",
+        "meals": [
+          "白蘿蔔（去皮煮軟壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）"
+        ],
+        "candidate": "重複觀察候選：白蘿蔔；去皮煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-03-31",
+        "meals": [
+          "全熟去刺鮭魚泥＋白蘿蔔（去皮煮軟壓泥）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）"
+        ],
+        "candidate": "重複觀察候選：白蘿蔔；去皮煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-01",
+        "meals": [
+          "洋蔥（充分煮軟切細或打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋甜椒（去蒂去籽，煮軟去韌皮後壓泥）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋全熟牛肉泥"
+        ],
+        "candidate": "首次候選：洋蔥；充分煮軟切細或打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-02",
+        "meals": [
+          "全熟去殼蝦泥＋洋蔥（充分煮軟切細或打泥）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋全熟雞肉泥"
+        ],
+        "candidate": "重複觀察候選：洋蔥；充分煮軟切細或打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-03",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋洋蔥（充分煮軟切細或打泥）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟蛋泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：洋蔥；充分煮軟切細或打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-04",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋蒸南瓜泥",
+          "單純小麥麵（煮軟切碎；初期打泥）＋熟豆腐泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-04-05 茄子",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-05",
+        "meals": [
+          "茄子（蒸熟去韌皮壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸地瓜泥",
+          "熟馬鈴薯泥＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "首次候選：茄子；蒸熟去韌皮壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-06",
+        "meals": [
+          "茄子（蒸熟去韌皮壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋全熟去殼蝦泥"
+        ],
+        "candidate": "重複觀察候選：茄子；蒸熟去韌皮壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-07",
+        "meals": [
+          "全熟去刺鮭魚泥＋茄子（蒸熟去韌皮壓泥）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋煮熟扁豆泥"
+        ],
+        "candidate": "重複觀察候選：茄子；蒸熟去韌皮壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-08",
+        "meals": [
+          "絲瓜（去皮去硬籽煮軟壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋高麗菜（煮軟去硬梗後打泥或切細）",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "首次候選：絲瓜；去皮去硬籽煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-09",
+        "meals": [
+          "全熟去殼蝦泥＋絲瓜（去皮去硬籽煮軟壓泥）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "重複觀察候選：絲瓜；去皮去硬籽煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-10",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋絲瓜（去皮去硬籽煮軟壓泥）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：絲瓜；去皮去硬籽煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-11",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋茄子（蒸熟去韌皮壓泥）",
+          "熟馬鈴薯泥＋紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-04-12 冬瓜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-12",
+        "meals": [
+          "冬瓜（去皮去籽煮軟壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋絲瓜（去皮去硬籽煮軟壓泥）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋全熟牛肉泥"
+        ],
+        "candidate": "首次候選：冬瓜；去皮去籽煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-13",
+        "meals": [
+          "冬瓜（去皮去籽煮軟壓泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋全熟雞肉泥"
+        ],
+        "candidate": "重複觀察候選：冬瓜；去皮去籽煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-14",
+        "meals": [
+          "全熟去刺鮭魚泥＋冬瓜（去皮去籽煮軟壓泥）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋全熟蛋泥"
+        ],
+        "candidate": "重複觀察候選：冬瓜；去皮去籽煮軟壓泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-15",
+        "meals": [
+          "小黃瓜（去皮去硬籽煮軟壓泥，不給硬生塊）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋青江菜（洗淨煮軟去硬梗後打泥或切細）",
+          "白米粥（僅米與水）＋熟豆腐泥"
+        ],
+        "candidate": "首次候選：小黃瓜；去皮去硬籽煮軟壓泥，不給硬生塊",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-16",
+        "meals": [
+          "全熟去殼蝦泥＋小黃瓜（去皮去硬籽煮軟壓泥，不給硬生塊）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "重複觀察候選：小黃瓜；去皮去硬籽煮軟壓泥，不給硬生塊",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-17",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋小黃瓜（去皮去硬籽煮軟壓泥，不給硬生塊）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋全熟去殼蝦泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：小黃瓜；去皮去硬籽煮軟壓泥，不給硬生塊",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-18",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋蒸南瓜泥",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋煮熟扁豆泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-04-19 蘆筍",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-19",
+        "meals": [
+          "蘆筍（去老硬纖維，嫩部煮軟打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋蒸地瓜泥",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "首次候選：蘆筍；去老硬纖維，嫩部煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-20",
+        "meals": [
+          "蘆筍（去老硬纖維，嫩部煮軟打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "重複觀察候選：蘆筍；去老硬纖維，嫩部煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-21",
+        "meals": [
+          "全熟去刺鮭魚泥＋蘆筍（去老硬纖維，嫩部煮軟打泥）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）"
+        ],
+        "candidate": "重複觀察候選：蘆筍；去老硬纖維，嫩部煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-22",
+        "meals": [
+          "豌豆（充分煮軟壓泥，不給整粒）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋洋蔥（充分煮軟切細或打泥）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）"
+        ],
+        "candidate": "首次候選：豌豆；充分煮軟壓泥，不給整粒",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-23",
+        "meals": [
+          "全熟去殼蝦泥＋豌豆（充分煮軟壓泥，不給整粒）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋全熟牛肉泥"
+        ],
+        "candidate": "重複觀察候選：豌豆；充分煮軟壓泥，不給整粒",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-24",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋豌豆（充分煮軟壓泥，不給整粒）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋全熟雞肉泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：豌豆；充分煮軟壓泥，不給整粒",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-25",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋冬瓜（去皮去籽煮軟壓泥）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-04-26 萵苣",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-26",
+        "meals": [
+          "萵苣（洗淨煮熟嫩葉後打泥或切細）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋小黃瓜（去皮去硬籽煮軟壓泥，不給硬生塊）",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋豌豆（充分煮軟壓泥，不給整粒）"
+        ],
+        "candidate": "首次候選：萵苣；洗淨煮熟嫩葉後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-27",
+        "meals": [
+          "萵苣（洗淨煮熟嫩葉後打泥或切細）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟牛肉泥"
+        ],
+        "candidate": "重複觀察候選：萵苣；洗淨煮熟嫩葉後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-28",
+        "meals": [
+          "全熟去刺鮭魚泥＋萵苣（洗淨煮熟嫩葉後打泥或切細）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟雞肉泥"
+        ],
+        "candidate": "重複觀察候選：萵苣；洗淨煮熟嫩葉後打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-29",
+        "meals": [
+          "芥藍（去硬梗取嫩葉煮軟打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋四季豆（去頭尾去筋，充分煮熟煮軟後打泥或切細）",
+          "熟馬鈴薯泥＋全熟蛋泥"
+        ],
+        "candidate": "首次候選：芥藍；去硬梗取嫩葉煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-04-30",
+        "meals": [
+          "全熟去殼蝦泥＋芥藍（去硬梗取嫩葉煮軟打泥）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋熟豆腐泥"
+        ],
+        "candidate": "重複觀察候選：芥藍；去硬梗取嫩葉煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-01",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋芥藍（去硬梗取嫩葉煮軟打泥）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：芥藍；去硬梗取嫩葉煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-02",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋熟菠菜泥",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋全熟去殼蝦泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-05-03 空心菜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-03",
+        "meals": [
+          "空心菜（取嫩葉洗淨煮熟打泥或切細）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋櫛瓜（洗淨煮軟壓泥）",
+          "白米粥（僅米與水）＋煮熟扁豆泥"
+        ],
+        "candidate": "首次候選：空心菜；取嫩葉洗淨煮熟打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-04",
+        "meals": [
+          "空心菜（取嫩葉洗淨煮熟打泥或切細）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "重複觀察候選：空心菜；取嫩葉洗淨煮熟打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-05",
+        "meals": [
+          "全熟去刺鮭魚泥＋空心菜（取嫩葉洗淨煮熟打泥或切細）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "重複觀察候選：空心菜；取嫩葉洗淨煮熟打泥或切細",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-06",
+        "meals": [
+          "地瓜葉（去粗梗，嫩葉洗淨煮軟打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋空心菜（取嫩葉洗淨煮熟打泥或切細）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）"
+        ],
+        "candidate": "首次候選：地瓜葉；去粗梗，嫩葉洗淨煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-07",
+        "meals": [
+          "全熟去殼蝦泥＋地瓜葉（去粗梗，嫩葉洗淨煮軟打泥）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）"
+        ],
+        "candidate": "重複觀察候選：地瓜葉；去粗梗，嫩葉洗淨煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-08",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋地瓜葉（去粗梗，嫩葉洗淨煮軟打泥）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋豌豆（充分煮軟壓泥，不給整粒）"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：地瓜葉；去粗梗，嫩葉洗淨煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-09",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋冬瓜（去皮去籽煮軟壓泥）",
+          "白米粥（僅米與水）＋全熟牛肉泥"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-05-10 莧菜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-10",
+        "meals": [
+          "莧菜（去硬梗洗淨煮熟打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋小黃瓜（去皮去硬籽煮軟壓泥，不給硬生塊）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋全熟雞肉泥"
+        ],
+        "candidate": "首次候選：莧菜；去硬梗洗淨煮熟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-11",
+        "meals": [
+          "莧菜（去硬梗洗淨煮熟打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟馬鈴薯泥＋全熟蛋泥"
+        ],
+        "candidate": "重複觀察候選：莧菜；去硬梗洗淨煮熟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-12",
+        "meals": [
+          "全熟去刺鮭魚泥＋莧菜（去硬梗洗淨煮熟打泥）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋熟豆腐泥"
+        ],
+        "candidate": "重複觀察候選：莧菜；去硬梗洗淨煮熟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-13",
+        "meals": [
+          "茼蒿（嫩葉洗淨充分煮熟打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋白蘿蔔（去皮煮軟壓泥）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋全熟去刺鮭魚泥"
+        ],
+        "candidate": "首次候選：茼蒿；嫩葉洗淨充分煮熟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-14",
+        "meals": [
+          "全熟去殼蝦泥＋茼蒿（嫩葉洗淨充分煮熟打泥）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋全熟去殼蝦泥"
+        ],
+        "candidate": "重複觀察候選：茼蒿；嫩葉洗淨充分煮熟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-15",
+        "meals": [
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋茼蒿（嫩葉洗淨充分煮熟打泥）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋煮熟扁豆泥"
+        ],
+        "candidate": "週末不首次試新；重複觀察候選：茼蒿；嫩葉洗淨充分煮熟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-16",
+        "meals": [
+          "無顆粒純杏仁醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟豆腐泥＋高麗菜（煮軟去硬梗後打泥或切細）",
+          "單純小麥麵（煮軟切碎；初期打泥）＋豬肉（充分煮熟去筋細磨，依能力處理）"
+        ],
+        "candidate": "週末不首次試新；不試新；下項候選：2027-05-17 白菜",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-17",
+        "meals": [
+          "白菜（洗淨去硬梗煮軟打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "全熟蛋泥＋青江菜（洗淨煮軟去硬梗後打泥或切細）",
+          "熟馬鈴薯泥＋鷹嘴豆（充分煮軟去鬆皮後壓泥，不給整粒；不加其他配料）"
+        ],
+        "candidate": "首次候選：白菜；洗淨去硬梗煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-18",
+        "meals": [
+          "白菜（洗淨去硬梗煮軟打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "小米（煮至全軟後打泥或壓碎，不給整粒穀物）＋火雞肉（充分煮熟去皮去筋細磨，選原肉而非加工肉片）"
+        ],
+        "candidate": "重複觀察候選：白菜；洗淨去硬梗煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-19",
+        "meals": [
+          "全熟去刺鮭魚泥＋白菜（洗淨去硬梗煮軟打泥）",
+          "巴氏殺菌全脂無糖原味優格＋含鐵嬰兒燕麥糊（依標示調製）",
+          "藜麥（依產品指示洗淨煮至全軟，再打泥或壓碎，不給整粒）＋紅豆（充分煮軟壓泥，不給整粒，不用含糖鹽的成品豆）"
+        ],
+        "candidate": "重複觀察候選：白菜；洗淨去硬梗煮軟打泥",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-20",
+        "meals": [
+          "含鐵嬰兒燕麥糊（依標示調製）＋香瓜（熟軟去皮去籽壓泥，不做球狀或大塊）",
+          "全熟蛋泥＋煮軟花椰菜泥",
+          "玉米（充分煮熟打泥並過濾韌皮，不給整粒玉米）＋豌豆（充分煮軟壓泥，不給整粒）"
+        ],
+        "candidate": "無新食材候選；回顧實際紀錄",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      },
+      {
+        "date": "2027-05-21",
+        "meals": [
+          "全熟去殼蝦泥＋熟菠菜泥",
+          "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
+          "白米粥（僅米與水）＋全熟牛肉泥"
+        ],
+        "candidate": "無新食材候選；回顧實際紀錄",
+        "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
+      }
+    ],
+    "candidateLibrary": 100,
+    "deferred": 40,
+    "sources": [
+      {
+        "title": "NHS：約六個月起步與質地",
+        "url": "https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/from-around-6-months/"
+      },
+      {
+        "title": "NHS：7–9 個月，逐步三餐與奶類並行",
+        "url": "https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/7-to-9-months/"
+      },
+      {
+        "title": "NHS：10–12 個月，軟碎與手指食物",
+        "url": "https://www.nhs.uk/best-start-in-life/baby/weaning/what-to-feed-your-baby/10-to-12-months/"
+      },
+      {
+        "title": "CDC：6–12 個月的母乳餵養",
+        "url": "https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/how-much-and-how-often.html"
+      }
+    ],
+    "textures": [
+      {
+        "id": "puree",
+        "name": "泥狀／滑順軟食",
+        "start": "2026-10-21",
+        "end": "2026-12-21",
+        "color": "#78956f",
+        "focus": "起步練習",
+        "example": "細緻南瓜泥、燕麥糊、細磨肉泥",
+        "gate": "這是已開始的歷史階段；六個月前的提前試吃仍須確認準備度與兒科建議。細泥可繼續搭配其他質地，不是到期就禁用。"
+      },
+      {
+        "id": "lumps",
+        "name": "叉壓泥／柔軟顆粒",
+        "start": "2026-11-22",
+        "end": "2027-01-21",
+        "color": "#d1ae75",
+        "focus": "約 6–7 個月",
+        "example": "叉壓南瓜、熟軟碎食",
+        "gate": "能穩定坐好並控制頭頸、處理當前食物，再逐步加入柔軟顆粒；持續難吞嚥時先評估，不按日曆硬升級。"
+      },
+      {
+        "id": "finger",
+        "name": "軟手指食物",
+        "start": "2026-11-22",
+        "end": "2027-03-21",
+        "color": "#ba7858",
+        "focus": "約 6 個月起可並行",
+        "example": "適合抓握、可壓爛的熟軟蔬菜條",
+        "gate": "具備進食準備度、能抓取並處理適合形狀的軟食時可開始；不必等顆粒階段結束，成人全程看顧。"
+      },
+      {
+        "id": "family",
+        "name": "軟碎家庭食物",
+        "start": "2027-02-22",
+        "end": "2027-05-21",
+        "color": "#728d9c",
+        "focus": "約 9–11 個月的重點",
+        "example": "細切軟菜、去刺魚、軟碎肉",
+        "gate": "從已能處理的軟度逐步細切；此處「固體」仍是可壓爛的軟食，不代表硬塊或成人硬食。"
+      }
+    ],
+    "volume": [
+      {
+        "start": "2026-10-21",
+        "end": "2026-11-21",
+        "age": "未滿 6 個月",
+        "meals": "白天少量 1 次",
+        "portion": "少量試味，確切 mL 未記錄",
+        "daily": "不設定每日配額",
+        "note": "先前已開始的實際歷程；奶類照常，不依此減奶。提前引入的適合性與準備度待確認。"
+      },
+      {
+        "start": "2026-11-22",
+        "end": "2026-12-21",
+        "age": "6 個月",
+        "meals": "家庭計畫每天 2 餐，循序建立",
+        "portion": "起始每餐 15–30 mL，仍餓可續添",
+        "daily": "兩餐各 15–30 時：30–60 mL",
+        "note": "這是家庭起始提供量，不是上限或必吃量；兩樣食材合計。"
+      },
+      {
+        "start": "2026-12-22",
+        "end": "2027-01-21",
+        "age": "7 個月",
+        "meals": "從 2 餐逐步到 3 餐",
+        "portion": "已舒服吃到 60 mL／餐時，第三餐先 15–30 mL",
+        "daily": "兩餐 60＋第三餐 15–30：135–150 mL",
+        "note": "家庭備餐算例；若三餐各 60，合計 180 mL。先看實際能力與食慾。"
+      },
+      {
+        "start": "2027-01-22",
+        "end": "2027-02-21",
+        "age": "8 個月",
+        "meals": "逐步穩定 3 餐",
+        "portion": "例如從 60 增至 90 mL／餐",
+        "daily": "三餐各 60–90 時：180–270 mL",
+        "note": "可視食慾再增加；不是必須在這個月達標，也不靠加水增加數字。"
+      },
+      {
+        "start": "2027-02-22",
+        "end": "2027-03-21",
+        "age": "9 個月",
+        "meals": "3 個主要餐次",
+        "portion": "約半杯（120–125 mL）作備餐參考",
+        "daily": "三餐都約半杯時：360–375 mL",
+        "note": "家庭算例，實吃可多可少；不把 mL 換算成要減的奶量。"
+      },
+      {
+        "start": "2027-03-22",
+        "end": "2027-05-21",
+        "age": "10–11 個月",
+        "meals": "3 餐，與奶類並行",
+        "portion": "依食慾、生長與營養密度調整",
+        "daily": "不設個人固定總量",
+        "note": "朝家庭軟食與自主進食發展，沒有固定生日加量規則。"
+      }
+    ],
+    "milk": {
+      "title": "先建立正餐，奶類繼續按需提供",
+      "reviewStart": "2026-12-22",
+      "reviewEnd": "2027-03-21",
+      "text": "7–9 個月（12/22–3/21）的目標是逐步建立三餐，並觀察奶量是否自然改變；10–12 個月仍是三餐加奶。現有資料沒有奶量、體重與生長曲線，因此不設定「哪一天取消一整餐母奶」。",
+      "gate": "穩定吃多樣正餐、進食舒適、生長與奶量適合時，再與兒科／營養專業人員討論某次奶是否需要調整。餐量達到 60、90 或 120 mL，都不等於可以直接減掉一餐奶。",
+      "afterYear": "一歲生日為 2027-05-22，是後續飲食安排的檢視點，不是必須停母乳的日期。"
+    }
+  }
 };
 </script><script>'use strict';
+(() => {
 const data=window.FEEDING_DATA;
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -592,19 +3611,16 @@ const colors={'蛋白質':'#b5beb6','蔬菜':'#7a9970','碳水':'#d8b98a','脂�
 const short=d=>d.slice(5).replace('-','/');
 const dateNumber=d=>Date.parse(`${d}T00:00:00Z`);
 function ageAt(birth,at){const b=new Date(`${birth}T00:00:00Z`),a=new Date(`${at}T00:00:00Z`);let months=(a.getUTCFullYear()-b.getUTCFullYear())*12+a.getUTCMonth()-b.getUTCMonth();if(a.getUTCDate()<b.getUTCDate())months--;const base=new Date(b);base.setUTCMonth(base.getUTCMonth()+months);return `${months} 個月 ${Math.round((a-base)/86400000)} 天`;}
-const familyTolerated=data.foods.filter(f=>f.tolerance.startsWith('已確認')).length;
 const knownStart=[data.firstLogDate,data.baselineReportedAt].filter(Boolean).sort()[0];
 const elapsed=Math.round((dateNumber(data.asOf)-dateNumber(data.actualStartDate||knownStart))/86400000)+1;
-const scoreLabel=f=>f.score===null?'尚無偏好訊號':f.score>=3?'很喜歡':f.score>0?'吃得不錯':f.score<0?'接受度較低':'回饋混合';
+const scoreLabel=f=>f.score===null?'尚無偏好訊號':f.score>=3?'很喜歡':f.score>=2?'吃得不錯':f.score>0?'接受尚可':f.score<0?'接受度較低':'回饋混合';
 const scoreClass=f=>f.score===null?'gray':f.score<0?'warm':'';
 $('age').textContent=`Nolan · ${ageAt(data.birthDate,data.asOf)}`;
 $('updated').textContent=`紀錄更新至 ${data.asOf.replaceAll('-',' / ')}`;
 $('footer-date').textContent=data.asOf;
 const stats=[
   ['副食品探索',`<small>${data.actualStartDate?'第':'至少第'}</small>${elapsed}<small>天</small>`,data.actualStartDate?`自 ${data.actualStartDate} 起`:`${short(knownStart)} 已回報吃過副食品<br>實際首次日期待補，非精確起始天數`],
-  ['已嘗試的不同食材',`${data.foods.length}<small>種</small>`,'同一食材不同做法只計一次'],
-  ['已確認耐受 · 家庭觀察',`${familyTolerated}<small>種</small>`,'含家長補充的三天試吃<br>地瓜另保留最新不適觀察'],
-  ['留下日誌的日子',`${data.logDates.length}<small>天</small>`,'未記錄的日子不視為沒有進食']
+  ['已嘗試的不同食材',`${data.foods.length}<small>種</small>`,'同一食材不同做法只計一次']
 ];
 $('stats').innerHTML=stats.map(([label,value,note])=>`<article class="stat"><p class="stat-label">${label}</p><p class="stat-value">${value}</p><p class="stat-note">${note}</p></article>`).join('');
 const counts=data.categoryOrder.map(name=>({name,count:data.foods.filter(f=>f.category===name).length}));
@@ -613,21 +3629,21 @@ const rings=counts.filter(c=>c.count).map(c=>{const length=c.count/data.foods.le
 $('donut').innerHTML=`<div class="donut" role="img" aria-label="${esc(counts.map(c=>`${c.name} ${c.count} 種`).join('，'))}"><svg viewBox="0 0 100 100" aria-hidden="true">${rings}</svg><div class="donut-center"><strong>${data.foods.length}</strong><span>種食材的探索</span></div></div>`;
 $('categories').innerHTML=counts.filter(c=>c.count||['蛋白質','蔬菜','碳水','脂肪'].includes(c.name)).map(c=>`<button class="category" data-category="${c.name}" ${c.count?'':'disabled'}><span class="dot" style="background:${colors[c.name]}"></span><span>${c.name}</span><strong>${c.count}</strong><span class="bar"><span style="width:${c.count/data.foods.length*100}%;background:${colors[c.name]}"></span></span></button>`).join('');
 const baseline=data.foods.filter(f=>f.baseline);
-const events=[{date:short(data.baselineReportedAt),title:'最初回報的滋味',note:`${baseline.map(f=>f.name).join('、')}已吃過；首次日期待補`,count:baseline.length}];
+const events=baseline.length?[{date:short(data.baselineReportedAt),title:'最初回報的滋味',note:`${baseline.map(f=>f.name).join('、')}已吃過；首次日期待補`,count:baseline.length}]:[];
 let total=data.foods.filter(f=>f.baseline).length;
 for(const date of data.logDates){const introduced=data.foods.filter(f=>!f.baseline&&f.dates[0]===date);if(introduced.length){total+=introduced.length;events.push({date:short(date),title:`${introduced.map(f=>f.icon+' '+f.name).join('、')}`,note:'新增實吃回報',count:total});}}
 $('timeline').innerHTML=events.map(e=>`<div class="timeline-row"><span class="timeline-date">${esc(e.date)}</span><span class="timeline-dot"></span><div><p class="timeline-title">${esc(e.title)}<span>${e.count} 種</span></p><p class="timeline-note">${esc(e.note)}</p></div></div>`).join('');
-$('method').textContent=data.method+' 明確喜歡 +3、吃得好 +2、多口 +2、幾乎吃完 +2、主動張嘴 +1、接受度較低 −2，同餐合計限制在 −5～+5。分數只是排序線索，不是精準量表；每項顯示有偏好訊號的回饋天數，少量回饋的排序仍可能變動。分類與原文可在詳細表核對。';
+$('method').textContent=data.method+' 明確喜歡 +3、吃得好 +2、接受尚可 +1、多口 +2、幾乎吃完 +2、主動張嘴 +1、接受度較低 −2，同餐合計限制在 −5～+5。分數只是排序線索，不是精準量表；每項顯示有偏好訊號的回饋天數，少量回饋的排序仍可能變動。分類與原文可在詳細表核對。';
 $('method-toggle').addEventListener('click',()=>{const open=$('method').hidden;$('method').hidden=!open;$('method-toggle').setAttribute('aria-expanded',String(open));});
 function ranking(list,container,kind){$(container).innerHTML=list.length?list.map((f,i)=>`<details class="rank-entry"><summary><span class="rank-number">${String(list.findIndex(other=>Math.abs(other.score-f.score)<0.0001)+1).padStart(2,'0')}</span><span class="food-icon" aria-hidden="true">${f.icon}</span><div class="rank-main"><strong>${esc(f.name)}</strong><p>${f.feedbackDays} 天偏好回饋 · ${esc(f.evidence.at(-1)?.cues.map(c=>c.label).join('、'))}</p></div><span class="badge ${scoreClass(f)}">${scoreLabel(f)}</span></summary><div class="evidence"><b>語意線索分數 ${f.score.toFixed(1)} / 5 · ${f.feedbackDays} 天回饋</b>${f.evidence.map(e=>`<blockquote><strong>${short(e.date)}</strong>「${esc(e.quote)}」<br>${esc(e.cues.map(c=>`${c.label} ${c.weight>0?'+':''}${c.weight}`).join(' · '))}</blockquote>`).join('')}${f.attention?'<p>另有進食不適紀錄，請查看下方詳細表。</p>':''}</div></details>`).join(''):'<p class="empty">目前還沒有這類偏好回饋。</p>';$(container).insertAdjacentHTML('beforeend',`<p class="rank-caption">目前 ${list.length} 種有${kind}回饋，不補滿名額。</p>`);}
 const top=data.foods.filter(f=>f.score>0).sort((a,b)=>b.score-a.score).slice(0,10);
 const bottom=data.foods.filter(f=>f.score<0).sort((a,b)=>a.score-b.score).slice(0,10);
 ranking(top,'top-list','正向');ranking(bottom,'bottom-list','接受度較低的');
-$('category-filter').insertAdjacentHTML('beforeend',counts.map(c=>`<option value="${c.name}">${c.name}（${c.count}）</option>`).join(''));
+$('category-filter').innerHTML='<option value="">全部分類</option>'+counts.map(c=>`<option value="${c.name}">${c.name}（${c.count}）</option>`).join('');
 function renderTable(){const category=$('category-filter').value,query=$('search').value.trim().toLowerCase(),texture=$('texture-filter').value,sort=$('sort').value;let foods=data.foods.filter(f=>(!category||f.category===category)&&(!texture||f.textures.includes(texture))&&(!query||JSON.stringify(f).toLowerCase().includes(query)));
   if(sort==='days')foods.sort((a,b)=>b.daysAtLeast-a.daysAtLeast);if(sort==='liked')foods.sort((a,b)=>(b.score??-Infinity)-(a.score??-Infinity));if(sort==='least')foods.sort((a,b)=>(a.score??Infinity)-(b.score??Infinity));
   $('table-count').textContent=`${foods.length} / ${data.foods.length} 種食材`;$('empty').hidden=foods.length>0;
-  $('food-rows').innerHTML=foods.map(f=>`<tr><td><span class="food-name"><span aria-hidden="true">${f.icon}</span>${esc(f.name)}</span><span class="cell-sub">${esc(f.category)}</span></td><td><span class="days">${f.confirmedDays?'至少 ':''}${f.daysAtLeast}<small> 天</small></span><span class="cell-sub">已確認最長連續 ${f.consecutiveDays} 天<br>有日期日誌 ${f.observedDays} 天<br>${f.dates.map(short).join('、')}${f.confirmedDays?'<br>另含家長補充，日期待補':''}</span></td><td>${f.textures.map(t=>`<span class="badge ${t==='未記錄'?'gray':''}">${esc(t)}</span>`).join(' ')}<span class="cell-sub">${esc(f.latest?.texture||'未提供')}</span></td><td><span class="badge ${scoreClass(f)}">${scoreLabel(f)}</span><p class="cell-text">${esc(f.latest?.interest||'未提供')}</p><span class="cell-sub">${f.feedbackDays?`${f.feedbackDays} 天偏好回饋 · ${f.score.toFixed(1)} / 5`:'缺少明確偏好回饋，未評分'}</span></td><td><span class="badge ${f.tolerance.startsWith('已確認')?'':'gray'}">${esc(f.tolerance)}</span><p class="cell-text">${esc(f.latest?.reaction||'未提供')}</p>${f.attention?'<p class="attention">需追蹤：進食時一直想吐，原因未確認</p>':''}<span class="cell-sub">${esc(f.note)}</span></td></tr>`).join('');
+  $('food-rows').innerHTML=foods.map(f=>`<tr><td><span class="food-name"><span aria-hidden="true">${f.icon}</span>${esc(f.name)}</span><span class="cell-sub">${esc(f.category)}</span></td><td><span class="days">${f.hasUndatedHistory?'至少 ':''}${f.daysAtLeast}<small> 天</small></span><span class="cell-sub">已確認最長連續 ${f.consecutiveDays} 天<br>有日期日誌 ${f.observedDays} 天<br>${f.dates.map(short).join('、')}${f.hasUndatedHistory?'<br>另含家長補充，日期待補':''}</span></td><td>${f.textures.map(t=>`<span class="badge ${t==='未記錄'?'gray':''}">${esc(t)}</span>`).join(' ')}<span class="cell-sub">${esc(f.latest?.texture||'未提供')}</span></td><td><span class="badge ${scoreClass(f)}">${scoreLabel(f)}</span><p class="cell-text">${esc(f.latest?.interest||'未提供')}</p><span class="cell-sub">${f.feedbackDays?`${f.feedbackDays} 天偏好回饋 · ${f.score.toFixed(1)} / 5`:'缺少明確偏好回饋，未評分'}</span></td><td><span class="badge ${f.tolerance.startsWith('已確認')?'':'gray'}">${esc(f.tolerance)}</span><p class="cell-text">${esc(f.latest?.reaction||'未提供')}</p>${f.attention?'<p class="attention">需追蹤：進食時一直想吐，原因未確認</p>':''}<span class="cell-sub">${esc(f.note)}</span></td></tr>`).join('');
 }
 for(const id of ['search','category-filter','texture-filter','sort'])$(id).addEventListener(id==='search'?'input':'change',renderTable);
 $('reset').addEventListener('click',()=>{for(const id of ['search','category-filter','texture-filter'])$(id).value='';$('sort').value='default';renderTable();});
@@ -646,5 +3662,6 @@ function renderAllergies() {
   }
 }
 renderAllergies();
+})();
 </script></body>
 </html>

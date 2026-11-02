@@ -1,11 +1,12 @@
 {
-  "actualStartDate": null,
+  "actualStartDate": "2026-10-21",
   "baselineReportedAt": "2026-10-29",
+  "toleranceConfirmation": {"date":"2026-11-02","source":"家長明確確認截至目前所有已嘗試食材均耐受；不改寫實吃天數或抹除先前進食不適。"},
   "foods": [
-    {"id":"rice","name":"十倍粥（米）","icon":"🍚","category":"碳水","aliases":["米（","十倍粥"],"baseline":true,"confirmedDays":3,"confirmedConsecutiveDays":3,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"家長補充已吃滿三天，具體日期待補。"},
-    {"id":"pumpkin","name":"南瓜","icon":"🎃","category":"蔬菜","aliases":["南瓜"],"baseline":true,"confirmedDays":3,"confirmedConsecutiveDays":3,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"家長補充已吃滿三天，具體日期待補。"},
-    {"id":"sweet-potato","name":"地瓜","icon":"🍠","category":"碳水","aliases":["地瓜"],"baseline":true,"confirmedDays":3,"confirmedConsecutiveDays":3,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"家長補充已吃滿三天；11/02 一直想吐，仍需追蹤。纖維較多是家長猜測，原因未確認。"},
-    {"id":"avocado","name":"酪梨","icon":"🥑","category":"脂肪","aliases":["酪梨"],"baseline":false,"tolerance":"觀察中","note":"最早實吃回報為 10/30，是否更早吃過待補。"},
-    {"id":"oats","name":"寶寶燕麥","icon":"🥣","category":"碳水","aliases":["寶寶燕麥","嬰兒燕麥"],"baseline":false,"tolerance":"觀察中","note":"11/02 首次嘗試；品牌、完整配料及是否含鐵待補。"}
+    {"id":"rice","name":"十倍粥（米）","icon":"🍚","category":"碳水","aliases":["米（","十倍粥"],"baseline":false,"firstTriedDate":"2026-10-21","confirmedDays":3,"confirmedDates":["2026-10-21","2026-10-22","2026-10-23"],"confirmedConsecutiveDays":3,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"10/21–10/23 連續三天吃十倍粥，整段回顧吃得還行；10/30 再次吃，共有 4 天實吃紀錄。"},
+    {"id":"pumpkin","name":"南瓜","icon":"🎃","category":"蔬菜","aliases":["南瓜"],"baseline":false,"firstTriedDate":"2026-10-24","confirmedDays":3,"confirmedDates":["2026-10-24","2026-10-25","2026-10-26"],"confirmedConsecutiveDays":3,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"10/24–10/26 連續三天吃南瓜，整段回顧不錯；10/31 細泥吃得挺好，共有 4 天實吃紀錄。"},
+    {"id":"sweet-potato","name":"地瓜（番薯）","icon":"🍠","category":"碳水","aliases":["地瓜","番薯"],"baseline":false,"firstTriedDate":"2026-10-27","confirmedDays":3,"confirmedDates":["2026-10-27","2026-10-28","2026-10-29"],"confirmedConsecutiveDays":3,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"10/27–10/29 有點難咬、難吞嚥（整段回顧，未細分發生日期）；11/02 複習一直想吐，共有 4 天實吃紀錄。質地未提供，原因未確認；不標為過敏。"},
+    {"id":"avocado","name":"酪梨","icon":"🥑","category":"脂肪","aliases":["酪梨"],"baseline":false,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"家長確認截至目前耐受。最早實吃回報為 10/30，是否更早吃過待補；實吃紀錄仍為 2 天。"},
+    {"id":"oats","name":"寶寶燕麥","icon":"🥣","category":"碳水","aliases":["寶寶燕麥","嬰兒燕麥"],"baseline":false,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"家長確認截至目前耐受。11/02 首次嘗試，實吃紀錄仍為 1 天；品牌、完整配料及是否含鐵待補。"}
   ]
 }
