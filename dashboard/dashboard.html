@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f4ed"><meta name="description" content="Nolan 的副食品探索日誌：進食進度、食材分類、喜好與每日觀察。">
+  <title>Nolan 的第一口 · 副食品 Dashboard</title>
+  <style>@charset "UTF-8";
+:root{--paper:#f6f4ed;--ink:#293e35;--muted:#768079;--line:#e1e5dc;--green:#4f7460;--mint:#e7ede3;--orange:#c97651;--peach:#f6e5da;--white:#fffefa}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI","Microsoft JhengHei",sans-serif;font-size:14px;line-height:1.7}button,input,select{font:inherit}button,a,select{touch-action:manipulation}a{color:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:4px}button:disabled{cursor:default}h1,h2,h3,p{margin:0}h2{font-size:24px;font-weight:650;letter-spacing:-.6px}h3{font-size:17px}main{max-width:1240px;padding:0 38px;margin:auto}.topbar{max-width:1440px;margin:auto;padding:25px 38px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;display:flex;align-items:center;gap:12px;font-family:Georgia,serif;font-size:21px;letter-spacing:-.5px}.brand-icon{display:grid;place-items:center;background:var(--green);color:white;border-radius:14px 14px 14px 3px;width:38px;height:38px;font-size:29px;line-height:1}.brand-sub{font-family:"Microsoft JhengHei",sans-serif;color:var(--muted);font-size:12px;letter-spacing:1px;border-left:1px solid var(--line);padding-left:14px;margin-left:4px}nav{display:flex;gap:27px}nav a{text-decoration:none;font-size:13px;color:#58685e}nav a:hover{color:var(--orange)}.private{font-size:11px;color:var(--green);letter-spacing:1px}.hero{padding:58px 0 36px;display:flex;justify-content:space-between;align-items:center;gap:30px}.eyebrow{font-size:10px;font-weight:650;letter-spacing:2px;color:var(--green);margin-bottom:12px}.hero h1{font-size:49px;line-height:1.35;font-weight:550;letter-spacing:2px;font-family:Georgia,"PMingLiU","Microsoft JhengHei",serif}.orange{color:var(--orange)}.intro{color:var(--muted);margin-top:17px;font-size:14px}.mobile-break{display:none}.hero-note{width:250px;min-height:210px;background:var(--mint);border-radius:100px 100px 12px 12px;text-align:center;display:flex;align-items:center;flex-direction:column;justify-content:center;padding:22px 18px;transform:rotate(2deg);margin-right:20px}.sprout{color:var(--green);font-size:44px;line-height:1.2;margin-bottom:10px}.hero-note>span:not(.sprout){font-size:8px;letter-spacing:1.8px;color:var(--green)}.hero-note strong{font-size:20px;font-weight:500;margin-top:10px}.hero-note p{font-size:11px;color:var(--muted);margin-top:5px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:26px}.stat{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px 23px}.stat:first-child{background:var(--green);color:white;border-color:var(--green)}.stat-label{font-size:12px;color:var(--muted)}.stat:first-child .stat-label,.stat:first-child .stat-note{color:#d7e4d7}.stat-value{font-family:Georgia,serif;font-size:45px;line-height:1.2;margin:12px 0 9px;letter-spacing:-1px;white-space:nowrap}.stat-value small{font-family:"Microsoft JhengHei",sans-serif;font-size:13px;margin:0 5px;letter-spacing:0}.stat-note{font-size:10px;color:var(--muted);line-height:1.8}.panel{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px}.chart-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:21px}.section-head .eyebrow{font-size:9px;margin-bottom:5px}.micro{font-size:10px;color:var(--muted);white-space:nowrap}.category-content{display:flex;align-items:center;justify-content:space-around;gap:20px;min-height:210px}.category-list{flex:1;max-width:240px}.category{display:flex;gap:9px;width:100%;align-items:center;background:none;border:0;border-radius:6px;padding:7px;color:var(--ink);font-size:12px;text-align:left}.category:hover{background:var(--paper)}.category:disabled{opacity:.6}.category .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}.category strong{margin-left:auto;font-size:13px}.category .bar{width:50px;height:4px;background:#eeeee6;border-radius:5px;overflow:hidden}.category .bar span{display:block;height:100%;border-radius:5px}.footnote{color:var(--muted);font-size:10px;line-height:1.9;margin-top:16px}.donut{width:172px;height:172px;position:relative}.donut svg{transform:rotate(-90deg);width:100%;height:100%}.donut-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column}.donut-center strong{font-size:38px;font-family:Georgia,serif;line-height:1.3}.donut-center span{font-size:10px;color:var(--muted)}.timeline{padding:7px 0 0;min-height:210px}.timeline-row{display:grid;grid-template-columns:48px 18px 1fr;gap:12px;margin-bottom:18px;align-items:start}.timeline-date{font-size:11px;color:var(--muted);padding-top:2px}.timeline-dot{width:9px;height:9px;border:2px solid var(--green);background:var(--white);border-radius:50%;margin-top:6px;position:relative}.timeline-row:not(:last-child) .timeline-dot:after{content:"";position:absolute;width:1px;height:39px;top:9px;left:2px;background:var(--line)}.timeline-title{font-size:13px}.timeline-note{font-size:11px;color:var(--muted);margin-top:2px}.timeline-title span{float:right;color:var(--green);font-weight:650;font-size:11px}.favorites-section{margin:42px 0 28px}.muted{font-size:12px;color:var(--muted);margin-top:4px}.text-button{border:0;background:none;color:var(--green);font-size:12px;padding:5px 0;text-decoration:underline;text-underline-offset:5px;white-space:nowrap}.rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.rank-heading{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line)}.round-icon{border-radius:50%;width:42px;height:42px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:26px}.peach{background:var(--peach);color:var(--orange)}.rank-entry{padding:16px 0;border-bottom:1px solid var(--line)}.rank-entry:last-child{border-bottom:0}.rank-entry summary{list-style:none;display:flex;align-items:center;gap:12px;cursor:pointer}.rank-entry summary::-webkit-details-marker{display:none}.rank-number{font-family:Georgia,serif;color:#8a9488;font-size:17px;min-width:14px}.food-icon{font-size:26px;width:34px}.rank-main{flex:1}.rank-main strong{font-size:14px;font-weight:600}.rank-main p{color:var(--muted);font-size:10px;line-height:1.7;margin-top:2px}.badge{display:inline-block;padding:3px 9px;border-radius:5px;font-size:10px;background:var(--mint);color:var(--green)}.badge.warm{background:var(--peach);color:#9b593a}.badge.gray{background:#efeee8;color:#71786f}.rank-entry summary:after{content:"＋";color:var(--muted);font-size:12px}.rank-entry[open] summary:after{content:"−"}.evidence{font-size:11px;color:var(--muted);padding:15px 10px 0 61px}.evidence blockquote{margin:8px 0 12px;border-left:2px solid #cdd8c8;padding-left:10px}.evidence b{font-weight:500;color:var(--green)}.rank-caption{font-size:10px;color:var(--muted);padding-top:15px}.method{border:1px solid #d4decc;background:var(--mint);border-radius:12px;padding:20px;font-size:12px;line-height:2;margin-bottom:18px}.food-panel{padding-bottom:20px;margin-bottom:35px}.filters{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 20px}.search{flex:1;min-width:180px;display:flex;align-items:center;border:1px solid var(--line);border-radius:7px;padding:0 12px;background:white}.search span{font-size:24px;color:var(--muted);margin-right:7px}.search input{border:0;background:none;width:100%;padding:8px 0;color:var(--ink);font-size:12px;min-width:0}select{border:1px solid var(--line);border-radius:7px;background:white;padding:10px;color:var(--ink);font-size:11px}.filters .text-button{padding:5px 8px}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px;min-width:890px}th{text-align:left;color:var(--muted);font-weight:500;font-size:10px;padding:13px 12px;background:#f6f7f1;border-bottom:1px solid var(--line)}td{vertical-align:top;border-bottom:1px solid var(--line);padding:20px 12px}tr:last-child td{border-bottom:0}td:nth-child(1){width:16%}td:nth-child(2){width:17%}td:nth-child(3){width:13%}td:nth-child(4){width:23%}td:nth-child(5){width:31%}.food-name{font-size:14px;font-weight:600;white-space:nowrap}.food-name span{margin-right:6px}.cell-sub{display:block;font-size:10px;color:var(--muted);margin-top:7px;line-height:1.8}.days{font-family:Georgia,"Microsoft JhengHei",sans-serif;font-size:20px}.days small{font-size:11px}.cell-text{font-size:11px;margin-top:8px;color:#627266;line-height:1.9}.attention{color:#a76342;background:#fbefe5;border-radius:5px;padding:5px 7px;font-size:10px;margin-top:9px}.empty{text-align:center;padding:40px;color:var(--muted)}footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:24px 0 35px;gap:20px}.brand-footer{font-family:Georgia,serif;font-size:30px;color:var(--green)}.brand-footer span{font-size:15px;font-style:italic;margin-left:9px}footer p{text-align:right;font-size:10px;color:var(--muted)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}[hidden]{display:none!important}@media(min-width:1500px){main{max-width:1340px}.hero{padding-top:65px}.hero h1{font-size:56px}}@media(max-width:1000px){.brand-sub{display:none}.chart-grid{grid-template-columns:1fr 1fr}.category-content{flex-direction:column;gap:10px}.category-list{width:100%;max-width:none}.stats{gap:10px}.stat{padding:18px 15px}.stat-value{font-size:37px}.chart-grid .panel{padding:22px}.category-content{min-height:360px}.timeline{min-height:360px;display:flex;flex-direction:column;justify-content:center}.micro{white-space:normal}.rank-grid .panel{padding:20px}}@media(max-width:700px){main{padding:0 19px}.topbar{padding:18px 19px;gap:12px}.brand{font-size:17px;gap:8px}.brand-icon{width:30px;height:30px;font-size:24px;border-radius:10px 10px 10px 3px}.private{display:none}nav{gap:13px}nav a{font-size:11px}.hero{padding:35px 0 27px;gap:15px}.hero h1{font-size:33px}.eyebrow{font-size:8px;letter-spacing:1.3px}.hero-note{width:130px;min-width:130px;min-height:164px;padding:15px 8px;margin:0}.hero-note>span:not(.sprout){font-size:6px;letter-spacing:.8px}.hero-note strong{font-size:13px}.hero-note p{font-size:9px}.sprout{font-size:32px}.intro{font-size:12px}.mobile-break{display:block}.stats{grid-template-columns:1fr 1fr;gap:12px}.stat-value{font-size:38px}.stat-label{font-size:11px}.chart-grid,.rank-grid{grid-template-columns:1fr;gap:16px}.category-content{flex-direction:row;min-height:210px}.category-list{max-width:220px}.timeline{min-height:210px}.panel{padding:20px}.chart-grid .panel{padding:20px}.donut{width:140px;height:140px}.donut-center strong{font-size:32px}h2{font-size:21px}.section-head{align-items:flex-start}.section-head>.text-button{font-size:10px}.muted{font-size:11px}.favorites-section{margin-top:32px}.food-panel{padding:20px 14px}.search{flex-basis:100%}.filters{gap:7px}select{padding:8px 6px;font-size:10px}footer{align-items:flex-start}.brand-footer span{font-size:12px;display:block;margin:0}footer p{font-size:9px}.rank-main p{max-width:220px}.category .bar{width:38px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.allergy-panel{margin-bottom:35px}.allergy-summary{display:flex;gap:12px;flex-wrap:wrap}.allergy-summary>span{background:var(--paper);padding:9px 15px;border-radius:8px;font-size:12px;color:var(--muted)}.allergy-summary strong{font-family:Georgia,serif;font-size:22px;color:var(--ink);margin-right:6px}.allergy-empty{text-align:center;padding:30px 15px 22px}.allergy-empty .round-icon{margin:0 auto 12px;font-size:19px}.allergy-empty p{font-size:12px;color:var(--muted);margin-top:7px}.allergy-list-title{margin-top:24px;margin-bottom:12px}.allergy-panel table{min-width:640px}.allergy-panel td:first-child{width:24%}.allergy-panel td:nth-child(2){width:43%}.allergy-panel td:nth-child(3){width:33%}@media(max-width:700px){nav{gap:9px}.topbar{flex-wrap:wrap}nav{margin-left:auto}}
+</style>
+
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#"><span class="brand-icon">n.</span>Nolan’s little bites<span class="brand-sub">副食品探索日誌</span></a><nav aria-label="主要導覽"><a href="#overview">總覽</a><a href="#favorites">喜好</a><a href="#allergies">過敏紀錄</a><a href="#foods">食材紀錄</a></nav><span class="private">● 家庭紀錄</span></header>
+  <main>
+    <section class="hero" id="overview"><div><p class="eyebrow">SMALL SPOONS, NEW DISCOVERIES</p><h1>一口一口，<br>認識這個世界<span class="orange">。</span></h1><p class="intro">記下 Nolan 的每一次嘗試，<br class="mobile-break">讓小小的進步，都有跡可循。</p></div><div class="hero-note"><span class="sprout" aria-hidden="true">✳</span><span>OUR LITTLE FOOD EXPLORER</span><strong id="age">Nolan</strong><p id="updated"></p></div></section>
+    <section class="stats" aria-label="整體進度" id="stats"></section>
+    <section class="chart-grid">
+      <article class="panel category-panel"><div class="section-head"><div><p class="eyebrow">A LITTLE BIT OF EVERYTHING</p><h2>探索的食物版圖</h2></div><span class="micro">依食材種類計數</span></div><div class="category-content"><div id="donut"></div><div id="categories" class="category-list"></div></div><p class="footnote">每種食材依主要用途歸入一類：地瓜歸碳水、酪梨歸脂肪。這是食材種類分布，不是營養攝取比例。點選分類可篩選下方紀錄。</p></article>
+      <article class="panel"><div class="section-head"><div><p class="eyebrow">ONE NEW TASTE AT A TIME</p><h2>小小探索足跡</h2></div></div><div id="timeline" class="timeline"></div><p class="footnote">只顯示有回報的進展；沒有日誌的日期不視為沒吃，也不補算。日誌前已吃過的 3 種食物包含在總數內。</p></article>
+    </section>
+    <section id="favorites" class="favorites-section"><div class="section-head"><div><p class="eyebrow">WHAT THOSE LITTLE BITES TELL US</p><h2>Nolan 的口味筆記</h2><p class="muted">從每天的回饋讀懂喜好，隨著新的嘗試慢慢改變。</p></div><button class="text-button" id="method-toggle" aria-expanded="false" aria-controls="method">排序怎麼來的？ ↗</button></div><div class="method" id="method" hidden></div><div class="rank-grid"><article class="panel"><div class="rank-heading"><span class="round-icon">♡</span><div><h3>Top 10 · 比較喜歡</h3><p class="muted">有明確正向回饋的食材</p></div></div><div id="top-list"></div></article><article class="panel"><div class="rank-heading"><span class="round-icon peach">↻</span><div><h3>Bottom 10 · 還在熟悉</h3><p class="muted">近期接受度較低的食材</p></div></div><div id="bottom-list"></div></article></div><p class="footnote">只列有偏好證據的食材，不足 10 種就顯示實際數量。未提供偏好不當成不喜歡；想吐等進食反應另外追蹤。每項可展開查看原始回饋。</p></section>
+    <section class="panel food-panel" id="foods"><div class="section-head"><div><p class="eyebrow">EVERY FOOD HAS A LITTLE STORY</p><h2>每一種食材的進度</h2></div><span class="micro" id="table-count"></span></div><div class="filters"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜尋食材或回饋…" aria-label="搜尋食材或回饋"></label><label><span class="sr-only">食材分類</span><select id="category-filter"><option value="">全部分類</option></select></label><label><span class="sr-only">質地</span><select id="texture-filter"><option value="">全部質地</option><option>泥狀</option><option>粥狀</option><option>糊狀</option><option>顆粒狀</option><option>軟固體</option><option>未記錄</option></select></label><label><span class="sr-only">排序</span><select id="sort"><option value="default">依探索順序</option><option value="days">嘗試天數最多</option><option value="liked">偏好由高到低</option><option value="least">偏好由低到高</option></select></label><button class="text-button" id="reset">重設</button></div><div class="table-scroll"><table><thead><tr><th scope="col">食材 / 分類</th><th scope="col">試吃天數</th><th scope="col">質地</th><th scope="col">接受度 / 喜好</th><th scope="col">反應與耐受紀錄</th></tr></thead><tbody id="food-rows"></tbody></table></div><div id="empty" class="empty" hidden>沒有符合條件的食材。試試其他分類，或重設篩選。</div><p class="footnote">「至少 3 天」包含家長補充的歷史進食，不與有日期的日誌重複相加。家庭耐受標註保留原始觀察；地瓜最新想吐的反應仍需追蹤。質地按實際回報，不按食物名稱推測。</p></section>
+    <section class="panel allergy-panel" id="allergies" aria-labelledby="allergy-title">
+      <div class="section-head"><div><p class="eyebrow">ALLERGY JOURNAL</p><h2 id="allergy-title">過敏食物與症狀</h2><p class="muted">截至目前的過敏紀錄，與一般進食反應分開追蹤。</p></div><span class="micro" id="allergy-reviewed"></span></div>
+      <div class="allergy-summary" id="allergy-summary"></div>
+      <div class="allergy-empty" id="allergy-empty"><span class="round-icon" aria-hidden="true">✓</span><h3>目前尚未發現過敏原</h3><p>尚無過敏食物或過敏症狀回報，名單暫時留白。</p></div>
+      <div id="allergy-confirmed" hidden><h3 class="allergy-list-title">Top 10 · 已確認的過敏食物</h3><div class="table-scroll"><table><thead><tr><th scope="col">食物</th><th scope="col">過敏症狀與發生日期</th><th scope="col">確認依據／補充紀錄</th></tr></thead><tbody id="allergy-confirmed-rows"></tbody></table></div></div>
+      <div id="allergy-suspected" hidden><h3 class="allergy-list-title">疑似反應 · 尚未確認過敏</h3><div class="table-scroll"><table><thead><tr><th scope="col">食物</th><th scope="col">回報症狀與發生日期</th><th scope="col">確認狀態／補充紀錄</th></tr></thead><tbody id="allergy-suspected-rows"></tbody></table></div></div>
+      <p class="footnote">最多列出 10 種，依最近回報日期排序，不代表嚴重程度。只依明確回報登記；想吐、拒吃或不喜歡不會自動標成過敏。沒有過敏紀錄不代表已排除所有食物過敏。</p>
+    </section>
+    <footer><span class="brand-footer">n. <span>Made of little moments.</span></span><p>資料來自家庭日誌 · <span id="footer-date"></span><br>每次新增回饋，重新整理食材、進度與喜好。</p></footer>
+  </main>
+<script>window.FEEDING_DATA = {
+  "name": "Nolan",
+  "birthDate": "2026-05-22",
+  "actualStartDate": null,
+  "baselineReportedAt": "2026-10-29",
+  "firstLogDate": "2026-10-30",
+  "asOf": "2026-11-02",
+  "logDates": [
+    "2026-10-30",
+    "2026-10-31",
+    "2026-11-02"
+  ],
+  "categoryOrder": [
+    "蛋白質",
+    "蔬菜",
+    "碳水",
+    "脂肪",
+    "水果",
+    "待分類"
+  ],
+  "foods": [
+    {
+      "id": "rice",
+      "name": "十倍粥（米）",
+      "icon": "🍚",
+      "category": "碳水",
+      "aliases": [
+        "米（",
+        "十倍粥"
+      ],
+      "baseline": true,
+      "confirmedDays": 3,
+      "confirmedConsecutiveDays": 3,
+      "confirmationDate": "2026-11-02",
+      "tolerance": "已確認耐受（家庭觀察）",
+      "note": "家長補充已吃滿三天，具體日期待補。",
+      "entries": [
+        {
+          "foodId": "rice",
+          "date": "2026-10-30",
+          "ingredients": "米（十倍粥；其他配料未提供）",
+          "texture": "十倍粥",
+          "textureGroup": "粥狀",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
+        }
+      ],
+      "dates": [
+        "2026-10-30"
+      ],
+      "observedDays": 1,
+      "daysAtLeast": 3,
+      "consecutiveDays": 3,
+      "score": null,
+      "feedbackDays": 0,
+      "evidence": [],
+      "textures": [
+        "粥狀"
+      ],
+      "latest": {
+        "foodId": "rice",
+        "date": "2026-10-30",
+        "ingredients": "米（十倍粥；其他配料未提供）",
+        "texture": "十倍粥",
+        "textureGroup": "粥狀",
+        "amount": "已吃，份量未提供",
+        "interest": "未提供",
+        "reaction": "未提供",
+        "score": null,
+        "evidence": []
+      },
+      "attention": false
+    },
+    {
+      "id": "pumpkin",
+      "name": "南瓜",
+      "icon": "🎃",
+      "category": "蔬菜",
+      "aliases": [
+        "南瓜"
+      ],
+      "baseline": true,
+      "confirmedDays": 3,
+      "confirmedConsecutiveDays": 3,
+      "confirmationDate": "2026-11-02",
+      "tolerance": "已確認耐受（家庭觀察）",
+      "note": "家長補充已吃滿三天，具體日期待補。",
+      "entries": [
+        {
+          "foodId": "pumpkin",
+          "date": "2026-10-31",
+          "ingredients": "南瓜（其他配料未提供）",
+          "texture": "打成非常細緻的南瓜泥",
+          "textureGroup": "泥狀",
+          "amount": "已吃，份量未提供",
+          "interest": "吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供",
+          "reaction": "未提供",
+          "score": 3,
+          "evidence": [
+            {
+              "weight": 2,
+              "label": "吃得好"
+            },
+            {
+              "weight": 1,
+              "label": "主動張嘴"
+            }
+          ]
+        }
+      ],
+      "dates": [
+        "2026-10-31"
+      ],
+      "observedDays": 1,
+      "daysAtLeast": 3,
+      "consecutiveDays": 3,
+      "score": 3,
+      "feedbackDays": 1,
+      "evidence": [
+        {
+          "date": "2026-10-31",
+          "quote": "已吃，份量未提供；吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供",
+          "cues": [
+            {
+              "weight": 2,
+              "label": "吃得好"
+            },
+            {
+              "weight": 1,
+              "label": "主動張嘴"
+            }
+          ]
+        }
+      ],
+      "textures": [
+        "泥狀"
+      ],
+      "latest": {
+        "foodId": "pumpkin",
+        "date": "2026-10-31",
+        "ingredients": "南瓜（其他配料未提供）",
+        "texture": "打成非常細緻的南瓜泥",
+        "textureGroup": "泥狀",
+        "amount": "已吃，份量未提供",
+        "interest": "吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供",
+        "reaction": "未提供",
+        "score": 3,
+        "evidence": [
+          {
+            "weight": 2,
+            "label": "吃得好"
+          },
+          {
+            "weight": 1,
+            "label": "主動張嘴"
+          }
+        ]
+      },
+      "attention": false
+    },
+    {
+      "id": "sweet-potato",
+      "name": "地瓜",
+      "icon": "🍠",
+      "category": "碳水",
+      "aliases": [
+        "地瓜"
+      ],
+      "baseline": true,
+      "confirmedDays": 3,
+      "confirmedConsecutiveDays": 3,
+      "confirmationDate": "2026-11-02",
+      "tolerance": "已確認耐受（家庭觀察）",
+      "note": "家長補充已吃滿三天；11/02 一直想吐，仍需追蹤。纖維較多是家長猜測，原因未確認。",
+      "entries": [
+        {
+          "foodId": "sweet-potato",
+          "date": "2026-11-02",
+          "ingredients": "地瓜（其他配料未提供）",
+          "texture": "未提供；家長猜測纖維較多影響進食，尚未確認",
+          "textureGroup": "未記錄",
+          "amount": "已嘗試，份量未提供",
+          "interest": "吃得不是很好",
+          "reaction": "進食時一直想吐；是否實際嘔吐、是否有嗆咳及其他症狀未提供",
+          "score": -2,
+          "evidence": [
+            {
+              "weight": -2,
+              "label": "接受度較低"
+            }
+          ]
+        }
+      ],
+      "dates": [
+        "2026-11-02"
+      ],
+      "observedDays": 1,
+      "daysAtLeast": 3,
+      "consecutiveDays": 3,
+      "score": -2,
+      "feedbackDays": 1,
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "quote": "已嘗試，份量未提供；吃得不是很好",
+          "cues": [
+            {
+              "weight": -2,
+              "label": "接受度較低"
+            }
+          ]
+        }
+      ],
+      "textures": [
+        "未記錄"
+      ],
+      "latest": {
+        "foodId": "sweet-potato",
+        "date": "2026-11-02",
+        "ingredients": "地瓜（其他配料未提供）",
+        "texture": "未提供；家長猜測纖維較多影響進食，尚未確認",
+        "textureGroup": "未記錄",
+        "amount": "已嘗試，份量未提供",
+        "interest": "吃得不是很好",
+        "reaction": "進食時一直想吐；是否實際嘔吐、是否有嗆咳及其他症狀未提供",
+        "score": -2,
+        "evidence": [
+          {
+            "weight": -2,
+            "label": "接受度較低"
+          }
+        ]
+      },
+      "attention": true
+    },
+    {
+      "id": "avocado",
+      "name": "酪梨",
+      "icon": "🥑",
+      "category": "脂肪",
+      "aliases": [
+        "酪梨"
+      ],
+      "baseline": false,
+      "tolerance": "觀察中",
+      "note": "最早實吃回報為 10/30，是否更早吃過待補。",
+      "entries": [
+        {
+          "foodId": "avocado",
+          "date": "2026-10-30",
+          "ingredients": "酪梨（其他配料未提供）",
+          "texture": "酪梨泥",
+          "textureGroup": "泥狀",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
+        },
+        {
+          "foodId": "avocado",
+          "date": "2026-10-31",
+          "ingredients": "酪梨（其他配料未提供）",
+          "texture": "打成非常細緻的酪梨泥",
+          "textureGroup": "泥狀",
+          "amount": "酪梨泥幾乎吃完；提供量與實吃重量未提供",
+          "interest": "吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供",
+          "reaction": "未提供",
+          "score": 5,
+          "evidence": [
+            {
+              "weight": 2,
+              "label": "吃得好"
+            },
+            {
+              "weight": 2,
+              "label": "大部分吃完"
+            },
+            {
+              "weight": 1,
+              "label": "主動張嘴"
+            }
+          ]
+        }
+      ],
+      "dates": [
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "observedDays": 2,
+      "daysAtLeast": 2,
+      "consecutiveDays": 2,
+      "score": 5,
+      "feedbackDays": 1,
+      "evidence": [
+        {
+          "date": "2026-10-31",
+          "quote": "酪梨泥幾乎吃完；提供量與實吃重量未提供；吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供",
+          "cues": [
+            {
+              "weight": 2,
+              "label": "吃得好"
+            },
+            {
+              "weight": 2,
+              "label": "大部分吃完"
+            },
+            {
+              "weight": 1,
+              "label": "主動張嘴"
+            }
+          ]
+        }
+      ],
+      "textures": [
+        "泥狀"
+      ],
+      "latest": {
+        "foodId": "avocado",
+        "date": "2026-10-31",
+        "ingredients": "酪梨（其他配料未提供）",
+        "texture": "打成非常細緻的酪梨泥",
+        "textureGroup": "泥狀",
+        "amount": "酪梨泥幾乎吃完；提供量與實吃重量未提供",
+        "interest": "吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供",
+        "reaction": "未提供",
+        "score": 5,
+        "evidence": [
+          {
+            "weight": 2,
+            "label": "吃得好"
+          },
+          {
+            "weight": 2,
+            "label": "大部分吃完"
+          },
+          {
+            "weight": 1,
+            "label": "主動張嘴"
+          }
+        ]
+      },
+      "attention": false
+    },
+    {
+      "id": "oats",
+      "name": "寶寶燕麥",
+      "icon": "🥣",
+      "category": "碳水",
+      "aliases": [
+        "寶寶燕麥",
+        "嬰兒燕麥"
+      ],
+      "baseline": false,
+      "tolerance": "觀察中",
+      "note": "11/02 首次嘗試；品牌、完整配料及是否含鐵待補。",
+      "entries": [
+        {
+          "foodId": "oats",
+          "date": "2026-11-02",
+          "ingredients": "寶寶燕麥（品牌、完整成分與是否含鐵未提供）",
+          "texture": "調製方式與稠度未提供",
+          "textureGroup": "未記錄",
+          "amount": "吃了好多口，回報時仍在吃；確切份量未提供",
+          "interest": "很喜歡吃；飽足訊號未提供",
+          "reaction": "家長觀察食物吃進去就不見了、沒有吐出來；其他反應與後續觀察未提供",
+          "score": 5,
+          "evidence": [
+            {
+              "weight": 3,
+              "label": "明確表達喜歡"
+            },
+            {
+              "weight": 2,
+              "label": "吃了多口"
+            }
+          ]
+        }
+      ],
+      "dates": [
+        "2026-11-02"
+      ],
+      "observedDays": 1,
+      "daysAtLeast": 1,
+      "consecutiveDays": 1,
+      "score": 5,
+      "feedbackDays": 1,
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "quote": "吃了好多口，回報時仍在吃；確切份量未提供；很喜歡吃；飽足訊號未提供",
+          "cues": [
+            {
+              "weight": 3,
+              "label": "明確表達喜歡"
+            },
+            {
+              "weight": 2,
+              "label": "吃了多口"
+            }
+          ]
+        }
+      ],
+      "textures": [
+        "未記錄"
+      ],
+      "latest": {
+        "foodId": "oats",
+        "date": "2026-11-02",
+        "ingredients": "寶寶燕麥（品牌、完整成分與是否含鐵未提供）",
+        "texture": "調製方式與稠度未提供",
+        "textureGroup": "未記錄",
+        "amount": "吃了好多口，回報時仍在吃；確切份量未提供",
+        "interest": "很喜歡吃；飽足訊號未提供",
+        "reaction": "家長觀察食物吃進去就不見了、沒有吐出來；其他反應與後續觀察未提供",
+        "score": 5,
+        "evidence": [
+          {
+            "weight": 3,
+            "label": "明確表達喜歡"
+          },
+          {
+            "weight": 2,
+            "label": "吃了多口"
+          }
+        ]
+      },
+      "attention": false
+    }
+  ],
+  "observations": [
+    {
+      "foodId": "avocado",
+      "date": "2026-10-30",
+      "ingredients": "酪梨（其他配料未提供）",
+      "texture": "酪梨泥",
+      "textureGroup": "泥狀",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "rice",
+      "date": "2026-10-30",
+      "ingredients": "米（十倍粥；其他配料未提供）",
+      "texture": "十倍粥",
+      "textureGroup": "粥狀",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "avocado",
+      "date": "2026-10-31",
+      "ingredients": "酪梨（其他配料未提供）",
+      "texture": "打成非常細緻的酪梨泥",
+      "textureGroup": "泥狀",
+      "amount": "酪梨泥幾乎吃完；提供量與實吃重量未提供",
+      "interest": "吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供",
+      "reaction": "未提供",
+      "score": 5,
+      "evidence": [
+        {
+          "weight": 2,
+          "label": "吃得好"
+        },
+        {
+          "weight": 2,
+          "label": "大部分吃完"
+        },
+        {
+          "weight": 1,
+          "label": "主動張嘴"
+        }
+      ]
+    },
+    {
+      "foodId": "pumpkin",
+      "date": "2026-10-31",
+      "ingredients": "南瓜（其他配料未提供）",
+      "texture": "打成非常細緻的南瓜泥",
+      "textureGroup": "泥狀",
+      "amount": "已吃，份量未提供",
+      "interest": "吃得挺好，越來越會張開嘴巴吃；飽足訊號未提供",
+      "reaction": "未提供",
+      "score": 3,
+      "evidence": [
+        {
+          "weight": 2,
+          "label": "吃得好"
+        },
+        {
+          "weight": 1,
+          "label": "主動張嘴"
+        }
+      ]
+    },
+    {
+      "foodId": "oats",
+      "date": "2026-11-02",
+      "ingredients": "寶寶燕麥（品牌、完整成分與是否含鐵未提供）",
+      "texture": "調製方式與稠度未提供",
+      "textureGroup": "未記錄",
+      "amount": "吃了好多口，回報時仍在吃；確切份量未提供",
+      "interest": "很喜歡吃；飽足訊號未提供",
+      "reaction": "家長觀察食物吃進去就不見了、沒有吐出來；其他反應與後續觀察未提供",
+      "score": 5,
+      "evidence": [
+        {
+          "weight": 3,
+          "label": "明確表達喜歡"
+        },
+        {
+          "weight": 2,
+          "label": "吃了多口"
+        }
+      ]
+    },
+    {
+      "foodId": "sweet-potato",
+      "date": "2026-11-02",
+      "ingredients": "地瓜（其他配料未提供）",
+      "texture": "未提供；家長猜測纖維較多影響進食，尚未確認",
+      "textureGroup": "未記錄",
+      "amount": "已嘗試，份量未提供",
+      "interest": "吃得不是很好",
+      "reaction": "進食時一直想吐；是否實際嘔吐、是否有嗆咳及其他症狀未提供",
+      "score": -2,
+      "evidence": [
+        {
+          "weight": -2,
+          "label": "接受度較低"
+        }
+      ]
+    }
+  ],
+  "allergies": {
+    "lastReviewed": "2026-11-02",
+    "summary": "家長回報目前尚未發現過敏原。",
+    "confirmedCount": 0,
+    "suspectedCount": 0,
+    "confirmed": [],
+    "suspected": []
+  },
+  "method": "以中文語意線索歸納每日食量與興趣，分數 -5～+5；近 30 天回饋權重較高。同餐同一訊號只計一次，再取加權平均；無偏好訊號不計分。反應欄不參與喜好分數。"
+};
+</script><script>'use strict';
+const data=window.FEEDING_DATA;
+const $=id=>document.getElementById(id);
+const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const colors={'蛋白質':'#b5beb6','蔬菜':'#7a9970','碳水':'#d8b98a','脂肪':'#bd7857','水果':'#d69b98','待分類':'#adb5b7'};
+const short=d=>d.slice(5).replace('-','/');
+const dateNumber=d=>Date.parse(`${d}T00:00:00Z`);
+function ageAt(birth,at){const b=new Date(`${birth}T00:00:00Z`),a=new Date(`${at}T00:00:00Z`);let months=(a.getUTCFullYear()-b.getUTCFullYear())*12+a.getUTCMonth()-b.getUTCMonth();if(a.getUTCDate()<b.getUTCDate())months--;const base=new Date(b);base.setUTCMonth(base.getUTCMonth()+months);return `${months} 個月 ${Math.round((a-base)/86400000)} 天`;}
+const familyTolerated=data.foods.filter(f=>f.tolerance.startsWith('已確認')).length;
+const knownStart=[data.firstLogDate,data.baselineReportedAt].filter(Boolean).sort()[0];
+const elapsed=Math.round((dateNumber(data.asOf)-dateNumber(data.actualStartDate||knownStart))/86400000)+1;
+const scoreLabel=f=>f.score===null?'尚無偏好訊號':f.score>=3?'很喜歡':f.score>0?'吃得不錯':f.score<0?'接受度較低':'回饋混合';
+const scoreClass=f=>f.score===null?'gray':f.score<0?'warm':'';
+$('age').textContent=`Nolan · ${ageAt(data.birthDate,data.asOf)}`;
+$('updated').textContent=`紀錄更新至 ${data.asOf.replaceAll('-',' / ')}`;
+$('footer-date').textContent=data.asOf;
+const stats=[
+  ['副食品探索',`<small>${data.actualStartDate?'第':'至少第'}</small>${elapsed}<small>天</small>`,data.actualStartDate?`自 ${data.actualStartDate} 起`:`${short(knownStart)} 已回報吃過副食品<br>實際首次日期待補，非精確起始天數`],
+  ['已嘗試的不同食材',`${data.foods.length}<small>種</small>`,'同一食材不同做法只計一次'],
+  ['已確認耐受 · 家庭觀察',`${familyTolerated}<small>種</small>`,'含家長補充的三天試吃<br>地瓜另保留最新不適觀察'],
+  ['留下日誌的日子',`${data.logDates.length}<small>天</small>`,'未記錄的日子不視為沒有進食']
+];
+$('stats').innerHTML=stats.map(([label,value,note])=>`<article class="stat"><p class="stat-label">${label}</p><p class="stat-value">${value}</p><p class="stat-note">${note}</p></article>`).join('');
+const counts=data.categoryOrder.map(name=>({name,count:data.foods.filter(f=>f.category===name).length}));
+let offset=0;
+const rings=counts.filter(c=>c.count).map(c=>{const length=c.count/data.foods.length*100;const ring=`<circle cx="50" cy="50" r="40" fill="none" stroke="${colors[c.name]}" stroke-width="10" pathLength="100" stroke-dasharray="${length} ${100-length}" stroke-dashoffset="${-offset}"/>`;offset+=length;return ring;}).join('');
+$('donut').innerHTML=`<div class="donut" role="img" aria-label="${esc(counts.map(c=>`${c.name} ${c.count} 種`).join('，'))}"><svg viewBox="0 0 100 100" aria-hidden="true">${rings}</svg><div class="donut-center"><strong>${data.foods.length}</strong><span>種食材的探索</span></div></div>`;
+$('categories').innerHTML=counts.filter(c=>c.count||['蛋白質','蔬菜','碳水','脂肪'].includes(c.name)).map(c=>`<button class="category" data-category="${c.name}" ${c.count?'':'disabled'}><span class="dot" style="background:${colors[c.name]}"></span><span>${c.name}</span><strong>${c.count}</strong><span class="bar"><span style="width:${c.count/data.foods.length*100}%;background:${colors[c.name]}"></span></span></button>`).join('');
+const baseline=data.foods.filter(f=>f.baseline);
+const events=[{date:short(data.baselineReportedAt),title:'最初回報的滋味',note:`${baseline.map(f=>f.name).join('、')}已吃過；首次日期待補`,count:baseline.length}];
+let total=data.foods.filter(f=>f.baseline).length;
+for(const date of data.logDates){const introduced=data.foods.filter(f=>!f.baseline&&f.dates[0]===date);if(introduced.length){total+=introduced.length;events.push({date:short(date),title:`${introduced.map(f=>f.icon+' '+f.name).join('、')}`,note:'新增實吃回報',count:total});}}
+$('timeline').innerHTML=events.map(e=>`<div class="timeline-row"><span class="timeline-date">${esc(e.date)}</span><span class="timeline-dot"></span><div><p class="timeline-title">${esc(e.title)}<span>${e.count} 種</span></p><p class="timeline-note">${esc(e.note)}</p></div></div>`).join('');
+$('method').textContent=data.method+' 明確喜歡 +3、吃得好 +2、多口 +2、幾乎吃完 +2、主動張嘴 +1、接受度較低 −2，同餐合計限制在 −5～+5。分數只是排序線索，不是精準量表；每項顯示有偏好訊號的回饋天數，少量回饋的排序仍可能變動。分類與原文可在詳細表核對。';
+$('method-toggle').addEventListener('click',()=>{const open=$('method').hidden;$('method').hidden=!open;$('method-toggle').setAttribute('aria-expanded',String(open));});
+function ranking(list,container,kind){$(container).innerHTML=list.length?list.map((f,i)=>`<details class="rank-entry"><summary><span class="rank-number">${String(list.findIndex(other=>Math.abs(other.score-f.score)<0.0001)+1).padStart(2,'0')}</span><span class="food-icon" aria-hidden="true">${f.icon}</span><div class="rank-main"><strong>${esc(f.name)}</strong><p>${f.feedbackDays} 天偏好回饋 · ${esc(f.evidence.at(-1)?.cues.map(c=>c.label).join('、'))}</p></div><span class="badge ${scoreClass(f)}">${scoreLabel(f)}</span></summary><div class="evidence"><b>語意線索分數 ${f.score.toFixed(1)} / 5 · ${f.feedbackDays} 天回饋</b>${f.evidence.map(e=>`<blockquote><strong>${short(e.date)}</strong>「${esc(e.quote)}」<br>${esc(e.cues.map(c=>`${c.label} ${c.weight>0?'+':''}${c.weight}`).join(' · '))}</blockquote>`).join('')}${f.attention?'<p>另有進食不適紀錄，請查看下方詳細表。</p>':''}</div></details>`).join(''):'<p class="empty">目前還沒有這類偏好回饋。</p>';$(container).insertAdjacentHTML('beforeend',`<p class="rank-caption">目前 ${list.length} 種有${kind}回饋，不補滿名額。</p>`);}
+const top=data.foods.filter(f=>f.score>0).sort((a,b)=>b.score-a.score).slice(0,10);
+const bottom=data.foods.filter(f=>f.score<0).sort((a,b)=>a.score-b.score).slice(0,10);
+ranking(top,'top-list','正向');ranking(bottom,'bottom-list','接受度較低的');
+$('category-filter').insertAdjacentHTML('beforeend',counts.map(c=>`<option value="${c.name}">${c.name}（${c.count}）</option>`).join(''));
+function renderTable(){const category=$('category-filter').value,query=$('search').value.trim().toLowerCase(),texture=$('texture-filter').value,sort=$('sort').value;let foods=data.foods.filter(f=>(!category||f.category===category)&&(!texture||f.textures.includes(texture))&&(!query||JSON.stringify(f).toLowerCase().includes(query)));
+  if(sort==='days')foods.sort((a,b)=>b.daysAtLeast-a.daysAtLeast);if(sort==='liked')foods.sort((a,b)=>(b.score??-Infinity)-(a.score??-Infinity));if(sort==='least')foods.sort((a,b)=>(a.score??Infinity)-(b.score??Infinity));
+  $('table-count').textContent=`${foods.length} / ${data.foods.length} 種食材`;$('empty').hidden=foods.length>0;
+  $('food-rows').innerHTML=foods.map(f=>`<tr><td><span class="food-name"><span aria-hidden="true">${f.icon}</span>${esc(f.name)}</span><span class="cell-sub">${esc(f.category)}</span></td><td><span class="days">${f.confirmedDays?'至少 ':''}${f.daysAtLeast}<small> 天</small></span><span class="cell-sub">已確認最長連續 ${f.consecutiveDays} 天<br>有日期日誌 ${f.observedDays} 天<br>${f.dates.map(short).join('、')}${f.confirmedDays?'<br>另含家長補充，日期待補':''}</span></td><td>${f.textures.map(t=>`<span class="badge ${t==='未記錄'?'gray':''}">${esc(t)}</span>`).join(' ')}<span class="cell-sub">${esc(f.latest?.texture||'未提供')}</span></td><td><span class="badge ${scoreClass(f)}">${scoreLabel(f)}</span><p class="cell-text">${esc(f.latest?.interest||'未提供')}</p><span class="cell-sub">${f.feedbackDays?`${f.feedbackDays} 天偏好回饋 · ${f.score.toFixed(1)} / 5`:'缺少明確偏好回饋，未評分'}</span></td><td><span class="badge ${f.tolerance.startsWith('已確認')?'':'gray'}">${esc(f.tolerance)}</span><p class="cell-text">${esc(f.latest?.reaction||'未提供')}</p>${f.attention?'<p class="attention">需追蹤：進食時一直想吐，原因未確認</p>':''}<span class="cell-sub">${esc(f.note)}</span></td></tr>`).join('');
+}
+for(const id of ['search','category-filter','texture-filter','sort'])$(id).addEventListener(id==='search'?'input':'change',renderTable);
+$('reset').addEventListener('click',()=>{for(const id of ['search','category-filter','texture-filter'])$(id).value='';$('sort').value='default';renderTable();});
+document.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>{$('category-filter').value=b.dataset.category;renderTable();$('foods').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}));
+renderTable();
+
+function renderAllergies() {
+  const allergies=data.allergies??{confirmedCount:0,suspectedCount:0,confirmed:[],suspected:[]};
+  $('allergy-reviewed').textContent=allergies.lastReviewed?`最後回報 ${allergies.lastReviewed}`:'';
+  $('allergy-summary').innerHTML=`<span><strong>${allergies.confirmedCount}</strong> 種已確認過敏食物</span><span><strong>${allergies.suspectedCount}</strong> 種疑似反應待確認</span>`;
+  $('allergy-empty').hidden=allergies.confirmedCount+allergies.suspectedCount>0;
+  for (const status of ['confirmed','suspected']) {
+    const groups=allergies[status];
+    $(`allergy-${status}`).hidden=groups.length===0;
+    $(`allergy-${status}-rows`).innerHTML=groups.map(group=>`<tr><td><span class="food-name">${esc(group.icon)} ${esc(group.foodName)}</span><span class="cell-sub">${group.events.length} 次相關回報</span></td><td>${group.events.map(event=>`<p class="cell-text"><strong>${esc(event.date)}</strong> · ${esc(event.symptoms)}${event.onset?`<br>出現時間：${esc(event.onset)}`:''}</p>`).join('')}</td><td><span class="badge ${status==='suspected'?'warm':''}">${status==='confirmed'?'已確認過敏':'疑似，待確認'}</span>${group.events.map(event=>`<p class="cell-text">${esc(event.confirmedBy||'確認依據未提供')}${event.note?`<br>${esc(event.note)}`:''}</p>`).join('')}</td></tr>`).join('');
+  }
+}
+renderAllergies();
+</script></body>
+</html>

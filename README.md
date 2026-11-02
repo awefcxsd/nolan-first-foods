@@ -14,6 +14,8 @@
 
 ## Overall overview：實際進食進度
 
+互動版：[私人線上 Dashboard](https://nolan-food-journal.mattebee2.chatgpt.site) · [本機單檔版](dashboard/dashboard.html) · [更新方式](dashboard/README.md)。每次新增回報後執行 `node dashboard/build.mjs`，同步更新分類圖、喜好排行與明細；線上版另須重新部署。
+
 更新至 **2026-11-02**，Nolan **5 個月 11 天**。已試過 **5 種**；已確認耐受（家庭觀察）**3 種**（地瓜另有最新進食不適待觀察）；有日期的進食日誌 **3 天**。
 
 | 食物 | 已記錄的實吃日期 | 最長已確認連續天數 | 耐受狀態 | 最新進食表現／待補資訊 |

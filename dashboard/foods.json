@@ -1,0 +1,11 @@
+{
+  "actualStartDate": null,
+  "baselineReportedAt": "2026-10-29",
+  "foods": [
+    {"id":"rice","name":"十倍粥（米）","icon":"🍚","category":"碳水","aliases":["米（","十倍粥"],"baseline":true,"confirmedDays":3,"confirmedConsecutiveDays":3,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"家長補充已吃滿三天，具體日期待補。"},
+    {"id":"pumpkin","name":"南瓜","icon":"🎃","category":"蔬菜","aliases":["南瓜"],"baseline":true,"confirmedDays":3,"confirmedConsecutiveDays":3,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"家長補充已吃滿三天，具體日期待補。"},
+    {"id":"sweet-potato","name":"地瓜","icon":"🍠","category":"碳水","aliases":["地瓜"],"baseline":true,"confirmedDays":3,"confirmedConsecutiveDays":3,"confirmationDate":"2026-11-02","tolerance":"已確認耐受（家庭觀察）","note":"家長補充已吃滿三天；11/02 一直想吐，仍需追蹤。纖維較多是家長猜測，原因未確認。"},
+    {"id":"avocado","name":"酪梨","icon":"🥑","category":"脂肪","aliases":["酪梨"],"baseline":false,"tolerance":"觀察中","note":"最早實吃回報為 10/30，是否更早吃過待補。"},
+    {"id":"oats","name":"寶寶燕麥","icon":"🥣","category":"碳水","aliases":["寶寶燕麥","嬰兒燕麥"],"baseline":false,"tolerance":"觀察中","note":"11/02 首次嘗試；品牌、完整配料及是否含鐵待補。"}
+  ]
+}
