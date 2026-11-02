@@ -1,5 +1,7 @@
 # YYYY-MM-DD Nolan 進食紀錄
 
+<!-- 每次填寫或補充後，同步更新 README.md 的 overall overview（日期、月齡、統計及各食物進度）與 docs/food-log.md。 -->
+
 - 月齡：
 - 身體狀況／照顧者：
 - 今日計畫連結：
