@@ -19,7 +19,7 @@ assert.equal(introductions.size, 57);
 assert.equal(firsts[0][0].slice(0, 10), '2026-10-30');
 assert(firsts[0][5].includes('酪梨'));
 assert(firsts[0][6].includes('家長指定'));
-for (const [name, expected] of Object.entries({ 含鐵嬰兒燕麥: '2026-11-02', 全熟蛋: '2026-11-23', 花生: '2026-11-26', 菠菜: '2027-01-04' })) {
+for (const [name, expected] of Object.entries({ 含鐵嬰兒燕麥: '2026-11-02', 全熟蛋: '2026-11-09', 雞肉: '2026-11-23', 花生: '2026-11-26', 菠菜: '2027-01-04' })) {
   assert.equal(introductions.get(name), Date.parse(expected), `保留既有首次日期：${name}`);
 }
 const sixMonths = Date.parse('2026-11-22');
@@ -28,7 +28,7 @@ firsts.forEach((row, index) => {
   assert(![0, 6].includes(date.getUTCDay()), `週末首次引入：${row[0]}`);
   if (index) assert(+date - Date.parse(firsts[index - 1][0].slice(0, 10)) >= 3 * dayMs);
   assert(+date + 2 * dayMs <= Date.parse(rows.at(-1)[0].slice(0, 10)), '首次候選須保留本期內完整觀察');
-  if (row[5].includes('【')) assert(+date >= sixMonths, `過敏原預設起點：${row[0]}`);
+  if (row[5].includes('【') && !row[5].includes('候選：全熟蛋')) assert(+date >= sixMonths, `其他過敏原預設起點：${row[0]}`);
 });
 rows.forEach((row, index) => {
   const date = Date.parse(row[0].slice(0, 10));
@@ -71,6 +71,16 @@ rows.forEach((row, index) => {
 });
 // Independent full-week check after all introductions: two egg/peanut reminders,
 // one for each other allergen; no prescription about portion size is implied.
+for (const day of ['2026-11-12', '2026-11-16', '2026-11-19']) {
+  const row = rows.find(row => row[0].startsWith(day));
+  assert(row[2].includes('全熟蛋'), `${day} 提前引入後的蛋複習須在唯一一餐`);
+  assert(row[7].includes('過敏原複習：全熟蛋') && row[7].includes('兒科確認'), `${day} 保留條件式複習提醒`);
+}
+for (const day of ['2026-11-09', '2026-11-10', '2026-11-11']) {
+  const row = rows.find(row => row[0].startsWith(day));
+  assert(row[5].includes('候選：全熟蛋') && row[2].includes('全熟蛋'));
+  assert(row[7].includes('兒科確認'));
+}
 const week = rows.filter(row => row[0].slice(0, 10) >= '2027-02-01' && row[0].slice(0, 10) <= '2027-02-07');
 assert.equal(week.length, 7);
 for (const [name, count] of Object.entries({ 全熟蛋: 2, 花生: 2, 原味優格: 1, 小麥麵: 1, 豆腐: 1, 鮭魚: 1, 芝麻: 1, 杏仁: 1, 蝦: 1 })) {

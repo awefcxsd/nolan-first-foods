@@ -4,3 +4,7 @@ Thumbs.db
 .env.*
 node_modules/
 *.tmp
+
+.sites-publish/
+
+.sites-artifacts/
