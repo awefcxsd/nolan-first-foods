@@ -53,8 +53,9 @@ const candidates = [
   ['雞肉', '充分煮熟打泥或細碎', ''],
   ['花椰菜', '煮軟壓泥', ''],
   ['香蕉', '熟軟去皮壓泥', ''],
-  ['梨', '去皮去籽煮軟壓泥', ''],
+  // Swap carrot and pear so the week of 11/16 introduces only one fruit.
   ['胡蘿蔔', '煮至可輕易壓爛後壓泥', ''],
+  ['梨', '去皮去籽煮軟壓泥', ''],
   ['馬鈴薯', '去皮煮熟壓泥', ''],
   ['扁豆', '充分煮熟壓泥，不給整粒', ''],
   ['菠菜', '洗淨煮熟切細或打泥', ''],
@@ -279,7 +280,7 @@ assert.equal(totalFoods.size, baselineFoods.length + allFoods.length, 'overview 
 let overview = `# 食材 overview\n\n[返回每日索引](README.md) · [實際食材紀錄](../docs/food-log.md) · [餵食原則與份量](../docs/feeding-guide.md)\n\n`;
 overview += `| 項目 | 種數 | 定義 |\n| --- | --- | --- |\n| 家長已回報試過 | ${baselineFoods.length} | 米、南瓜、地瓜；首次日期及個別反應待補 |\n| 新增候選總數 | ${allFoods.length} | 不代表已實際吃過 |\n| 本期已排首次日期 | ${foods.length} | 只排平日且每項至少三天，完整觀察落在本期內 |\n| 待後續引入 | ${deferredFoods.length} | 本期排不下，未硬塞入一歲前菜單 |\n| 食材候選總計 | **${totalFoods.size}** | 起始食物＋全部新增候選，去除重複 |\n| 清單中標記過敏原／含麩質的食物 | ${allFoods.filter(food => food.allergen).length} | 子集合不另加計；未標記也不代表絕不過敏，耐受不能跨食物推定 |\n\n`;
 overview += `計數按本輪具名食物去重：十倍粥與米粥都算「米」；小麥麵算一項、優格算一項，不另外把小麥或乳再加一次。水不計，母乳／配方奶另記。選成分單純的產品；其他穀類、奶、蛋或調味配料仍是額外食材，不能藏在兩樣食材的料理裡。這是家長要求的簡化菜單，不是醫學上每餐只能兩樣。\n\n`;
-overview += `本版將蛋提前至2026-11-09，與雞肉2026-11-23互換，其餘最初20項首次候選日期保留，其餘由${iso(extensionStart)}起依至少三天與平日規則重排；先前較疏的22項日期會調整。到一歲前只排入${foods.length}項新增，另${deferredFoods.length}項明列待後續。100種是家庭候選庫，並非醫師訂定的必吃清單，也不宣稱一歲前完成。實際觀察未完成就順延。[台灣小兒科醫師與醫院資料查核](../docs/taiwan-recommendations.md)。\n\n`;
+overview += `本版將蛋提前至2026-11-09，與雞肉2026-11-23互換。11/16當週的新水果保留香蕉，胡蘿蔔與梨互換首次日期。擴充候選由${iso(extensionStart)}起依至少三天與平日規則安排。到一歲前只排入${foods.length}項新增，另${deferredFoods.length}項明列待後續。100種是家庭候選庫，並非醫師訂定的必吃清單，也不宣稱一歲前完成。實際觀察未完成就順延。[台灣小兒科醫師與醫院資料查核](../docs/taiwan-recommendations.md)。\n\n`;
 overview += `## 每月首次候選與累計\n\n| 月份 | 本月新增候選數 | 累計計畫涵蓋種類（含起始${baselineFoods.length}種） |\n| --- | --- | --- |\n`;
 let cumulative = baselineFoods.length;
 for (const month of months.keys()) {
