@@ -4,7 +4,7 @@ window.FEEDING_DATA = {
   "actualStartDate": "2026-10-21",
   "baselineReportedAt": "2026-10-29",
   "firstLogDate": "2026-10-21",
-  "asOf": "2026-11-13",
+  "asOf": "2026-11-15",
   "logDates": [
     "2026-10-21",
     "2026-10-22",
@@ -24,7 +24,8 @@ window.FEEDING_DATA = {
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
-    "2026-11-13"
+    "2026-11-13",
+    "2026-11-15"
   ],
   "categoryOrder": [
     "蛋白質",
@@ -171,7 +172,7 @@ window.FEEDING_DATA = {
       "confirmedConsecutiveDays": 3,
       "confirmationDate": "2026-11-02",
       "tolerance": "已確認耐受（家庭觀察）",
-      "note": "10/24–10/26 連續三天吃南瓜，整段回顧不錯；10/31 細泥吃得挺好；11/03 少量、一點點，反應未提供；11/05 無特別反應；11/06、11/11 再次吃，共有 8 天實吃紀錄。11/05–11/06、11/11 份量與質地未提供，11/06、11/11 反應未提供。",
+      "note": "10/24–10/26 連續三天吃南瓜，整段回顧不錯；10/31 細泥吃得挺好；11/03 少量、一點點，反應未提供；11/05 無特別反應；11/06、11/11、11/15 再次吃，共有 9 天實吃紀錄。11/05–11/06、11/11、11/15 份量與質地未提供，11/06、11/11、11/15 反應未提供。",
       "entries": [
         {
           "foodId": "pumpkin",
@@ -282,6 +283,18 @@ window.FEEDING_DATA = {
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "pumpkin",
+          "date": "2026-11-15",
+          "ingredients": "南瓜（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
@@ -292,13 +305,14 @@ window.FEEDING_DATA = {
         "2026-11-03",
         "2026-11-05",
         "2026-11-06",
-        "2026-11-11"
+        "2026-11-11",
+        "2026-11-15"
       ],
-      "observedDays": 8,
-      "daysAtLeast": 8,
+      "observedDays": 9,
+      "daysAtLeast": 9,
       "hasUndatedHistory": false,
       "consecutiveDays": 3,
-      "score": 2.527472527472528,
+      "score": 2.5263157894736845,
       "feedbackDays": 2,
       "evidence": [
         {
@@ -332,7 +346,7 @@ window.FEEDING_DATA = {
       ],
       "latest": {
         "foodId": "pumpkin",
-        "date": "2026-11-11",
+        "date": "2026-11-15",
         "ingredients": "南瓜（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
@@ -766,7 +780,7 @@ window.FEEDING_DATA = {
       "baseline": false,
       "firstTriedDate": "2026-11-10",
       "tolerance": "已嘗試，觀察中",
-      "note": "11/10 首次記錄，是否更早吃過待補。家長回報 Nolan 很喜歡花椰菜；11/13 再次吃，共 2 天實吃紀錄；份量、質地與反應未提供。",
+      "note": "11/10 首次記錄，是否更早吃過待補。家長回報 Nolan 很喜歡花椰菜；11/13、11/15 再次吃，共 3 天實吃紀錄；份量、質地與反應未提供。",
       "entries": [
         {
           "foodId": "broccoli",
@@ -796,14 +810,27 @@ window.FEEDING_DATA = {
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "broccoli",
+          "date": "2026-11-15",
+          "ingredients": "花椰菜（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
         "2026-11-10",
-        "2026-11-13"
+        "2026-11-13",
+        "2026-11-15"
       ],
-      "observedDays": 2,
-      "daysAtLeast": 2,
+      "observedDays": 3,
+      "daysAtLeast": 3,
       "hasUndatedHistory": false,
       "consecutiveDays": 1,
       "score": 3,
@@ -825,7 +852,7 @@ window.FEEDING_DATA = {
       ],
       "latest": {
         "foodId": "broccoli",
-        "date": "2026-11-13",
+        "date": "2026-11-15",
         "ingredients": "花椰菜（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
@@ -1316,6 +1343,30 @@ window.FEEDING_DATA = {
       "reaction": "未提供",
       "score": null,
       "evidence": []
+    },
+    {
+      "foodId": "broccoli",
+      "date": "2026-11-15",
+      "ingredients": "花椰菜（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "pumpkin",
+      "date": "2026-11-15",
+      "ingredients": "南瓜（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
     }
   ],
   "allergies": {
@@ -1330,7 +1381,7 @@ window.FEEDING_DATA = {
   "planning": {
     "start": "2026-10-21",
     "end": "2027-05-21",
-    "referenceDate": "2026-11-14",
+    "referenceDate": "2026-11-15",
     "checkedDate": "2026-11-02",
     "scheduleStart": "2026-10-30",
     "readinessConfirmed": false,
@@ -1392,7 +1443,7 @@ window.FEEDING_DATA = {
         "actualDate": null
       },
       {
-        "name": "香蕉",
+        "name": "梨",
         "category": "水果",
         "allergen": "—",
         "plannedDate": "2026-11-16",
@@ -1469,7 +1520,7 @@ window.FEEDING_DATA = {
         "actualDate": null
       },
       {
-        "name": "梨",
+        "name": "香蕉",
         "category": "水果",
         "allergen": "—",
         "plannedDate": "2026-12-24",
@@ -1777,7 +1828,7 @@ window.FEEDING_DATA = {
           "牛肉",
           "全熟蛋",
           "花椰菜",
-          "香蕉",
+          "梨",
           "胡蘿蔔",
           "雞肉",
           "花生",
@@ -1795,7 +1846,7 @@ window.FEEDING_DATA = {
           "芝麻",
           "杏仁",
           "蝦",
-          "梨",
+          "香蕉",
           "馬鈴薯",
           "扁豆"
         ]
@@ -2042,37 +2093,37 @@ window.FEEDING_DATA = {
           "不安排副食品；母乳／配方奶照常",
           "不安排副食品；母乳／配方奶照常"
         ],
-        "candidate": "週末不首次試新；不試新；下項候選：2026-11-16 香蕉",
+        "candidate": "週末不首次試新；不試新；下項候選：2026-11-16 梨",
         "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
       },
       {
         "date": "2026-11-16",
         "meals": [
-          "全熟蛋泥＋熟香蕉泥",
+          "全熟蛋泥＋去皮去籽蒸梨泥",
           "不安排副食品；母乳／配方奶照常",
           "不安排副食品；母乳／配方奶照常"
         ],
-        "candidate": "首次候選：香蕉；熟軟去皮壓泥",
+        "candidate": "首次候選：梨；去皮去籽煮軟壓泥",
         "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
       },
       {
         "date": "2026-11-17",
         "meals": [
-          "熟香蕉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "去皮去籽蒸梨泥＋含鐵嬰兒燕麥糊（依標示調製）",
           "不安排副食品；母乳／配方奶照常",
           "不安排副食品；母乳／配方奶照常"
         ],
-        "candidate": "重複觀察候選：香蕉；熟軟去皮壓泥",
+        "candidate": "重複觀察候選：梨；去皮去籽煮軟壓泥",
         "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
       },
       {
         "date": "2026-11-18",
         "meals": [
-          "熟香蕉泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "去皮去籽蒸梨泥＋含鐵嬰兒燕麥糊（依標示調製）",
           "不安排副食品；母乳／配方奶照常",
           "不安排副食品；母乳／配方奶照常"
         ],
-        "candidate": "重複觀察候選：香蕉；熟軟去皮壓泥",
+        "candidate": "重複觀察候選：梨；去皮去籽煮軟壓泥",
         "amount": "僅白天少量試味，提前引入的量由兒科確認；不套用六個月份量"
       },
       {
@@ -2108,7 +2159,7 @@ window.FEEDING_DATA = {
       {
         "date": "2026-11-22",
         "meals": [
-          "含鐵嬰兒燕麥糊（依標示調製）＋熟香蕉泥",
+          "含鐵嬰兒燕麥糊（依標示調製）＋去皮去籽蒸梨泥",
           "全熟蛋泥＋蒸南瓜泥",
           "不安排副食品；母乳／配方奶照常"
         ],
@@ -2248,7 +2299,7 @@ window.FEEDING_DATA = {
       {
         "date": "2026-12-06",
         "meals": [
-          "含鐵嬰兒燕麥糊（依標示調製）＋熟香蕉泥",
+          "含鐵嬰兒燕麥糊（依標示調製）＋去皮去籽蒸梨泥",
           "全熟蛋泥＋煮軟花椰菜泥",
           "不安排副食品；母乳／配方奶照常"
         ],
@@ -2428,31 +2479,31 @@ window.FEEDING_DATA = {
       {
         "date": "2026-12-24",
         "meals": [
-          "去皮去籽蒸梨泥＋含鐵嬰兒燕麥糊（依標示調製）",
+          "熟香蕉泥＋含鐵嬰兒燕麥糊（依標示調製）",
           "全熟蛋泥＋煮軟胡蘿蔔泥",
           "白米粥（僅米與水）＋全熟雞肉泥"
         ],
-        "candidate": "首次候選：梨；去皮去籽煮軟壓泥",
+        "candidate": "首次候選：香蕉；熟軟去皮壓泥",
         "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
       },
       {
         "date": "2026-12-25",
         "meals": [
-          "全熟去殼蝦泥＋去皮去籽蒸梨泥",
+          "全熟去殼蝦泥＋熟香蕉泥",
           "無顆粒純花生醬（以水充分稀釋，拌入同餐食物）＋含鐵嬰兒燕麥糊（依標示調製）",
           "單純小麥麵（煮軟切碎；初期打泥）＋熟豆腐泥"
         ],
-        "candidate": "重複觀察候選：梨；去皮去籽煮軟壓泥",
+        "candidate": "重複觀察候選：香蕉；熟軟去皮壓泥",
         "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
       },
       {
         "date": "2026-12-26",
         "meals": [
-          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋去皮去籽蒸梨泥",
+          "純芝麻醬（以水充分稀釋，拌入同餐食物）＋熟香蕉泥",
           "單純小麥麵（煮軟切碎；初期打泥）＋含鐵嬰兒燕麥糊（依標示調製）",
           "白米粥（僅米與水）＋全熟去刺鮭魚泥"
         ],
-        "candidate": "週末不首次試新；重複觀察候選：梨；去皮去籽煮軟壓泥",
+        "candidate": "週末不首次試新；重複觀察候選：香蕉；熟軟去皮壓泥",
         "amount": "每餐先提供1–2大匙（合計約15–30mL），仍餓可續添，不是上限或必吃量；首次新食材僅少量試味，過敏原量依個別建議"
       },
       {

@@ -25,8 +25,8 @@ assert.equal(data.foods.find(f=>f.id==='beef').tolerance,'已嘗試，觀察中'
 assert.equal(data.foods.find(f=>f.id==='beef').latest.reaction,'未提供');
 assert.equal(data.actualStartDate,'2026-10-21');
 assert.equal(data.firstLogDate,'2026-10-21');
-assert.equal((Date.parse(data.asOf)-Date.parse(data.actualStartDate))/86400000+1,24);
-assert.equal(data.logDates.length,19);
+assert.equal((Date.parse(data.asOf)-Date.parse(data.actualStartDate))/86400000+1,26);
+assert.equal(data.logDates.length,20);
 assert.equal(data.foods.find(f=>f.id==='rice').daysAtLeast,4,'歷史三天與10/30共四天，不再額外重複相加');
 for(const id of ['rice','sweet-potato']){
   const food=data.foods.find(f=>f.id===id);
@@ -34,7 +34,7 @@ for(const id of ['rice','sweet-potato']){
 }
 assert.equal(data.foods.find(f=>f.id==='avocado').consecutiveDays,2);
 assert.equal(data.foods.find(f=>f.id==='avocado').observedDays,2,'耐受確認不補造試吃天數');
-assert.equal(data.foods.find(f=>f.id==='pumpkin').observedDays,8);
+assert.equal(data.foods.find(f=>f.id==='pumpkin').observedDays,9);
 assert.equal(data.foods.find(f=>f.id==='pumpkin').consecutiveDays,3);
 assert.equal(data.foods.find(f=>f.id==='oats').consecutiveDays,2);
 assert.equal(data.foods.find(f=>f.id==='oats').observedDays,2);
@@ -121,7 +121,7 @@ assert(!/id="stats"[^>]*>\s*<\/section>/.test(staticHtml),'統計不可只剩空
 assert(!/id="donut"[^>]*>\s*<\/div>/.test(staticHtml),'分類圖必須在 HTML 內');
 assert(staticHtml.includes('目前尚未發現過敏原'));
 assert(staticHtml.includes('自 2026-10-21 起'));
-assert(staticHtml.includes('24<small>天</small>'));
+assert(staticHtml.includes('26<small>天</small>'));
 assert(!staticHtml.includes('最初回報的滋味'),'已補齊首次日期後，時間軸不得仍把三種食物併在10/29');
 assert(!staticRows.includes('另含家長補充，日期待補'));
 const delivered=fs.readFileSync(new URL('./dist/index.html',import.meta.url),'utf8');
