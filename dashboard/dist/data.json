@@ -4,7 +4,7 @@
   "actualStartDate": "2026-10-21",
   "baselineReportedAt": "2026-10-29",
   "firstLogDate": "2026-10-21",
-  "asOf": "2026-11-15",
+  "asOf": "2026-11-17",
   "logDates": [
     "2026-10-21",
     "2026-10-22",
@@ -25,7 +25,9 @@
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
-    "2026-11-15"
+    "2026-11-15",
+    "2026-11-16",
+    "2026-11-17"
   ],
   "categoryOrder": [
     "蛋白質",
@@ -312,7 +314,7 @@
       "daysAtLeast": 9,
       "hasUndatedHistory": false,
       "consecutiveDays": 3,
-      "score": 2.5263157894736845,
+      "score": 2.525252525252525,
       "feedbackDays": 2,
       "evidence": [
         {
@@ -619,12 +621,13 @@
       "category": "碳水",
       "aliases": [
         "寶寶燕麥",
-        "嬰兒燕麥"
+        "嬰兒燕麥",
+        "燕麥"
       ],
       "baseline": false,
       "confirmationDate": "2026-11-02",
       "tolerance": "已確認耐受（家庭觀察）",
-      "note": "家長確認截至目前耐受。11/02 首次嘗試，11/03 少量、一點點，連續 2 天實吃紀錄；今日質地與反應未提供；品牌、完整配料及是否含鐵待補。",
+      "note": "家長確認先前耐受。11/02 首次嘗試，11/03 少量、一點點；11/16 再次吃，共 3 天實吃紀錄，最長連續 2 天。11/16 份量、質地與反應未提供；品牌、完整配料及是否含鐵待補。",
       "entries": [
         {
           "foodId": "oats",
@@ -658,14 +661,27 @@
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "oats",
+          "date": "2026-11-16",
+          "ingredients": "寶寶燕麥（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
         "2026-11-02",
-        "2026-11-03"
+        "2026-11-03",
+        "2026-11-16"
       ],
-      "observedDays": 2,
-      "daysAtLeast": 2,
+      "observedDays": 3,
+      "daysAtLeast": 3,
       "hasUndatedHistory": false,
       "consecutiveDays": 2,
       "score": 5,
@@ -691,11 +707,11 @@
       ],
       "latest": {
         "foodId": "oats",
-        "date": "2026-11-03",
-        "ingredients": "寶寶燕麥（品牌、完整成分與是否含鐵未提供）",
+        "date": "2026-11-16",
+        "ingredients": "寶寶燕麥（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
-        "amount": "少量，一點點；確切份量與兩樣各自的量未提供",
+        "amount": "已吃，份量未提供",
         "interest": "未提供",
         "reaction": "未提供",
         "score": null,
@@ -833,7 +849,7 @@
       "daysAtLeast": 3,
       "hasUndatedHistory": false,
       "consecutiveDays": 1,
-      "score": 3,
+      "score": 3.0000000000000004,
       "feedbackDays": 1,
       "evidence": [
         {
@@ -875,7 +891,7 @@
       "baseline": false,
       "firstTriedDate": "2026-11-11",
       "tolerance": "已嘗試，觀察中",
-      "note": "11/11 首次記錄，是否更早吃過待補。11/12、11/13 再次吃，共連續 3 天；份量、質地與反應未提供。",
+      "note": "11/11 首次記錄，是否更早吃過待補。11/12、11/13、11/17 再次吃，共 4 天，最長連續 3 天；份量、質地與反應未提供。",
       "entries": [
         {
           "foodId": "egg",
@@ -912,15 +928,28 @@
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "egg",
+          "date": "2026-11-17",
+          "ingredients": "蛋（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
         "2026-11-11",
         "2026-11-12",
-        "2026-11-13"
+        "2026-11-13",
+        "2026-11-17"
       ],
-      "observedDays": 3,
-      "daysAtLeast": 3,
+      "observedDays": 4,
+      "daysAtLeast": 4,
       "hasUndatedHistory": false,
       "consecutiveDays": 3,
       "score": null,
@@ -931,7 +960,7 @@
       ],
       "latest": {
         "foodId": "egg",
-        "date": "2026-11-13",
+        "date": "2026-11-17",
         "ingredients": "蛋（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
@@ -940,6 +969,93 @@
         "reaction": "未提供",
         "score": null,
         "evidence": []
+      },
+      "attention": false
+    },
+    {
+      "id": "banana",
+      "name": "香蕉",
+      "icon": "🍌",
+      "category": "水果",
+      "aliases": [
+        "香蕉"
+      ],
+      "baseline": false,
+      "firstTriedDate": "2026-11-16",
+      "tolerance": "已嘗試，觀察中",
+      "note": "11/16 首次記錄，是否更早吃過待補；11/17 再次吃，連續 2 天。家長整體回顧「好像沒有很喜歡生的香蕉」，未細分日期，僅彙記一次；猜測可能還不夠熟，熟度與原因未確認。份量、具體質地與身體反應未提供。",
+      "entries": [
+        {
+          "foodId": "banana",
+          "date": "2026-11-16",
+          "ingredients": "香蕉（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供；跨日整體回顧見 11/17",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
+        },
+        {
+          "foodId": "banana",
+          "date": "2026-11-17",
+          "ingredients": "香蕉（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "好像沒有很喜歡生的香蕉（本次整體回顧，未細分發生日期）",
+          "reaction": "未提供",
+          "score": -2,
+          "evidence": [
+            {
+              "weight": -2,
+              "label": "接受度較低"
+            }
+          ]
+        }
+      ],
+      "dates": [
+        "2026-11-16",
+        "2026-11-17"
+      ],
+      "observedDays": 2,
+      "daysAtLeast": 2,
+      "hasUndatedHistory": false,
+      "consecutiveDays": 2,
+      "score": -2,
+      "feedbackDays": 1,
+      "evidence": [
+        {
+          "date": "2026-11-17",
+          "quote": "已吃，份量未提供；好像沒有很喜歡生的香蕉（本次整體回顧，未細分發生日期）",
+          "cues": [
+            {
+              "weight": -2,
+              "label": "接受度較低"
+            }
+          ]
+        }
+      ],
+      "textures": [
+        "未記錄"
+      ],
+      "latest": {
+        "foodId": "banana",
+        "date": "2026-11-17",
+        "ingredients": "香蕉（其他配料未提供）",
+        "texture": "未提供",
+        "textureGroup": "未記錄",
+        "amount": "已吃，份量未提供",
+        "interest": "好像沒有很喜歡生的香蕉（本次整體回顧，未細分發生日期）",
+        "reaction": "未提供",
+        "score": -2,
+        "evidence": [
+          {
+            "weight": -2,
+            "label": "接受度較低"
+          }
+        ]
       },
       "attention": false
     }
@@ -1367,6 +1483,59 @@
       "reaction": "未提供",
       "score": null,
       "evidence": []
+    },
+    {
+      "foodId": "banana",
+      "date": "2026-11-16",
+      "ingredients": "香蕉（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供；跨日整體回顧見 11/17",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "oats",
+      "date": "2026-11-16",
+      "ingredients": "寶寶燕麥（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "banana",
+      "date": "2026-11-17",
+      "ingredients": "香蕉（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "好像沒有很喜歡生的香蕉（本次整體回顧，未細分發生日期）",
+      "reaction": "未提供",
+      "score": -2,
+      "evidence": [
+        {
+          "weight": -2,
+          "label": "接受度較低"
+        }
+      ]
+    },
+    {
+      "foodId": "egg",
+      "date": "2026-11-17",
+      "ingredients": "蛋（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
     }
   ],
   "allergies": {
@@ -1381,7 +1550,7 @@
   "planning": {
     "start": "2026-10-21",
     "end": "2027-05-21",
-    "referenceDate": "2026-11-16",
+    "referenceDate": "2026-11-17",
     "checkedDate": "2026-11-02",
     "scheduleStart": "2026-10-30",
     "readinessConfirmed": false,
