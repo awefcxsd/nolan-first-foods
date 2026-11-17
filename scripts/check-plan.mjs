@@ -19,7 +19,7 @@ assert.equal(introductions.size, 57);
 assert.equal(firsts[0][0].slice(0, 10), '2026-10-30');
 assert(firsts[0][5].includes('酪梨'));
 assert(firsts[0][6].includes('家長指定'));
-for (const [name, expected] of Object.entries({ 含鐵嬰兒燕麥: '2026-11-02', 全熟蛋: '2026-11-09', 梨: '2026-11-16', 香蕉: '2026-12-24', 雞肉: '2026-11-23', 花生: '2026-11-26', 菠菜: '2027-01-04' })) {
+for (const [name, expected] of Object.entries({ 含鐵嬰兒燕麥: '2026-11-02', 全熟蛋: '2026-11-09', 香蕉: '2026-11-16', 梨: '2026-12-24', 雞肉: '2026-11-23', 花生: '2026-11-26', 菠菜: '2027-01-04' })) {
   assert.equal(introductions.get(name), Date.parse(expected), `保留既有首次日期：${name}`);
 }
 const sixMonths = Date.parse('2026-11-22');
