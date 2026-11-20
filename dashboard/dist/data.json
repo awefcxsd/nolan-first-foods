@@ -4,7 +4,7 @@
   "actualStartDate": "2026-10-21",
   "baselineReportedAt": "2026-10-29",
   "firstLogDate": "2026-10-21",
-  "asOf": "2026-11-17",
+  "asOf": "2026-11-20",
   "logDates": [
     "2026-10-21",
     "2026-10-22",
@@ -27,7 +27,9 @@
     "2026-11-13",
     "2026-11-15",
     "2026-11-16",
-    "2026-11-17"
+    "2026-11-17",
+    "2026-11-19",
+    "2026-11-20"
   ],
   "categoryOrder": [
     "蛋白質",
@@ -314,7 +316,7 @@
       "daysAtLeast": 9,
       "hasUndatedHistory": false,
       "consecutiveDays": 3,
-      "score": 2.525252525252525,
+      "score": 2.5238095238095237,
       "feedbackDays": 2,
       "evidence": [
         {
@@ -380,7 +382,7 @@
       "confirmedConsecutiveDays": 3,
       "confirmationDate": "2026-11-02",
       "tolerance": "已確認耐受（家庭觀察）",
-      "note": "10/27–10/29 有點難咬、難吞嚥（整段回顧，未細分發生日期）；11/02 複習一直想吐，11/10、11/12 再次吃，反應未提供，共有 6 天實吃紀錄。質地未提供，原因未確認；不標為過敏。",
+      "note": "10/27–10/29 有點難咬、難吞嚥（整段回顧，未細分發生日期）；11/02 複習一直想吐，11/10、11/12、11/19 再次吃，反應未提供，共有 7 天實吃紀錄。質地未提供，原因未確認；不標為過敏。",
       "entries": [
         {
           "foodId": "sweet-potato",
@@ -458,6 +460,18 @@
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "sweet-potato",
+          "date": "2026-11-19",
+          "ingredients": "地瓜（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
@@ -466,10 +480,11 @@
         "2026-10-29",
         "2026-11-02",
         "2026-11-10",
-        "2026-11-12"
+        "2026-11-12",
+        "2026-11-19"
       ],
-      "observedDays": 6,
-      "daysAtLeast": 6,
+      "observedDays": 7,
+      "daysAtLeast": 7,
       "hasUndatedHistory": false,
       "consecutiveDays": 3,
       "score": -2,
@@ -491,7 +506,7 @@
       ],
       "latest": {
         "foodId": "sweet-potato",
-        "date": "2026-11-12",
+        "date": "2026-11-19",
         "ingredients": "地瓜（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
@@ -627,7 +642,7 @@
       "baseline": false,
       "confirmationDate": "2026-11-02",
       "tolerance": "已確認耐受（家庭觀察）",
-      "note": "家長確認先前耐受。11/02 首次嘗試，11/03 少量、一點點；11/16 再次吃，共 3 天實吃紀錄，最長連續 2 天。11/16 份量、質地與反應未提供；品牌、完整配料及是否含鐵待補。",
+      "note": "家長確認先前耐受。11/02 首次嘗試，11/03 少量、一點點；11/16、11/20 再次吃，共 4 天實吃紀錄，最長連續 2 天。11/16、11/20 份量、質地與反應未提供；品牌、完整配料及是否含鐵待補。",
       "entries": [
         {
           "foodId": "oats",
@@ -673,15 +688,28 @@
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "oats",
+          "date": "2026-11-20",
+          "ingredients": "燕麥（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
         "2026-11-02",
         "2026-11-03",
-        "2026-11-16"
+        "2026-11-16",
+        "2026-11-20"
       ],
-      "observedDays": 3,
-      "daysAtLeast": 3,
+      "observedDays": 4,
+      "daysAtLeast": 4,
       "hasUndatedHistory": false,
       "consecutiveDays": 2,
       "score": 5,
@@ -707,8 +735,8 @@
       ],
       "latest": {
         "foodId": "oats",
-        "date": "2026-11-16",
-        "ingredients": "寶寶燕麥（其他配料未提供）",
+        "date": "2026-11-20",
+        "ingredients": "燕麥（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
         "amount": "已吃，份量未提供",
@@ -849,7 +877,7 @@
       "daysAtLeast": 3,
       "hasUndatedHistory": false,
       "consecutiveDays": 1,
-      "score": 3.0000000000000004,
+      "score": 3,
       "feedbackDays": 1,
       "evidence": [
         {
@@ -1056,6 +1084,73 @@
             "label": "接受度較低"
           }
         ]
+      },
+      "attention": false
+    },
+    {
+      "id": "carrot",
+      "name": "紅蘿蔔（胡蘿蔔）",
+      "icon": "🥕",
+      "category": "蔬菜",
+      "aliases": [
+        "紅蘿蔔",
+        "胡蘿蔔"
+      ],
+      "baseline": false,
+      "firstTriedDate": "2026-11-19",
+      "tolerance": "已嘗試，觀察中",
+      "note": "11/19 首次記錄，是否更早吃過待補。11/20 再次吃，共連續 2 天。份量、質地與反應未提供。",
+      "entries": [
+        {
+          "foodId": "carrot",
+          "date": "2026-11-19",
+          "ingredients": "紅蘿蔔（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
+        },
+        {
+          "foodId": "carrot",
+          "date": "2026-11-20",
+          "ingredients": "紅蘿蔔（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
+        }
+      ],
+      "dates": [
+        "2026-11-19",
+        "2026-11-20"
+      ],
+      "observedDays": 2,
+      "daysAtLeast": 2,
+      "hasUndatedHistory": false,
+      "consecutiveDays": 2,
+      "score": null,
+      "feedbackDays": 0,
+      "evidence": [],
+      "textures": [
+        "未記錄"
+      ],
+      "latest": {
+        "foodId": "carrot",
+        "date": "2026-11-20",
+        "ingredients": "紅蘿蔔（其他配料未提供）",
+        "texture": "未提供",
+        "textureGroup": "未記錄",
+        "amount": "已吃，份量未提供",
+        "interest": "未提供",
+        "reaction": "未提供",
+        "score": null,
+        "evidence": []
       },
       "attention": false
     }
@@ -1536,6 +1631,54 @@
       "reaction": "未提供",
       "score": null,
       "evidence": []
+    },
+    {
+      "foodId": "carrot",
+      "date": "2026-11-19",
+      "ingredients": "紅蘿蔔（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "sweet-potato",
+      "date": "2026-11-19",
+      "ingredients": "地瓜（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "carrot",
+      "date": "2026-11-20",
+      "ingredients": "紅蘿蔔（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "oats",
+      "date": "2026-11-20",
+      "ingredients": "燕麥（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
     }
   ],
   "allergies": {
@@ -1550,7 +1693,7 @@
   "planning": {
     "start": "2026-10-21",
     "end": "2027-05-21",
-    "referenceDate": "2026-11-17",
+    "referenceDate": "2026-11-20",
     "checkedDate": "2026-11-02",
     "scheduleStart": "2026-10-30",
     "readinessConfirmed": false,
