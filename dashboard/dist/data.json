@@ -4,7 +4,7 @@
   "actualStartDate": "2026-10-21",
   "baselineReportedAt": "2026-10-29",
   "firstLogDate": "2026-10-21",
-  "asOf": "2026-11-20",
+  "asOf": "2026-11-21",
   "logDates": [
     "2026-10-21",
     "2026-10-22",
@@ -29,7 +29,8 @@
     "2026-11-16",
     "2026-11-17",
     "2026-11-19",
-    "2026-11-20"
+    "2026-11-20",
+    "2026-11-21"
   ],
   "categoryOrder": [
     "蛋白質",
@@ -316,7 +317,7 @@
       "daysAtLeast": 9,
       "hasUndatedHistory": false,
       "consecutiveDays": 3,
-      "score": 2.5238095238095237,
+      "score": 2.523364485981308,
       "feedbackDays": 2,
       "evidence": [
         {
@@ -642,7 +643,7 @@
       "baseline": false,
       "confirmationDate": "2026-11-02",
       "tolerance": "已確認耐受（家庭觀察）",
-      "note": "家長確認先前耐受。11/02 首次嘗試，11/03 少量、一點點；11/16、11/20 再次吃，共 4 天實吃紀錄，最長連續 2 天。11/16、11/20 份量、質地與反應未提供；品牌、完整配料及是否含鐵待補。",
+      "note": "家長確認先前耐受。11/02 首次嘗試，11/03 少量、一點點；11/16、11/20、11/21 再次吃，共 5 天實吃紀錄，最長連續 2 天。11/16、11/20、11/21 份量、質地與反應未提供；品牌、完整配料及是否含鐵待補。",
       "entries": [
         {
           "foodId": "oats",
@@ -700,16 +701,29 @@
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "oats",
+          "date": "2026-11-21",
+          "ingredients": "燕麥（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
         "2026-11-02",
         "2026-11-03",
         "2026-11-16",
-        "2026-11-20"
+        "2026-11-20",
+        "2026-11-21"
       ],
-      "observedDays": 4,
-      "daysAtLeast": 4,
+      "observedDays": 5,
+      "daysAtLeast": 5,
       "hasUndatedHistory": false,
       "consecutiveDays": 2,
       "score": 5,
@@ -735,7 +749,7 @@
       ],
       "latest": {
         "foodId": "oats",
-        "date": "2026-11-20",
+        "date": "2026-11-21",
         "ingredients": "燕麥（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
@@ -877,7 +891,7 @@
       "daysAtLeast": 3,
       "hasUndatedHistory": false,
       "consecutiveDays": 1,
-      "score": 3,
+      "score": 3.0000000000000004,
       "feedbackDays": 1,
       "evidence": [
         {
@@ -1099,7 +1113,7 @@
       "baseline": false,
       "firstTriedDate": "2026-11-19",
       "tolerance": "已嘗試，觀察中",
-      "note": "11/19 首次記錄，是否更早吃過待補。11/20 再次吃，共連續 2 天。份量、質地與反應未提供。",
+      "note": "11/19 首次記錄，是否更早吃過待補。11/20、11/21 再次吃，共連續 3 天。11/21 超愛吃，一直張嘴要再吃。份量、質地與身體反應未提供。",
       "entries": [
         {
           "foodId": "carrot",
@@ -1124,16 +1138,29 @@
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "carrot",
+          "date": "2026-11-21",
+          "ingredients": "紅蘿蔔（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "超愛吃紅蘿蔔，一直張嘴要再吃",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
         "2026-11-19",
-        "2026-11-20"
+        "2026-11-20",
+        "2026-11-21"
       ],
-      "observedDays": 2,
-      "daysAtLeast": 2,
+      "observedDays": 3,
+      "daysAtLeast": 3,
       "hasUndatedHistory": false,
-      "consecutiveDays": 2,
+      "consecutiveDays": 3,
       "score": null,
       "feedbackDays": 0,
       "evidence": [],
@@ -1142,12 +1169,12 @@
       ],
       "latest": {
         "foodId": "carrot",
-        "date": "2026-11-20",
+        "date": "2026-11-21",
         "ingredients": "紅蘿蔔（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
         "amount": "已吃，份量未提供",
-        "interest": "未提供",
+        "interest": "超愛吃紅蘿蔔，一直張嘴要再吃",
         "reaction": "未提供",
         "score": null,
         "evidence": []
@@ -1679,6 +1706,30 @@
       "reaction": "未提供",
       "score": null,
       "evidence": []
+    },
+    {
+      "foodId": "carrot",
+      "date": "2026-11-21",
+      "ingredients": "紅蘿蔔（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "超愛吃紅蘿蔔，一直張嘴要再吃",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "oats",
+      "date": "2026-11-21",
+      "ingredients": "燕麥（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
     }
   ],
   "allergies": {
@@ -1693,7 +1744,7 @@
   "planning": {
     "start": "2026-10-21",
     "end": "2027-05-21",
-    "referenceDate": "2026-11-20",
+    "referenceDate": "2026-11-21",
     "checkedDate": "2026-11-02",
     "scheduleStart": "2026-10-30",
     "readinessConfirmed": false,
