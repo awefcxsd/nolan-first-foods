@@ -15,6 +15,7 @@ const unknown = /^(未提供|待補|未記錄)/;
 export function sentiment(text) {
   const cues = [
     [/(?<!沒有|没有)很喜歡|(?<!沒有|没有)很喜欢|非常喜歡|非常喜欢|很愛吃|很爱吃/, 3, '明確表達喜歡'],
+    [/非常討厭|非常讨厌/, -4, '明確表達討厭'],
     [/沒有很喜歡|没有很喜欢|不太喜歡|不太喜欢|吃得不是很好|吃得不太好|不喜歡|不喜欢|拒吃|不願意吃|不愿意吃/, -2, '接受度較低'],
     [/吃得挺好|吃得很好|吃得不錯|吃得不错|也不錯|也不错/, 2, '吃得好'],
     [/吃得還行|吃得还行|吃得尚可/, 1, '接受尚可'],
@@ -91,7 +92,7 @@ export function buildData(logDirectory, metadata, profile, allergyMetadata) {
     const score=rated.length?weighted.reduce((sum,o)=>sum+o.score*o.weight,0)/weighted.reduce((sum,o)=>sum+o.weight,0):null;
     const latest=entries.at(-1);
     const hasUndatedHistory=Boolean(f.confirmedDays)&&!(f.confirmedDates?.length>=f.confirmedDays&&f.confirmedDates.every(date=>dates.includes(date)));
-    return {...f,entries,dates,observedDays:dates.length,daysAtLeast:Math.max(dates.length,f.confirmedDays??0),hasUndatedHistory,consecutiveDays:Math.max(streak(dates),f.confirmedConsecutiveDays??0),score,feedbackDays:new Set(rated.map(o=>o.date)).size,evidence:rated.map(o=>({date:o.date,quote:`${o.amount}；${o.interest}`,cues:o.evidence})),textures:[...new Set(entries.map(o=>o.textureGroup))],latest,attention:entries.some(o=>/想吐|嘔吐|呕吐|嗆咳|呛咳|難咬|難吞嚥/.test(o.reaction)&&!/^未提供/.test(o.reaction))};
+    return {...f,entries,dates,observedDays:dates.length,daysAtLeast:Math.max(dates.length,f.confirmedDays??0),hasUndatedHistory,consecutiveDays:Math.max(streak(dates),f.confirmedConsecutiveDays??0),score,feedbackDays:new Set(rated.map(o=>o.date)).size,evidence:rated.map(o=>({date:o.date,quote:`${o.amount}；${o.interest}`,cues:o.evidence})),textures:[...new Set(entries.map(o=>o.textureGroup))],latest,attention:entries.some(o=>/想吐|就吐|嘔吐|呕吐|嗆咳|呛咳|難咬|難吞嚥/.test(o.reaction)&&!/^未提供/.test(o.reaction))};
   }).filter(f=>f.baseline||f.entries.length);
   return {name:profile.name,birthDate:profile.birthDate,actualStartDate:metadata.actualStartDate,baselineReportedAt:metadata.baselineReportedAt,firstLogDate:files[0]?.slice(0,10)??null,asOf:lastDate,logDates:files.map(n=>n.slice(0,10)),categoryOrder:categories,foods,observations,allergies:buildAllergies(allergyMetadata,foods),method:'以中文語意線索歸納每日食量與興趣，分數 -5～+5；近 30 天回饋權重較高。同餐同一訊號只計一次，再取加權平均；無偏好訊號不計分。反應欄不參與喜好分數。'};
 }

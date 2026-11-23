@@ -20,19 +20,23 @@ const data=buildData(fileURLToPath(new URL('../logs/',import.meta.url)),metadata
 assert.equal(data.foods.length,10);
 assert.equal(data.foods.filter(f=>f.tolerance==='已確認耐受（家庭觀察）').length,5,'依家長確認更新所有已試食材的狀態');
 assert.equal(data.foods.find(f=>f.id==='egg').consecutiveDays,3);
-assert.equal(data.foods.find(f=>f.id==='egg').observedDays,4);
-assert.equal(data.foods.find(f=>f.id==='banana').observedDays,2);
+assert.equal(data.foods.find(f=>f.id==='egg').observedDays,5);
+assert.equal(data.foods.find(f=>f.id==='banana').observedDays,3);
 assert.equal(data.foods.find(f=>f.id==='banana').consecutiveDays,2);
-assert.equal(data.foods.find(f=>f.id==='banana').feedbackDays,1,'跨日回顧只計一次');
-assert.equal(data.foods.find(f=>f.id==='banana').score,-2);
+assert.equal(data.foods.find(f=>f.id==='banana').feedbackDays,2,'跨日回顧只計一次');
+const banana=data.foods.find(f=>f.id==='banana');
+assert.equal(banana.entries.at(-1).score,-4);
+assert.equal(banana.latest.reaction,'吃了一口就吐');
+assert.equal(banana.attention,true);
+assert.equal(data.foods.find(f=>f.id==='carrot').consecutiveDays,4);
 assert.equal(data.foods.find(f=>f.id==='egg').latest.reaction,'未提供');
 assert.equal(data.foods.find(f=>f.id==='beef').observedDays,2);
 assert.equal(data.foods.find(f=>f.id==='beef').tolerance,'已嘗試，觀察中');
 assert.equal(data.foods.find(f=>f.id==='beef').latest.reaction,'未提供');
 assert.equal(data.actualStartDate,'2026-10-21');
 assert.equal(data.firstLogDate,'2026-10-21');
-assert.equal((Date.parse(data.asOf)-Date.parse(data.actualStartDate))/86400000+1,32);
-assert.equal(data.logDates.length,25);
+assert.equal((Date.parse(data.asOf)-Date.parse(data.actualStartDate))/86400000+1,33);
+assert.equal(data.logDates.length,26);
 assert.equal(data.foods.find(f=>f.id==='rice').daysAtLeast,4,'歷史三天與10/30共四天，不再額外重複相加');
 for(const id of ['rice','sweet-potato']){
   const food=data.foods.find(f=>f.id===id);
@@ -127,7 +131,7 @@ assert(!/id="stats"[^>]*>\s*<\/section>/.test(staticHtml),'統計不可只剩空
 assert(!/id="donut"[^>]*>\s*<\/div>/.test(staticHtml),'分類圖必須在 HTML 內');
 assert(staticHtml.includes('目前尚未發現過敏原'));
 assert(staticHtml.includes('自 2026-10-21 起'));
-assert(staticHtml.includes('32<small>天</small>'));
+assert(staticHtml.includes('33<small>天</small>'));
 assert(!staticHtml.includes('最初回報的滋味'),'已補齊首次日期後，時間軸不得仍把三種食物併在10/29');
 assert(!staticRows.includes('另含家長補充，日期待補'));
 const delivered=fs.readFileSync(new URL('./dist/index.html',import.meta.url),'utf8');

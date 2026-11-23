@@ -4,7 +4,7 @@
   "actualStartDate": "2026-10-21",
   "baselineReportedAt": "2026-10-29",
   "firstLogDate": "2026-10-21",
-  "asOf": "2026-11-21",
+  "asOf": "2026-11-22",
   "logDates": [
     "2026-10-21",
     "2026-10-22",
@@ -30,7 +30,8 @@
     "2026-11-17",
     "2026-11-19",
     "2026-11-20",
-    "2026-11-21"
+    "2026-11-21",
+    "2026-11-22"
   ],
   "categoryOrder": [
     "蛋白質",
@@ -317,7 +318,7 @@
       "daysAtLeast": 9,
       "hasUndatedHistory": false,
       "consecutiveDays": 3,
-      "score": 2.523364485981308,
+      "score": 2.5229357798165135,
       "feedbackDays": 2,
       "evidence": [
         {
@@ -891,7 +892,7 @@
       "daysAtLeast": 3,
       "hasUndatedHistory": false,
       "consecutiveDays": 1,
-      "score": 3.0000000000000004,
+      "score": 3,
       "feedbackDays": 1,
       "evidence": [
         {
@@ -933,7 +934,7 @@
       "baseline": false,
       "firstTriedDate": "2026-11-11",
       "tolerance": "已嘗試，觀察中",
-      "note": "11/11 首次記錄，是否更早吃過待補。11/12、11/13、11/17 再次吃，共 4 天，最長連續 3 天；份量、質地與反應未提供。",
+      "note": "11/11 首次記錄，是否更早吃過待補。11/12、11/13、11/17、11/22 再次吃，共 5 天，最長連續 3 天；份量、質地與反應未提供。",
       "entries": [
         {
           "foodId": "egg",
@@ -982,16 +983,29 @@
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "egg",
+          "date": "2026-11-22",
+          "ingredients": "蛋（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
         "2026-11-11",
         "2026-11-12",
         "2026-11-13",
-        "2026-11-17"
+        "2026-11-17",
+        "2026-11-22"
       ],
-      "observedDays": 4,
-      "daysAtLeast": 4,
+      "observedDays": 5,
+      "daysAtLeast": 5,
       "hasUndatedHistory": false,
       "consecutiveDays": 3,
       "score": null,
@@ -1002,7 +1016,7 @@
       ],
       "latest": {
         "foodId": "egg",
-        "date": "2026-11-17",
+        "date": "2026-11-22",
         "ingredients": "蛋（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
@@ -1025,7 +1039,7 @@
       "baseline": false,
       "firstTriedDate": "2026-11-16",
       "tolerance": "已嘗試，觀察中",
-      "note": "11/16 首次記錄，是否更早吃過待補；11/17 再次吃，連續 2 天。家長整體回顧「好像沒有很喜歡生的香蕉」，未細分日期，僅彙記一次；猜測可能還不夠熟，熟度與原因未確認。份量、具體質地與身體反應未提供。",
+      "note": "11/16 首次記錄，是否更早吃過待補；11/17 再次吃，連續 2 天。家長整體回顧「好像沒有很喜歡生的香蕉」，未細分日期，僅彙記一次；猜測可能還不夠熟，熟度與原因未確認。先前份量、具體質地與身體反應未提供。11/22 再次吃，共 3 天，最長連續 2 天。家長回報非常討厭香蕉，吃了一口就吐，原因未確認。",
       "entries": [
         {
           "foodId": "banana",
@@ -1055,18 +1069,36 @@
               "label": "接受度較低"
             }
           ]
+        },
+        {
+          "foodId": "banana",
+          "date": "2026-11-22",
+          "ingredients": "香蕉（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "一口",
+          "interest": "非常討厭香蕉",
+          "reaction": "吃了一口就吐",
+          "score": -4,
+          "evidence": [
+            {
+              "weight": -4,
+              "label": "明確表達討厭"
+            }
+          ]
         }
       ],
       "dates": [
         "2026-11-16",
-        "2026-11-17"
+        "2026-11-17",
+        "2026-11-22"
       ],
-      "observedDays": 2,
-      "daysAtLeast": 2,
+      "observedDays": 3,
+      "daysAtLeast": 3,
       "hasUndatedHistory": false,
       "consecutiveDays": 2,
-      "score": -2,
-      "feedbackDays": 1,
+      "score": -3.076923076923077,
+      "feedbackDays": 2,
       "evidence": [
         {
           "date": "2026-11-17",
@@ -1077,6 +1109,16 @@
               "label": "接受度較低"
             }
           ]
+        },
+        {
+          "date": "2026-11-22",
+          "quote": "一口；非常討厭香蕉",
+          "cues": [
+            {
+              "weight": -4,
+              "label": "明確表達討厭"
+            }
+          ]
         }
       ],
       "textures": [
@@ -1084,22 +1126,22 @@
       ],
       "latest": {
         "foodId": "banana",
-        "date": "2026-11-17",
+        "date": "2026-11-22",
         "ingredients": "香蕉（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
-        "amount": "已吃，份量未提供",
-        "interest": "好像沒有很喜歡生的香蕉（本次整體回顧，未細分發生日期）",
-        "reaction": "未提供",
-        "score": -2,
+        "amount": "一口",
+        "interest": "非常討厭香蕉",
+        "reaction": "吃了一口就吐",
+        "score": -4,
         "evidence": [
           {
-            "weight": -2,
-            "label": "接受度較低"
+            "weight": -4,
+            "label": "明確表達討厭"
           }
         ]
       },
-      "attention": false
+      "attention": true
     },
     {
       "id": "carrot",
@@ -1113,7 +1155,7 @@
       "baseline": false,
       "firstTriedDate": "2026-11-19",
       "tolerance": "已嘗試，觀察中",
-      "note": "11/19 首次記錄，是否更早吃過待補。11/20、11/21 再次吃，共連續 3 天。11/21 超愛吃，一直張嘴要再吃。份量、質地與身體反應未提供。",
+      "note": "11/19 首次記錄，是否更早吃過待補。11/20–11/22 再次吃，共連續 4 天。11/21 超愛吃，一直張嘴要再吃。11/22 再次吃，份量、質地與反應未提供。 先前份量、質地與身體反應未提供。",
       "entries": [
         {
           "foodId": "carrot",
@@ -1150,17 +1192,30 @@
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "carrot",
+          "date": "2026-11-22",
+          "ingredients": "紅蘿蔔（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
         "2026-11-19",
         "2026-11-20",
-        "2026-11-21"
+        "2026-11-21",
+        "2026-11-22"
       ],
-      "observedDays": 3,
-      "daysAtLeast": 3,
+      "observedDays": 4,
+      "daysAtLeast": 4,
       "hasUndatedHistory": false,
-      "consecutiveDays": 3,
+      "consecutiveDays": 4,
       "score": null,
       "feedbackDays": 0,
       "evidence": [],
@@ -1169,12 +1224,12 @@
       ],
       "latest": {
         "foodId": "carrot",
-        "date": "2026-11-21",
+        "date": "2026-11-22",
         "ingredients": "紅蘿蔔（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
         "amount": "已吃，份量未提供",
-        "interest": "超愛吃紅蘿蔔，一直張嘴要再吃",
+        "interest": "未提供",
         "reaction": "未提供",
         "score": null,
         "evidence": []
@@ -1730,6 +1785,47 @@
       "reaction": "未提供",
       "score": null,
       "evidence": []
+    },
+    {
+      "foodId": "egg",
+      "date": "2026-11-22",
+      "ingredients": "蛋（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "carrot",
+      "date": "2026-11-22",
+      "ingredients": "紅蘿蔔（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "banana",
+      "date": "2026-11-22",
+      "ingredients": "香蕉（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "一口",
+      "interest": "非常討厭香蕉",
+      "reaction": "吃了一口就吐",
+      "score": -4,
+      "evidence": [
+        {
+          "weight": -4,
+          "label": "明確表達討厭"
+        }
+      ]
     }
   ],
   "allergies": {
@@ -1744,7 +1840,7 @@
   "planning": {
     "start": "2026-10-21",
     "end": "2027-05-21",
-    "referenceDate": "2026-11-21",
+    "referenceDate": "2026-11-22",
     "checkedDate": "2026-11-02",
     "scheduleStart": "2026-10-30",
     "readinessConfirmed": false,
