@@ -4,7 +4,7 @@ window.FEEDING_DATA = {
   "actualStartDate": "2026-10-21",
   "baselineReportedAt": "2026-10-29",
   "firstLogDate": "2026-10-21",
-  "asOf": "2026-11-22",
+  "asOf": "2026-11-27",
   "logDates": [
     "2026-10-21",
     "2026-10-22",
@@ -31,7 +31,8 @@ window.FEEDING_DATA = {
     "2026-11-19",
     "2026-11-20",
     "2026-11-21",
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-27"
   ],
   "categoryOrder": [
     "蛋白質",
@@ -178,7 +179,7 @@ window.FEEDING_DATA = {
       "confirmedConsecutiveDays": 3,
       "confirmationDate": "2026-11-02",
       "tolerance": "已確認耐受（家庭觀察）",
-      "note": "10/24–10/26 連續三天吃南瓜，整段回顧不錯；10/31 細泥吃得挺好；11/03 少量、一點點，反應未提供；11/05 無特別反應；11/06、11/11、11/15 再次吃，共有 9 天實吃紀錄。11/05–11/06、11/11、11/15 份量與質地未提供，11/06、11/11、11/15 反應未提供。",
+      "note": "10/24–10/26 連續三天吃南瓜，整段回顧不錯；10/31 細泥吃得挺好；11/03 少量、一點點，反應未提供；11/05 無特別反應；11/06、11/11、11/15、11/27 再次吃，共有 10 天實吃紀錄。11/05–11/06、11/11、11/15、11/27 份量與質地未提供，11/06、11/11、11/15、11/27 反應未提供。",
       "entries": [
         {
           "foodId": "pumpkin",
@@ -301,6 +302,18 @@ window.FEEDING_DATA = {
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "pumpkin",
+          "date": "2026-11-27",
+          "ingredients": "南瓜（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
@@ -312,13 +325,14 @@ window.FEEDING_DATA = {
         "2026-11-05",
         "2026-11-06",
         "2026-11-11",
-        "2026-11-15"
+        "2026-11-15",
+        "2026-11-27"
       ],
-      "observedDays": 9,
-      "daysAtLeast": 9,
+      "observedDays": 10,
+      "daysAtLeast": 10,
       "hasUndatedHistory": false,
       "consecutiveDays": 3,
-      "score": 2.5229357798165135,
+      "score": 2.5210084033613445,
       "feedbackDays": 2,
       "evidence": [
         {
@@ -352,7 +366,7 @@ window.FEEDING_DATA = {
       ],
       "latest": {
         "foodId": "pumpkin",
-        "date": "2026-11-15",
+        "date": "2026-11-27",
         "ingredients": "南瓜（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
@@ -773,7 +787,7 @@ window.FEEDING_DATA = {
       "baseline": false,
       "firstTriedDate": "2026-11-05",
       "tolerance": "已嘗試，觀察中",
-      "note": "11/05 首次記錄，是否更早吃過待補。11/05 家長回報無特別反應；11/06 再次吃，反應未提供，連續 2 天實吃紀錄。份量、質地與觀察時間未提供。",
+      "note": "11/05 首次記錄，是否更早吃過待補。11/05 家長回報無特別反應；11/06、11/27 再次吃，反應未提供；共 3 天實吃紀錄，最長連續 2 天（11/05–11/06）。份量、質地與觀察時間未提供。",
       "entries": [
         {
           "foodId": "beef",
@@ -798,14 +812,27 @@ window.FEEDING_DATA = {
           "reaction": "未提供",
           "score": null,
           "evidence": []
+        },
+        {
+          "foodId": "beef",
+          "date": "2026-11-27",
+          "ingredients": "牛肉（其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
         }
       ],
       "dates": [
         "2026-11-05",
-        "2026-11-06"
+        "2026-11-06",
+        "2026-11-27"
       ],
-      "observedDays": 2,
-      "daysAtLeast": 2,
+      "observedDays": 3,
+      "daysAtLeast": 3,
       "hasUndatedHistory": false,
       "consecutiveDays": 2,
       "score": null,
@@ -816,7 +843,7 @@ window.FEEDING_DATA = {
       ],
       "latest": {
         "foodId": "beef",
-        "date": "2026-11-06",
+        "date": "2026-11-27",
         "ingredients": "牛肉（其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
@@ -1097,7 +1124,7 @@ window.FEEDING_DATA = {
       "daysAtLeast": 3,
       "hasUndatedHistory": false,
       "consecutiveDays": 2,
-      "score": -3.076923076923077,
+      "score": -3.066666666666667,
       "feedbackDays": 2,
       "evidence": [
         {
@@ -1226,6 +1253,59 @@ window.FEEDING_DATA = {
         "foodId": "carrot",
         "date": "2026-11-22",
         "ingredients": "紅蘿蔔（其他配料未提供）",
+        "texture": "未提供",
+        "textureGroup": "未記錄",
+        "amount": "已吃，份量未提供",
+        "interest": "未提供",
+        "reaction": "未提供",
+        "score": null,
+        "evidence": []
+      },
+      "attention": false
+    },
+    {
+      "id": "peanut",
+      "name": "花生",
+      "icon": "🥜",
+      "category": "蛋白質",
+      "aliases": [
+        "花生"
+      ],
+      "baseline": false,
+      "firstTriedDate": "2026-11-27",
+      "tolerance": "已嘗試，觀察中",
+      "note": "11/27 首次記錄；做法、份量、質地與反應未提供，是否更早吃過待補。",
+      "entries": [
+        {
+          "foodId": "peanut",
+          "date": "2026-11-27",
+          "ingredients": "花生（做法及其他配料未提供）",
+          "texture": "未提供",
+          "textureGroup": "未記錄",
+          "amount": "已吃，份量未提供",
+          "interest": "未提供",
+          "reaction": "未提供",
+          "score": null,
+          "evidence": []
+        }
+      ],
+      "dates": [
+        "2026-11-27"
+      ],
+      "observedDays": 1,
+      "daysAtLeast": 1,
+      "hasUndatedHistory": false,
+      "consecutiveDays": 1,
+      "score": null,
+      "feedbackDays": 0,
+      "evidence": [],
+      "textures": [
+        "未記錄"
+      ],
+      "latest": {
+        "foodId": "peanut",
+        "date": "2026-11-27",
+        "ingredients": "花生（做法及其他配料未提供）",
         "texture": "未提供",
         "textureGroup": "未記錄",
         "amount": "已吃，份量未提供",
@@ -1826,6 +1906,42 @@ window.FEEDING_DATA = {
           "label": "明確表達討厭"
         }
       ]
+    },
+    {
+      "foodId": "peanut",
+      "date": "2026-11-27",
+      "ingredients": "花生（做法及其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "pumpkin",
+      "date": "2026-11-27",
+      "ingredients": "南瓜（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
+    },
+    {
+      "foodId": "beef",
+      "date": "2026-11-27",
+      "ingredients": "牛肉（其他配料未提供）",
+      "texture": "未提供",
+      "textureGroup": "未記錄",
+      "amount": "已吃，份量未提供",
+      "interest": "未提供",
+      "reaction": "未提供",
+      "score": null,
+      "evidence": []
     }
   ],
   "allergies": {
@@ -1840,7 +1956,7 @@ window.FEEDING_DATA = {
   "planning": {
     "start": "2026-10-21",
     "end": "2027-05-21",
-    "referenceDate": "2026-11-22",
+    "referenceDate": "2026-11-27",
     "checkedDate": "2026-11-02",
     "scheduleStart": "2026-10-30",
     "readinessConfirmed": false,
